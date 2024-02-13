@@ -38,9 +38,10 @@ import { ListingContextProvider } from "./globleContext/ListingContext";
 import ThirdStep from "./pages/ListPetToRehouse/ThirdStep";
 
 function App() {
+  const clintId = process.env.REACT_APP_GOOGLE_CLIENT_ID as string;
   return (
     <div className="min-[1750px]:ml-[50%] min-[1750px]:translate-x-[-50%] ">
-      <GoogleOAuthProvider clientId="301547758518-7iub0l5c9v4iutt3n0vhuggi4v5mqos5.apps.googleusercontent.com">
+      <GoogleOAuthProvider clientId={clintId}>
         <BrowserRouter>
           <ThemeContextProvider>
             <ListingContextProvider>

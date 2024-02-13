@@ -34,7 +34,7 @@ function Login() {
     login();
   };
 
-  const CLIENT_ID: string = process.env.REACT_APP_CLIENT_ID || "";
+  const CLIENT_ID = process.env.REACT_APP_CLIENT_ID as string;
   const googleLogin = useGoogleAuth(`http://localhost:8080/googleAuth`);
   const githubLogin = (): void => {
     window.location.assign(
