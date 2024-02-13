@@ -8,7 +8,8 @@ const sendMail = async ({
   setSendEmail: Function;
 }) => {
   try {
-    const response = await fetch("http://localhost:8080/sendMail", {
+    const url = process.env.REACT_APP_URL as string;
+    const response = await fetch(`${url}/sendMail`, {
       method: "post",
       body: JSON.stringify({ email }),
       headers: {

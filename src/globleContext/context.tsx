@@ -8,8 +8,9 @@ function ThemeContextProvider(props: { children: React.ReactNode }) {
   const [loading, setLoading] = useState<boolean>(true);
 
   const getUser = useCallback(async () => {
+    const url = process.env.REACT_APP_URL as string;
     try {
-      const response = await fetch("http://localhost:8080/getUser", {
+      const response = await fetch(`${url}/getUser`, {
         credentials: "include",
       });
       const result = await response.json();

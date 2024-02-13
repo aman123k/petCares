@@ -14,8 +14,9 @@ function Profile() {
   const [image, setImage] = useState<string>("");
   const [userName, setUserName] = useState<string>("");
   const navigator = useNavigate();
+  const url = process.env.REACT_APP_URL as string;
   const { updateUser } = useUpdate({
-    url: " http://localhost:8080/updateUserProfile",
+    url: `${url}/updateUserProfile`,
     data: { image, userName },
   });
 

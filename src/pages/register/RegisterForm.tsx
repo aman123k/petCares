@@ -21,9 +21,10 @@ const RegisterForm: React.FC = () => {
     picture: "",
     registerType: [""],
   });
-  const backendEndpoint = "http://localhost:8080/registration";
+  const url = process.env.REACT_APP_URL as string;
+
   const { register } = useRegister({
-    url: backendEndpoint,
+    url: `${url}/registration`,
     data,
   });
 

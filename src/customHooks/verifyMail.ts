@@ -13,11 +13,11 @@ const useVerifyMail = ({
 }) => {
   const toastId = useRef("");
   const navigator = useNavigate();
-
+  const url = process.env.REACT_APP_URL as string;
   const verifyMail = async (): Promise<void> => {
     toastId.current = toast.loading("Please wait...");
     try {
-      const response = await fetch("http://localhost:8080/verifyOtp", {
+      const response = await fetch(`${url}/verifyOtp`, {
         method: "post",
         body: JSON.stringify({ email, newPass, otp }),
         headers: {

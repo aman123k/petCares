@@ -18,8 +18,9 @@ function Login() {
     email: "",
   });
 
+  const url = process.env.REACT_APP_URL as string;
   const { login } = useLogin({
-    url: "http://localhost:8080/login",
+    url: `${url}/login`,
     userInfo,
   });
 
@@ -103,7 +104,7 @@ function Login() {
               type="submit"
               className=" w-full bg-[#8AD82B] py-3 font-semibold text-white rounded-lg"
             >
-              Register
+              Login
             </button>
           </form>
           <section className="">
