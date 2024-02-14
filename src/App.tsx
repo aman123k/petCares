@@ -36,6 +36,7 @@ import MainRehouse from "./pages/ListPetToRehouse/MainRehouse";
 import SecoundStep from "./pages/ListPetToRehouse/SecoundStep";
 import { ListingContextProvider } from "./globleContext/ListingContext";
 import ThirdStep from "./pages/ListPetToRehouse/ThirdStep";
+import PreparingParrot from "./pages/Animal/PreparingParrot";
 
 function App() {
   const clintId = process.env.REACT_APP_GOOGLE_CLIENT_ID as string;
@@ -82,6 +83,10 @@ function App() {
                 <Route
                   path="/preparing-for-your-rabbit"
                   element={<PreparingRabbit />}
+                />
+                <Route
+                  path="/preparing-for-your-parrot"
+                  element={<PreparingParrot />}
                 />
                 <Route path="/pet-welfare" element={<PetInformation />} />
                 <Route path="/contact-petcares" element={<Contact />} />

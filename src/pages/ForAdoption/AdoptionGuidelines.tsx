@@ -8,7 +8,7 @@ import adoptGuideImg from "../../images/if-you-want-to-adopt2-removebg-preview.p
 import notAdoptImg from "../../images/cannot-adopt.jpg";
 import chooseAdop from "../../images/adopting-dog-single.jpg";
 import cat from "../../images/adopting-cat-singlesmall.jpg";
-import parrot from "../../images/parrot.jpeg";
+import parrot from "../../images/parrot.png";
 import rabbit from "../../images/rabbit.jpeg";
 
 function AdoptionGuidelines() {
@@ -35,7 +35,7 @@ function AdoptionGuidelines() {
         className=" font-Nunito flex flex-col bg-[#F9F9F9]  max-[650px]:w-full
         max-[850px]:gap-4 max-[650px]:gap-0 py-14 px-8 max-[650px]:py-10 max-[380px]:mt-12"
       >
-        <section className="px-20 mb-4 flex  gap-3 flex-col max-[850px]:px-5 max-[650px]:px-0">
+        <section className="px-20 mb-4 flex  gap-3 flex-col max-[850px]:px-10 max-[650px]:px-0">
           <h1 className="font-bold text-4xl max-[650px]:text-3xl text-[#252525]">
             Animal Welfare Is Our Top Priority Our guide to adoption
           </h1>
@@ -67,13 +67,13 @@ function AdoptionGuidelines() {
           </p>
         </section>
         <section
-          className=" flex mx-14 px-5 mt-16 pb-12 items-center border-b max-[650px]:mt-10 bg-[#F9F9F9]
+          className=" flex px-5 mt-16 pb-12 items-center border-b max-[650px]:mt-10 bg-[#F9F9F9]
            max-[850px]:flex-col-reverse max-[850px]:w-full max-[850px]:mx-3 max-[650px]:mx-0 max-[650px]:px-0 "
         >
           <img
             src={adoptGuideImg}
             alt=""
-            className="w-[50%] max-[850px]:w-full bg-blend-multiply min-[1350px]-h-[32rem] max-[850px]:mt-6 object-contain"
+            className="w-[50%] max-[850px]:w-full bg-blend-multiply max-[650px]:h-auto h-[32rem] min-[1350px]-h-[32rem] max-[850px]:mt-6 object-contain"
           />
           <div className=" flex flex-col gap-1.5 max-[850px]:w-full w-[50%]">
             <h1 className=" font-bold text-2xl ">
@@ -176,7 +176,7 @@ function AdoptionGuidelines() {
           <img
             src={chooseAdop}
             alt=""
-            className="w-[50%] max-[650px]:w-full max-[850px]:w-[80%] mix-blend-multiply min-[1350px]-h-[32rem] object-contain"
+            className="w-[50%] max-[650px]:w-full max-[850px]:w-[80%] max-[650px]:h-auto h-[30rem] mix-blend-multiply min-[1350px]-h-[32rem] object-contain"
           />
           <div className=" flex flex-col gap-3 w-[50%] max-[850px]:w-full">
             <h1 className=" font-bold text-2xl ">Rules for adopting a dog</h1>
@@ -268,24 +268,18 @@ function AdoptionGuidelines() {
           <img
             src={cat}
             alt=""
-            className="w-[50%] max-[650px]:w-full  max-[850px]:w-[80%] mix-blend-multiply min-[1350px]-h-[32rem] object-contain"
+            className="w-[50%] max-[650px]:w-full  max-[850px]:w-[80%] max-[650px]:h-auto h-[30rem] mix-blend-multiply min-[1350px]-h-[32rem] object-contain"
           />
         </section>
         <section
           className=" flex mx-14 px-5 mt-8  gap-16 pb-12 items-center border-b
            max-[850px]:flex-col-reverse max-[850px]:w-full max-[850px]:mx-3 max-[650px]:mx-0 max-[650px]:px-0"
         >
-          <div
-            className="w-[40%] mr-[10%]  min-[1350px]-h-[32rem] max-[850px]:mt-6  
-          max-[850px]:mr-0 max-[850px]:w-[35rem] max-[650px]:w-auto bg-[#DDDDDD] p-6 max-[850px]:pb-14 "
-          >
-            <img
-              src={parrot}
-              alt=""
-              className="w-full object-contain h-full mix-blend-multiply "
-            />
-            <p className=" font-bold text-2xl text-center pt-6 pb-2">Jasper</p>
-          </div>
+          <img
+            src={parrot}
+            alt=""
+            className="w-[50%] max-[650px]:w-full  max-[850px]:w-[80%] max-[650px]:h-auto h-[30rem] mix-blend-multiply min-[1350px]-h-[32rem] object-contain"
+          />
           <div className=" flex flex-col gap-3 w-[50%] max-[850px]:w-full">
             <h1 className=" font-bold text-2xl ">
               Rules for adopting a parrot
@@ -321,7 +315,7 @@ function AdoptionGuidelines() {
             <p>
               If you are sure that adopting a parrots is for you, please also
               take a look at our guidelines,
-              <Link to="/" className="text-[#5FA604]">
+              <Link to="/preparing-for-your-parrot" className="text-[#5FA604]">
                 {" "}
                 Preparing For Your New Parrot.
               </Link>
@@ -374,7 +368,7 @@ function AdoptionGuidelines() {
           <img
             src={rabbit}
             alt=""
-            className="w-[50%] max-[850px]:w-full mix-blend-multiply min-[1350px]-h-[32rem] object-contain"
+            className="w-[50%]  max-[850px]:w-[80%] max-[650px]:h-auto h-[30rem] mix-blend-multiply min-[1350px]-h-[32rem] object-contain"
           />
         </section>
 

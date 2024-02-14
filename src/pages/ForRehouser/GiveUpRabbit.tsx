@@ -30,7 +30,7 @@ function GiveUpRabbit() {
       </section>
       <section
         className=" font-Nunito flex flex-col bg-[#F9F9F9]  max-[650px]:w-full
-    max-[850px]:gap-6 max-[650px]:gap-0 pb-16 max-[650px]:px-8"
+    max-[850px]:gap-6 max-[650px]:gap-0 pb-16 max-[650px]:px-8 max-[950px]:px-10"
       >
         <section
           className=" flex mx-14 px-5 mt-20 gap-4 max-[850px]:pb-8 pb-16 items-center border-b max-[650px]:mt-10
@@ -39,7 +39,7 @@ function GiveUpRabbit() {
           <img
             src={rabbit}
             alt=""
-            className="w-[50%] max-[650px]:w-full  max-[850px]:w-[80%] min-[1350px]:h-[28rem] object-contain mix-blend-multiply"
+            className="w-[50%] max-[650px]:w-full  max-[850px]:w-[70%] min-[1350px]:h-[28rem] object-contain mix-blend-multiply"
           />
           <div className=" flex flex-col gap-3 max-[850px]:w-full w-[50%] text-[#595959]">
             <h1 className=" font-bold text-3xl ">Giving up a rabbit</h1>
@@ -102,7 +102,7 @@ function GiveUpRabbit() {
           <img
             src={behaviours}
             alt=""
-            className="w-[50%] max-[650px]:w-full  max-[850px]:w-[80%] min-[1350px]:h-[28rem] object-contain mix-blend-multiply"
+            className="w-[50%] max-[650px]:w-full  max-[850px]:w-[70%] min-[1350px]:h-[28rem] object-contain mix-blend-multiply"
           />
         </section>
 
@@ -113,7 +113,7 @@ function GiveUpRabbit() {
           <img
             src={catHelth}
             alt=""
-            className="w-[50%]  max-[850px]:w-[80%] max-[650px]:w-full min-[1350px]:h-[28rem] object-contain mix-blend-multiply"
+            className="w-[50%]  max-[850px]:w-[70%] max-[650px]:w-full min-[1350px]:h-[28rem] object-contain mix-blend-multiply"
           />
           <div className=" flex flex-col gap-3 max-[850px]:w-full w-[50%] text-[#595959]">
             <h1 className=" font-bold text-3xl ">
@@ -167,7 +167,7 @@ function GiveUpRabbit() {
             <h1 className=" font-bold text-3xl ">Next steps</h1>
             <p>
               If you’re ready to{" "}
-              <Link to="/" className="text-[#95C830]">
+              <Link to="/rehouse-a-pet" className="text-[#95C830]">
                 giving up your rabbit
               </Link>{" "}
               , take a look at these guides we’ve created to help support you
@@ -197,7 +197,7 @@ function GiveUpRabbit() {
           <img
             src={confirm}
             alt=""
-            className="w-[50%]  max-[850px]:w-[80%] max-[650px]:w-full min-[1350px]:h-[28rem] object-contain mix-blend-multiply"
+            className="w-[50%]  max-[850px]:w-[70%] max-[650px]:w-full min-[1350px]:h-[28rem] object-contain mix-blend-multiply"
           />
         </section>
         <button
