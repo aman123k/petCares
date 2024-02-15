@@ -49,3 +49,14 @@ export type Characteristics = {
   petSex: string;
   petBreed: string;
 };
+
+export type KeyFacts = {
+  Microchipped: string;
+  HouseTrained: string;
+  GoodWithCat: string;
+  GoodWithDog: string;
+  GoodWithChild: string;
+  SpeciallNeed: string;
+  BehaviourIssues: string;
+  purebred: string;
+};

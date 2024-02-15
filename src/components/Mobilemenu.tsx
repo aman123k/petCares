@@ -51,12 +51,12 @@ const Mobilemenu: React.FC<ParentComponentProps> = ({
                 Home
               </li>
             </Link>
-            <Link to="/">
+            <Link to="/adopt-a-pet">
               <li className=" border-b py-4 hover:bg-[#F7F7F7] text-sm font-semibold px-6">
                 Find a Pet
               </li>
             </Link>
-            <Link to="/">
+            <Link to="/rehouse-a-pet">
               <li className=" border-b py-4 hover:bg-[#F7F7F7] text-sm font-semibold px-6">
                 List a Pet
               </li>

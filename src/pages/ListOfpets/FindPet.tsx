@@ -12,13 +12,16 @@ function FindPet() {
     <>
       <Header />
       <section className=" bg-[#EEEEEE]">
-        <section className=" flex gap-3 justify-center pt-16 max-[650px]:flex-col font-Nunito items-center">
-          <div className=" flex-col flex gap-3 relative w-max">
+        <section
+          className=" flex gap-3 justify-center pt-16 max-[650px]:flex-col max-[650px]:items-start
+           max-[650px]:w-full max-[650px]:px-10 font-Nunito items-center"
+        >
+          <div className=" flex-col flex gap-3 relative w-max max-[650px]:w-full">
             <span className=" font-bold text-[#595959] ">
               Select animal type
             </span>
             <select
-              className=" w-40 p-3 rounded-lg outline-none
+              className=" w-40 p-3 rounded-lg outline-none max-[650px]:w-full
              appearance-none cursor-pointer drop-shadow-md"
             >
               <option value="all">All</option>
@@ -29,27 +32,31 @@ function FindPet() {
             </select>
             <FaAngleDown className=" absolute bottom-4 right-2" />
           </div>
-          <div className=" flex-col flex gap-3 relative w-max">
+          <div className=" flex-col flex gap-3 relative w-max max-[650px]:w-full">
             <span className=" font-bold text-[#595959] ">Select breed</span>
             <div
-              className=" p-3 flex items-center justify-between cursor-pointer
+              className=" p-3 flex items-center justify-between cursor-pointer max-[650px]:w-full
              rounded-lg outline-none drop-shadow-md bg-white w-max min-w-40"
             >
               All breed
               <BsThreeDotsVertical />
             </div>
           </div>
-          <div className=" flex-col flex gap-3 relative w-max">
-            <span className=" font-bold text-[#595959] ">Select location</span>
+          <div className=" max-[650px]:w-full flex items-end">
+            <div className=" flex-col flex gap-3 relative w-max max-[650px]:w-full">
+              <span className=" font-bold text-[#595959] ">
+                Select location
+              </span>
 
-            <input
-              type="text"
-              placeholder=" Start typing"
-              className=" p-3 rounded-lg outline-none drop-shadow-md"
-            />
-          </div>
-          <div className=" ml-5 cursor-pointer">
-            <MdOutlineMyLocation className=" text-3xl text-[#96C830]" />
+              <input
+                type="text"
+                placeholder=" Start typing"
+                className=" p-3 rounded-lg outline-none drop-shadow-md"
+              />
+            </div>
+            <div className=" ml-5 cursor-pointer flex-shrink-0">
+              <MdOutlineMyLocation className=" text-3xl text-[#96C830]" />
+            </div>
           </div>
         </section>
 

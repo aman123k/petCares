@@ -1,5 +1,5 @@
 import React, { SetStateAction, useContext } from "react";
-import { Characteristics } from "../../interface/interface";
+import { Characteristics, KeyFacts } from "../../interface/interface";
 import { ListingContext } from "../../globleContext/ListingContext";
 import { FaCaretDown } from "react-icons/fa6";
 
@@ -80,15 +80,16 @@ function InputCard({
 
   return (
     <>
-      <div className=" flex flex-col gap-3">
-        <span className=" text-[#777777] font-semibold ">
-          {label} <span className=" text-red-600 text-g">*</span>
+      <div className=" flex flex-col gap-3 ">
+        <span className=" text-[#777777] text-lg font-semibold ">
+          {label} <span className=" text-red-600 ">*</span>
         </span>
         <div className=" w-full flex items-center bg-white rounded-lg  py-3  px-3.5 cursor-pointer">
           <select
             name={characteristics?.petSize}
             id=""
-            className=" appearance-none w-full bg-transparent capitalize outline-none cursor-pointer"
+            className=" appearance-none w-full bg-transparent capitalize outline-none cursor-pointer
+           "
             onChange={(e: React.ChangeEvent<HTMLSelectElement>) => {
               setCharacteristics({
                 ...characteristics,
@@ -121,5 +122,40 @@ function InputCard({
     </>
   );
 }
-
-export { InputCard, PetName, PetAge };
+function KeyFect({ label, keyname }: { label: string; keyname: string }) {
+  const { keyFact, setKeyFact } = useContext(ListingContext) as {
+    keyFact: KeyFacts;
+    setKeyFact: React.Dispatch<SetStateAction<object>>;
+  };
+  return (
+    <>
+      <div className=" flex justify-between text-[#777777]">
+        <span className=" text-lg font-semibold ">{label}</span>
+        <div className=" flex gap-10">
+          {["yes", "no", "unknown"].map((key, index) => {
+            return (
+              <span key={index} className=" flex gap-2 ">
+                <input
+                  type="radio"
+                  name={keyname}
+                  className="cursor-pointer w-4"
+                  id={`${key} ${keyname}`}
+                  onChange={(e) =>
+                    setKeyFact({
+                      ...keyFact,
+                      [keyname]: key,
+                    })
+                  }
+                />
+                <label htmlFor={`${key} ${keyname}`} className="cursor-pointer">
+                  {key}
+                </label>
+              </span>
+            );
+          })}
+        </div>
+      </div>
+    </>
+  );
+}
+export { InputCard, PetName, PetAge, KeyFect };

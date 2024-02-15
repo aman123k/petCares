@@ -1,5 +1,5 @@
 import React, { createContext, useState } from "react";
-import { Characteristics } from "../interface/interface";
+import { Characteristics, KeyFacts } from "../interface/interface";
 
 const ListingContext = createContext<object>({});
 
@@ -17,7 +17,9 @@ function ListingContextProvider(props: { children: React.ReactNode }) {
     petSex: "",
     petBreed: "",
   });
+  const [keyFact, setKeyFact] = useState<KeyFacts>();
 
+  console.log(keyFact);
   const handleChange = (
     e: React.ChangeEvent<HTMLSelectElement | HTMLInputElement>
   ) => {
@@ -43,6 +45,8 @@ function ListingContextProvider(props: { children: React.ReactNode }) {
         setPetStory,
         characteristics,
         setCharacteristics,
+        keyFact,
+        setKeyFact,
       }}
     >
       {props.children}
