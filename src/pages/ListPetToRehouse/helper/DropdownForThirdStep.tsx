@@ -1,6 +1,6 @@
 import React, { SetStateAction, useContext } from "react";
-import { Characteristics, KeyFacts } from "../../interface/interface";
-import { ListingContext } from "../../globleContext/ListingContext";
+import { Characteristics, KeyFacts } from "../../../interface/interface";
+import { ListingContext } from "../../../globleContext/ListingContext";
 import { FaCaretDown } from "react-icons/fa6";
 
 function PetName() {
@@ -66,10 +66,12 @@ function InputCard({
   Name,
   Data,
   label,
+  preSelet,
 }: {
   Name: string;
   Data: string[];
   label: string;
+  preSelet: string;
 }) {
   const { characteristics, setCharacteristics } = useContext(
     ListingContext
@@ -87,7 +89,7 @@ function InputCard({
         <div className=" w-full flex items-center bg-white rounded-lg  py-3  px-3.5 cursor-pointer">
           <select
             name={characteristics?.petSize}
-            id=""
+            value={preSelet ? preSelet : "Select an option"}
             className=" appearance-none w-full bg-transparent capitalize outline-none cursor-pointer
            "
             onChange={(e: React.ChangeEvent<HTMLSelectElement>) => {
@@ -97,23 +99,15 @@ function InputCard({
               });
             }}
           >
-            <option selected disabled value="">
+            <option selected disabled value="Select an option">
               Select an option
             </option>
             {Data.map((data, index) => {
-              if (data === Name) {
-                return (
-                  <option selected key={index} value={data}>
-                    {data}
-                  </option>
-                );
-              } else {
-                return (
-                  <option key={index} value={data}>
-                    {data}
-                  </option>
-                );
-              }
+              return (
+                <option key={index} value={data}>
+                  {data}
+                </option>
+              );
             })}
           </select>
           <FaCaretDown className=" flex-shrink-0" />
@@ -122,16 +116,24 @@ function InputCard({
     </>
   );
 }
-function KeyFect({ label, keyname }: { label: string; keyname: string }) {
+function KeyFect({
+  label,
+  keyname,
+  check,
+}: {
+  label: string;
+  keyname: string;
+  check: string;
+}) {
   const { keyFact, setKeyFact } = useContext(ListingContext) as {
     keyFact: KeyFacts;
     setKeyFact: React.Dispatch<SetStateAction<object>>;
   };
   return (
     <>
-      <div className=" flex justify-between text-[#777777]">
+      <div className=" flex justify-between text-[#777777] max-[650px]:flex-col">
         <span className=" text-lg font-semibold ">{label}</span>
-        <div className=" flex gap-10">
+        <div className=" flex gap-10 max-[650px]:gap-0 max-[650px]:justify-between max-[650px]:mt-2">
           {["yes", "no", "unknown"].map((key, index) => {
             return (
               <span key={index} className=" flex gap-2 ">
@@ -139,6 +141,7 @@ function KeyFect({ label, keyname }: { label: string; keyname: string }) {
                   type="radio"
                   name={keyname}
                   className="cursor-pointer w-4"
+                  checked={check === key}
                   id={`${key} ${keyname}`}
                   onChange={(e) =>
                     setKeyFact({

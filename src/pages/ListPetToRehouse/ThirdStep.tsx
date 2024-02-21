@@ -1,13 +1,18 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 import Header from "../../components/Header";
-import Count from "./Count";
+import Count from "./helper/Count";
 import Footer from "../../components/Footer";
 import { Characteristics, KeyFacts, User } from "../../interface/interface";
 import { ThemeContext } from "../../globleContext/context";
 import { ListingContext } from "../../globleContext/ListingContext";
 import { useNavigate } from "react-router-dom";
-import ThirdHelperPhoto from "./ThirdHelperPhoto";
-import { InputCard, KeyFect, PetAge, PetName } from "./DropdownForThirdStep";
+import ThirdHelperPhoto from "./helper/ThirdHelperPhoto";
+import {
+  InputCard,
+  KeyFect,
+  PetAge,
+  PetName,
+} from "./helper/DropdownForThirdStep";
 import { RxDot } from "react-icons/rx";
 import { BsArrowRightCircle } from "react-icons/bs";
 import {
@@ -19,7 +24,8 @@ import {
   rabbitBread,
   size,
 } from "../../data/data";
-import ThirdHelperContent from "./ThirdHelperContent";
+import ThirdHelperContent from "./helper/ThirdHelperContent";
+import toast, { Toaster } from "react-hot-toast";
 
 function ThirdStep() {
   const { userDetails }: { userDetails?: User } = useContext(ThemeContext);
@@ -51,11 +57,11 @@ function ThirdStep() {
     setPetStory: React.Dispatch<React.SetStateAction<string>>;
   };
 
-  // if (!pet || !reason! || !time) {
-  //   navigator("/rehouse-a-pet");
-  // }
+  if (!pet || !reason! || !time) {
+    navigator("/rehouse-a-pet");
+  }
   if (!userDetails) {
-    navigator("/login");
+    navigator("/");
   }
   useEffect(() => {
     const handleScroll = () => {
@@ -82,6 +88,31 @@ function ThirdStep() {
       targetRef.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  const nextPage = () => {
+    if (petImage?.length < 4) return toast.error("Select all photos");
+    else if (!characteristics.petName || !characteristics.petAge)
+      return toast.error("Please enter the pet's name and age");
+    else if (!characteristics.petSex || !characteristics.petSize)
+      return toast.error("Please enter the pet's Size and Sex");
+    else if (!characteristics.petColor || !characteristics.petBreed)
+      return toast.error("Please enter the pet's Colour and Bread");
+    else if (
+      !keyFact.BehaviourIssues ||
+      !keyFact.GoodWithCat ||
+      !keyFact.GoodWithChild ||
+      !keyFact.GoodWithDog ||
+      !keyFact.HouseTrained ||
+      !keyFact.Microchipped ||
+      !keyFact.SpeciallNeed ||
+      !keyFact.purebred
+    )
+      return toast.error("Select an option");
+    else if (!petStory)
+      return toast.error("Please enter pet story in more the 150 words");
+    else navigator("/rehouse-a-pet/confirm");
+  };
+
   return (
     <>
       <Header />
@@ -137,20 +168,6 @@ function ThirdStep() {
               />
             </li>
             <li
-              onClick={() => handleView("PetLocation")}
-              className=" flex text-lg items-center justify-between font-bold 
-              cursor-pointer"
-            >
-              Pet's Location
-              <BsArrowRightCircle
-                className={`text-3xl  ${
-                  activeSection === "PetLocation"
-                    ? "text-[#5FA501]"
-                    : "text-[#9a9999]"
-                } `}
-              />
-            </li>
-            <li
               onClick={() => handleView("Petstory")}
               className=" flex text-lg items-center justify-between font-bold
               cursor-pointer"
@@ -191,33 +208,57 @@ function ThirdStep() {
             <h1 className=" text-[#4A4949] text-3xl font-bold">
               Characteristics
             </h1>
-            <form
-              action=""
-              className=" grid grid-cols-2 gap-5 my-4 max-[650px]:grid-cols-1 font-Nunito"
-            >
+            <div className=" grid grid-cols-2 gap-5 my-4 max-[650px]:grid-cols-1 font-Nunito">
               <PetName />
               <PetAge />
-              <InputCard Name="petSize" Data={size} label="Size" />
-              <InputCard Name="petSex" Data={gender} label="Sex" />
-              <InputCard Name="petColor" Data={colors} label="Colours" />
+              <InputCard
+                Name="petSize"
+                Data={size}
+                label="Size"
+                preSelet={characteristics?.petSize}
+              />
+              <InputCard
+                Name="petSex"
+                Data={gender}
+                label="Sex"
+                preSelet={characteristics?.petSex}
+              />
+              <InputCard
+                Name="petColor"
+                Data={colors}
+                label="Colours"
+                preSelet={characteristics?.petColor}
+              />
               {pet === "dog" ? (
-                <InputCard Name="petBreed" Data={dogBread} label="Breed(s)" />
+                <InputCard
+                  Name="petBreed"
+                  Data={dogBread}
+                  label="Breed(s)"
+                  preSelet={characteristics?.petBreed}
+                />
               ) : pet === "cat" ? (
-                <InputCard Name="petBreed" Data={catBread} label="Breed(s)" />
+                <InputCard
+                  Name="petBreed"
+                  Data={catBread}
+                  label="Breed(s)"
+                  preSelet={characteristics?.petBreed}
+                />
               ) : pet === "rabbit" ? (
                 <InputCard
                   Name="petBreed"
                   Data={rabbitBread}
                   label="Breed(s)"
+                  preSelet={characteristics?.petBreed}
                 />
               ) : (
                 <InputCard
                   Name="petBreed"
                   Data={parrotBread}
                   label="Breed(s)"
+                  preSelet={characteristics?.petBreed}
                 />
               )}
-            </form>
+            </div>
           </section>
           <section
             ref={(el) =>
@@ -226,37 +267,48 @@ function ThirdStep() {
             className=" py-8"
           >
             <h1 className=" text-[#4A4949] text-3xl font-bold">Key Facts</h1>
-            <section className=" my-8 w-[60%] flex flex-col gap-6">
-              <KeyFect label="Microchipped" keyname="Microchipped" />
-              <KeyFect label="House trained" keyname="HouseTrained" />
-              <KeyFect label="Good with Cat" keyname="GoodWithCat" />
-              <KeyFect label="Good with Dog" keyname="GoodWithDog" />
-              <KeyFect label="Good with Child" keyname="GoodWithChild" />
-              <KeyFect label="Behaviour Issues" keyname="BehaviourIssues" />
-              <KeyFect label="Purebred" keyname="purebred" />
+            <section className=" my-8 w-[75%] max-[950px]:w-full flex flex-col gap-6">
+              <KeyFect
+                label="Microchipped"
+                keyname="Microchipped"
+                check={keyFact.Microchipped}
+              />
+              <KeyFect
+                label="House trained"
+                keyname="HouseTrained"
+                check={keyFact.HouseTrained}
+              />
+              <KeyFect
+                label="Good with Cat"
+                keyname="GoodWithCat"
+                check={keyFact.GoodWithCat}
+              />
+              <KeyFect
+                label="Good with Dog"
+                keyname="GoodWithDog"
+                check={keyFact.GoodWithDog}
+              />
+              <KeyFect
+                label="Good with Child"
+                keyname="GoodWithChild"
+                check={keyFact.GoodWithChild}
+              />
+              <KeyFect
+                label="Behaviour Issues"
+                keyname="BehaviourIssues"
+                check={keyFact.BehaviourIssues}
+              />
+              <KeyFect
+                label="Has Special needs"
+                keyname="SpeciallNeed"
+                check={keyFact.SpeciallNeed}
+              />
+              <KeyFect
+                label="Purebred"
+                keyname="purebred"
+                check={keyFact.purebred}
+              />
             </section>
-          </section>
-          <section
-            ref={(el) =>
-              el && (viewBox.current.PetLocation = el as HTMLDivElement)
-            }
-            className=" my-6"
-          >
-            <h1 className=" text-[#4A4949] text-3xl font-bold">
-              Pet's Location
-            </h1>
-            <div className=" mt-6">
-              <div className=" w-[40%] flex flex-col gap-3">
-                <p className=" capitalize text-[#777777] tracking-wide font-Nunito ">
-                  please enter the postcode of your pet's address
-                </p>
-                <input
-                  type="text"
-                  className="w-full py-3 px-3.5 rounded-lg "
-                  placeholder="Start typing your postcode"
-                />
-              </div>
-            </div>
           </section>
           <section
             ref={(el) =>
@@ -355,10 +407,29 @@ function ThirdStep() {
               }
             ></textarea>
           </section>
+          <section className=" flex justify-between max-[650px]:flex-col max-[650px]:gap-5">
+            <button
+              className=" border-[#96c16d] hover:text-[#5FA501] bg-[#96c16d]
+        hover:bg-white px-20 border-2 text-white rounded-lg font-semibold py-3
+        drop-shadow-md"
+              onClick={() => navigator(-1)}
+            >
+              Previous
+            </button>
+            <button
+              className="border-[#5FA501] hover:text-[#5FA501] bg-[#5FA501]
+        hover:bg-white px-20 border-2 text-white rounded-lg font-semibold py-3
+        drop-shadow-md"
+              onClick={nextPage}
+            >
+              Next
+            </button>
+          </section>
         </section>
       </section>
 
       <Footer />
+      <Toaster />
     </>
   );
 }

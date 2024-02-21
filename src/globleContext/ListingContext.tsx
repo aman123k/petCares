@@ -17,9 +17,17 @@ function ListingContextProvider(props: { children: React.ReactNode }) {
     petSex: "",
     petBreed: "",
   });
-  const [keyFact, setKeyFact] = useState<KeyFacts>();
+  const [keyFact, setKeyFact] = useState<KeyFacts>({
+    Microchipped: "",
+    HouseTrained: "",
+    GoodWithCat: "",
+    GoodWithDog: "",
+    GoodWithChild: "",
+    SpeciallNeed: "",
+    BehaviourIssues: "",
+    purebred: "",
+  });
 
-  console.log(keyFact);
   const handleChange = (
     e: React.ChangeEvent<HTMLSelectElement | HTMLInputElement>
   ) => {

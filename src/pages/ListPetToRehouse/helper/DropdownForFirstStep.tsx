@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
-import { timeToKeep, animals, RehosingReason } from "../../data/data";
+import { timeToKeep, animals, RehosingReason } from "../../../data/data";
 import { FaSortDown } from "react-icons/fa";
-import { ListingContext } from "../../globleContext/ListingContext";
+import { ListingContext } from "../../../globleContext/ListingContext";
 
 const AnimalDropDown = () => {
   const {
@@ -24,25 +24,17 @@ justify-between items-center  drop-shadow-md shrink-0 max-[850px]:w-[250px]"
           onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
             setPet && setPet(e.currentTarget.value)
           }
-          name=""
+          value={pet ? pet : "--select--"}
         >
           <option value="--select--" disabled selected>
             --select--
           </option>
           {animals.map((animal, index) => {
-            if (animal === pet) {
-              return (
-                <option selected key={index} value={animal}>
-                  {animal}
-                </option>
-              );
-            } else {
-              return (
-                <option key={index} value={animal}>
-                  {animal}
-                </option>
-              );
-            }
+            return (
+              <option key={index} value={animal}>
+                {animal}
+              </option>
+            );
           })}
         </select>
         <FaSortDown className=" flex-shrink-0 w-10" />
@@ -70,25 +62,17 @@ justify-between items-center  drop-shadow-md shrink-0 max-[850px]:w-[250px]"
           onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
             setReason && setReason(e.currentTarget.value)
           }
-          name=""
+          value={reason ? reason : "--select--"}
         >
           <option value="--select--" disabled selected>
             --select--
           </option>
           {RehosingReason.map((r, index) => {
-            if (r === reason) {
-              return (
-                <option selected key={index} value={r}>
-                  {r}
-                </option>
-              );
-            } else {
-              return (
-                <option key={index} value={r}>
-                  {r}
-                </option>
-              );
-            }
+            return (
+              <option key={index} value={r}>
+                {r}
+              </option>
+            );
           })}
         </select>
         <FaSortDown className=" w-10 flex-shrink-0" />
@@ -116,25 +100,17 @@ justify-between items-center  drop-shadow-md shrink-0 max-[850px]:w-[250px]"
           onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
             setTime && setTime(e.currentTarget.value)
           }
-          name=""
+          value={time ? time : "--select--"}
         >
           <option value="--select--" disabled selected>
             --select--
           </option>
           {timeToKeep.map((t, index) => {
-            if (t === time) {
-              return (
-                <option selected key={index} value={t}>
-                  {t}
-                </option>
-              );
-            } else {
-              return (
-                <option key={index} value={t}>
-                  {t}
-                </option>
-              );
-            }
+            return (
+              <option key={index} value={t}>
+                {t}
+              </option>
+            );
           })}
         </select>
         <FaSortDown className=" w-10 flex-shrink-0" />

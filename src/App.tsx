@@ -37,6 +37,9 @@ import SecoundStep from "./pages/ListPetToRehouse/SecoundStep";
 import { ListingContextProvider } from "./globleContext/ListingContext";
 import ThirdStep from "./pages/ListPetToRehouse/ThirdStep";
 import PreparingParrot from "./pages/Animal/PreparingParrot";
+import P from "./P";
+import Confirm from "./pages/ListPetToRehouse/Confirm";
+import { FindingContextProvider } from "./globleContext/FindPetContext";
 
 function App() {
   const clintId = process.env.REACT_APP_GOOGLE_CLIENT_ID as string;
@@ -46,65 +49,78 @@ function App() {
         <BrowserRouter>
           <ThemeContextProvider>
             <ListingContextProvider>
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/register" element={<Register />} />
-                <Route path="/register_adopt" element={<Adopter />} />
-                <Route
-                  path="/register_rehouse_your_pet"
-                  element={<Rehouser />}
-                />
-                <Route path="/for_rehousers" element={<ForRehouser />} />
-                <Route path="/for_adopter" element={<ForAdopter />} />
-                <Route path="/guidelines" element={<AdoptionGuidelines />} />
-                <Route path="/tips-for-adopters" element={<TipsForAdop />} />
-                <Route
-                  path="/tips-for-rehouser"
-                  element={<TipsForrehouser />}
-                />
-                <Route path="/giving-up-a-dog" element={<GiveUpDog />} />
-                <Route path="/giving-up-a-cat" element={<GiveUpCat />} />
-                <Route path="/giving-up-a-rabbit" element={<GiveUpRabbit />} />
-                <Route path="/giving-up-a-parrot" element={<GiveUpParrot />} />
-                <Route
-                  path="/are-you-ready-to-adopt-a-pet"
-                  element={<ReadyToadop />}
-                />
-                <Route path="/frequently-asked-questions" element={<Faq />} />
-                <Route
-                  path="/preparing-for-your-dog"
-                  element={<PreparingDog />}
-                />
-                <Route
-                  path="/preparing-for-your-cat"
-                  element={<PreparingCat />}
-                />
-                <Route
-                  path="/preparing-for-your-rabbit"
-                  element={<PreparingRabbit />}
-                />
-                <Route
-                  path="/preparing-for-your-parrot"
-                  element={<PreparingParrot />}
-                />
-                <Route path="/pet-welfare" element={<PetInformation />} />
-                <Route path="/contact-petcares" element={<Contact />} />
-                <Route path="/callback" element={<GithubAuth />} />
-                <Route path="/dashboard" element={<Dashboard />} />
-                <Route path="/profile" element={<Profile />} />
-                <Route path="/messages" element={<Messages />} />
-                <Route path="/favourites" element={<Favourites />} />
-                <Route path="/forgot-password" element={<ForgetPass />} />
-                <Route path="/adopt-a-pet" element={<FindPet />} />
-                <Route path="/adopt-a-pet/:id" element={<PetDetails />} />
-                <Route path="/rehouse-a-pet" element={<MainRehouse />} />
-                <Route
-                  path="/rehouse-a-pet/about-you"
-                  element={<SecoundStep />}
-                />
-                <Route path="/rehouse-a-pet/your-pet" element={<ThirdStep />} />
-              </Routes>
+              <FindingContextProvider>
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/login" element={<Login />} />
+                  <Route path="/register" element={<Register />} />
+                  <Route path="/register_adopt" element={<Adopter />} />
+                  <Route
+                    path="/register_rehouse_your_pet"
+                    element={<Rehouser />}
+                  />
+                  <Route path="/for_rehousers" element={<ForRehouser />} />
+                  <Route path="/for_adopter" element={<ForAdopter />} />
+                  <Route path="/guidelines" element={<AdoptionGuidelines />} />
+                  <Route path="/tips-for-adopters" element={<TipsForAdop />} />
+                  <Route
+                    path="/tips-for-rehouser"
+                    element={<TipsForrehouser />}
+                  />
+                  <Route path="/giving-up-a-dog" element={<GiveUpDog />} />
+                  <Route path="/giving-up-a-cat" element={<GiveUpCat />} />
+                  <Route
+                    path="/giving-up-a-rabbit"
+                    element={<GiveUpRabbit />}
+                  />
+                  <Route
+                    path="/giving-up-a-parrot"
+                    element={<GiveUpParrot />}
+                  />
+                  <Route
+                    path="/are-you-ready-to-adopt-a-pet"
+                    element={<ReadyToadop />}
+                  />
+                  <Route path="/frequently-asked-questions" element={<Faq />} />
+                  <Route
+                    path="/preparing-for-your-dog"
+                    element={<PreparingDog />}
+                  />
+                  <Route
+                    path="/preparing-for-your-cat"
+                    element={<PreparingCat />}
+                  />
+                  <Route
+                    path="/preparing-for-your-rabbit"
+                    element={<PreparingRabbit />}
+                  />
+                  <Route
+                    path="/preparing-for-your-parrot"
+                    element={<PreparingParrot />}
+                  />
+                  <Route path="/pet-welfare" element={<PetInformation />} />
+                  <Route path="/contact-petcares" element={<Contact />} />
+                  <Route path="/callback" element={<GithubAuth />} />
+                  <Route path="/dashboard" element={<Dashboard />} />
+                  <Route path="/profile" element={<Profile />} />
+                  <Route path="/messages" element={<Messages />} />
+                  <Route path="/favourites" element={<Favourites />} />
+                  <Route path="/forgot-password" element={<ForgetPass />} />
+                  <Route path="/adopt-a-pet" element={<FindPet />} />
+                  <Route path="/adopt-a-pet/:id" element={<PetDetails />} />
+                  <Route path="/rehouse-a-pet" element={<MainRehouse />} />
+                  <Route
+                    path="/rehouse-a-pet/about-you"
+                    element={<SecoundStep />}
+                  />
+                  <Route
+                    path="/rehouse-a-pet/your-pet"
+                    element={<ThirdStep />}
+                  />
+                  <Route path="/rehouse-a-pet/confirm" element={<Confirm />} />
+                  <Route path="/p" element={<P />} />
+                </Routes>
+              </FindingContextProvider>
             </ListingContextProvider>
           </ThemeContextProvider>
         </BrowserRouter>

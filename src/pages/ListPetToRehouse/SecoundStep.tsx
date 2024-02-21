@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import Count from "./Count";
+import Count from "./helper/Count";
 import { ListingContext } from "../../globleContext/ListingContext";
 import { ThemeContext } from "../../globleContext/context";
 import { User } from "../../interface/interface";
@@ -126,14 +126,24 @@ function SecoundStep() {
               />
             </div>
           </div>
-          <button
-            className=" ml-auto border-[#5FA501] hover:text-[#5FA501] bg-[#5FA501]
-        hover:bg-white px-20 max-[650px]:ml-0 border-2 text-white rounded-lg font-semibold py-3
+          <section className=" flex justify-between max-[650px]:flex-col max-[650px]:gap-5">
+            <button
+              className=" border-[#96c16d] hover:text-[#5FA501] bg-[#96c16d]
+        hover:bg-white px-20 border-2 text-white rounded-lg font-semibold py-3
         drop-shadow-md"
-            onClick={nextPage}
-          >
-            Next
-          </button>
+              onClick={() => navigator(-1)}
+            >
+              Previous
+            </button>
+            <button
+              className="border-[#5FA501] hover:text-[#5FA501] bg-[#5FA501]
+        hover:bg-white px-20 border-2 text-white rounded-lg font-semibold py-3
+        drop-shadow-md"
+              onClick={nextPage}
+            >
+              Next
+            </button>
+          </section>
         </section>
       </section>
       <Footer />
