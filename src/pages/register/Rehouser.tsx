@@ -81,7 +81,7 @@ function Rehouser() {
           </ul>
           <p className="mt-2">
             Don't forget to review our Don't forget to review our{" "}
-            <Link to="/tip_for_rehouser" className="text-[#9BCC3A]">
+            <Link to="/tips-for-rehouser" className="text-[#9BCC3A]">
               {" "}
               tips for rehousers page{" "}
             </Link>{" "}

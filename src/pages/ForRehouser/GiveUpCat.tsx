@@ -184,7 +184,7 @@ function GiveUpCat() {
                   How rehousing works
                 </li>
               </Link>
-              <Link to="/for_rehousers">
+              <Link to="/rehousers-faq">
                 <li className=" flex justify-start gap-2">
                   <RxDotFilled className="text-3xl  flex-shrink-0" />
                   FAQs for rehousers

@@ -40,6 +40,8 @@ import PreparingParrot from "./pages/Animal/PreparingParrot";
 import P from "./P";
 import Confirm from "./pages/ListPetToRehouse/Confirm";
 import { FindingContextProvider } from "./globleContext/FindPetContext";
+import About from "./pages/About";
+import RehouserFAQ from "./pages/FAQ/RehouserFAQ";
 
 function App() {
   const clintId = process.env.REACT_APP_GOOGLE_CLIENT_ID as string;
@@ -119,6 +121,8 @@ function App() {
                   />
                   <Route path="/rehouse-a-pet/confirm" element={<Confirm />} />
                   <Route path="/p" element={<P />} />
+                  <Route path="/about" element={<About />} />
+                  <Route path="/rehousers-faq" element={<RehouserFAQ />} />
                 </Routes>
               </FindingContextProvider>
             </ListingContextProvider>

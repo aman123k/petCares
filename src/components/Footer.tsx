@@ -72,7 +72,7 @@ function Footer() {
             </Link>
 
             <Link
-              to="/"
+              to="/about"
               className=" hover:translate-x-3 ease-in-out duration-200"
             >
               <li>About Us</li>
@@ -129,6 +129,18 @@ function Footer() {
               className=" hover:translate-x-3 ease-in-out duration-200"
             >
               <li>Pet Care Information</li>
+            </Link>
+            <Link
+              to="/pet-welfare"
+              className=" hover:translate-x-3 ease-in-out duration-200"
+            >
+              <li>Testimonials from Rehousers</li>
+            </Link>
+            <Link
+              to="/pet-welfare"
+              className=" hover:translate-x-3 ease-in-out duration-200"
+            >
+              <li>Donate to Neuter</li>
             </Link>
           </ul>
         </section>

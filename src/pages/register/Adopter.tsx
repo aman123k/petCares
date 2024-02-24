@@ -95,10 +95,16 @@ function Adopter() {
           </ul>
           <p className="mt-2">
             Don't forget to review our
-            <span className="text-[#9BCC3A]"> adoption guidelines </span> and
-            our pet <span className="text-[#9BCC3A]"> welfare guides </span> to
-            help you fully prepare for getting a new pet, and please make sure
-            to keep your adopter's profile up to date.
+            <Link to="/guidelines" className="text-[#9BCC3A]">
+              {" "}
+              adoption guidelines{" "}
+            </Link>{" "}
+            and our pet{" "}
+            <Link to="/pet-welfare" className="text-[#9BCC3A]">
+              welfare guides{" "}
+            </Link>{" "}
+            to help you fully prepare for getting a new pet, and please make
+            sure to keep your adopter's profile up to date.
           </p>
         </div>
       </section>

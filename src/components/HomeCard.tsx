@@ -4,14 +4,19 @@ import { RxDotFilled } from "react-icons/rx";
 import { Link } from "react-router-dom";
 
 function HomeCard() {
+  const checkStage =
+    window.location.href.split("/")[window.location.href.split("/").length - 1];
   return (
     <section
       className=" grid grid-cols-3 gap-8 my-16 
    max-[850px]:grid-cols-2 max-[650px]:grid-cols-1"
     >
       <Link
-        to=""
-        className="group flex flex-col gap-4 border px-8 py-14 rounded-xl hover:bg-white hover:drop-shadow-xl shadow-[#595959] ease-in-out "
+        to="/about"
+        className={`group flex flex-col gap-4 border px-8 
+        py-14 rounded-xl  hover:drop-shadow-xl 
+        shadow-[#595959] ease-in-out 
+        ${checkStage === "about" ? "bg-white" : "hover:bg-white"}`}
       >
         <div className=" bg-[#AFD57D] group-hover:bg-[#5FA501] p-6 w-max rounded-full ml-[50%] translate-x-[-50%]">
           <FaHandHoldingHeart className=" text-6xl text-white" />
@@ -40,8 +45,9 @@ function HomeCard() {
         </ul>
       </Link>
       <Link
-        to=""
-        className="group flex flex-col gap-4 border px-8 py-14 rounded-xl hover:bg-white hover:drop-shadow-xl shadow-[#595959] ease-in-out "
+        to="/about"
+        className={`group flex flex-col gap-4 border px-8 py-14 rounded-xl hover:bg-white hover:drop-shadow-xl shadow-[#595959] ease-in-out 
+        ${checkStage === "about" ? "bg-white" : "hover:bg-white"}`}
       >
         <div className=" bg-[#AFD57D] group-hover:bg-[#5FA501] p-6 w-max rounded-full ml-[50%] translate-x-[-50%]">
           <FaHandHoldingHeart className=" text-6xl text-white" />
@@ -62,8 +68,9 @@ function HomeCard() {
         </div>
       </Link>
       <Link
-        to=""
-        className="group flex flex-col gap-4 border px-8 py-14 rounded-xl hover:bg-white hover:drop-shadow-xl shadow-[#595959] ease-in-out "
+        to="/about"
+        className={`group flex flex-col gap-4 border px-8 py-14 rounded-xl hover:bg-white hover:drop-shadow-xl shadow-[#595959] ease-in-out 
+        ${checkStage === "about" ? "bg-white" : "hover:bg-white"}`}
       >
         <div className=" bg-[#AFD57D] group-hover:bg-[#5FA501] p-6 w-max rounded-full ml-[50%] translate-x-[-50%]">
           <FaHandHoldingHeart className=" text-6xl text-white" />

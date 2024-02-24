@@ -33,7 +33,7 @@ function Faq() {
             </div>
           </Link>
           <Link
-            to="/"
+            to="/rehousers-faq"
             className=" group bg-white border p-14 rounded-xl flex flex-col gap-10 hover:drop-shadow-xl"
           >
             <div className="ml-[50%] translate-x-[-50%] w-max bg-[#AFD57D] group-hover:bg-[#5FA501] p-5 rounded-full">

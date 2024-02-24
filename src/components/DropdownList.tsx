@@ -98,7 +98,7 @@ function DropdownListRehouse() {
               </li>
               <hr />
             </Link>
-            <Link to="/">
+            <Link to="/rehousers-faq">
               <li className="pb-4 text-[#595959] hover:text-[#5FA501] hover:translate-x-3 duration-200 ease-in-out">
                 Rehousers FAQ's
               </li>

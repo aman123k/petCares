@@ -89,7 +89,7 @@ const Header: React.FC = () => {
             </li>
             {rehouseList && <DropdownListRehouse />}
           </div>
-          <Link to="/" className="hover:text-[#5FA501]">
+          <Link to="/about" className="hover:text-[#5FA501]">
             <li>About us</li>
           </Link>
           <div
