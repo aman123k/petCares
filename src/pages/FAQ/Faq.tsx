@@ -15,7 +15,7 @@ function Faq() {
         </div>
         <section className=" grid grid-cols-2 gap-6 mt-16 max-[650px]:grid-cols-1">
           <Link
-            to="/"
+            to="/adopters-faqs"
             className=" group bg-white border p-14 rounded-xl flex flex-col gap-10 hover:drop-shadow-xl"
           >
             <div className="ml-[50%] translate-x-[-50%] w-max bg-[#AFD57D] group-hover:bg-[#5FA501] p-5 rounded-full">

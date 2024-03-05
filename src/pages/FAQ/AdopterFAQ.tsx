@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { FaPlus } from "react-icons/fa6";
 import { PiMinusBold } from "react-icons/pi";
 
-function RehouserFAQ() {
+function AdopterFAQ() {
   const [id, setId] = useState<number>();
   return (
     <>
@@ -14,7 +14,7 @@ function RehouserFAQ() {
         <section className=" bg-white px-10 py-4 rounded-lg drop-shadow-md font-Nunito">
           <div>
             <h1 className=" text-center py-3 font-bold text-2xl text-[#656565]">
-              FAQs for Rehousing a Pet
+              FAQs for Adopting a Pet
             </h1>
             <p className=" text-[#8a8787]">
               We hope our frequently asked questions will help you with any
@@ -182,8 +182,8 @@ function RehouserFAQ() {
             >
               <div className=" flex justify-between items-center gap-6 max-[650px]:items-start">
                 <h1 className=" font-semibold text-lg ">
-                  My pet isn't neutered, vaccinated or microchipped. Can I still
-                  list them with PetCares
+                  I've adopted a dog! I want to make sure that I'm giving them
+                  the best care, so what should I do next?
                 </h1>
                 <span className=" cursor-pointer text-[#5fa505] ">
                   {id !== 5 ? (
@@ -199,16 +199,64 @@ function RehouserFAQ() {
                 ${id === 5 ? "block" : "hidden"}`}
               >
                 <li>
-                  While we encourage complying with Indian legislation on pet
-                  neutering, microchipping, and vaccination before rehoming,
-                  we're here to assist regardless. Contact us for support in
-                  finding a loving home for your pet.
+                  We're glad that you want to give your new dog a great life.
+                </li>
+                <li>We recommend that you follow these steps:</li>
+                <li className=" font-bold text-black">
+                  Settling in your new dog
                 </li>
                 <li>
-                  Adopters prefer pets already neutered, microchipped, and
-                  vaccinated, easing their responsibility. Please consider this
-                  before rehoming. It enhances your pet's appeal for a loving
-                  family.
+                  The initial days in your home are crucial and unique for a
+                  pet. Your new dog will likely feel disoriented and uncertain
+                  about their surroundings and your expectations. Establishing
+                  clear routines and boundaries with your family is essential to
+                  ensure a smooth transition for your dog.
+                </li>
+                <li className=" font-bold text-black">
+                  Before You Bring Your Dog Home:
+                </li>
+                <li>
+                  When bringing home a new dog, designate a specific area where
+                  they'll spend most of their time, preferably in a kitchen or a
+                  room with an easy-to-clean floor. Prepare a dog crate if you
+                  plan on crate training. Ensure the space is dog-proofed,
+                  securing any potential hazards.
+                </li>
+                <li>
+                  Begin training your dog immediately, using consistent commands
+                  throughout the family to avoid confusion. Establish a routine
+                  and stick to it to provide structure for your new pet. It's
+                  essential to start training from day one to set expectations.
+                </li>
+                <li>
+                  Prior to bringing your dog home, equip them with an ID tag
+                  containing your phone number for added safety during
+                  transportation and the initial days. If your dog is
+                  microchipped, register your contact information with the
+                  microchip organization for extra security.
+                </li>
+                <li className=" text-black font-bold">The First Day:</li>
+                <li>
+                  When bringing a new pet home, allow them time to decompress
+                  and adjust to their new environment before introducing them to
+                  strangers. Educate children on safe approaches to the dog and
+                  ensure a calm atmosphere.
+                </li>
+                <li>
+                  Maintain the existing feeding schedule initially to prevent
+                  digestive issues. If changing food brands, gradually
+                  transition over a week to avoid upsetting their stomach.
+                  Secure your dog in a crate during car rides to alleviate
+                  stress. Upon arrival, guide them to their toileting area and
+                  spend time helping them acclimate. Expect accidents as they
+                  adjust to their new surroundings.
+                </li>
+                <li>
+                  During the first days, maintain a calm environment, limiting
+                  excitement and giving your dog time to settle in. Invest
+                  patience in the settling process, understanding it may take
+                  weeks for them to adjust. Be prepared to offer comfort and
+                  support as they acclimate to their new home.
                 </li>
               </ul>
             </div>
@@ -218,8 +266,8 @@ function RehouserFAQ() {
             >
               <div className=" flex justify-between items-center gap-6 max-[650px]:items-start">
                 <h1 className=" font-semibold text-lg ">
-                  I'm having trouble uploading photos from my iPhone to
-                  PetCares. What can I do?
+                  I've adopted a rabbit! I want to make sure that I'm giving
+                  them the best care, so what should I do next?
                 </h1>
                 <span className=" cursor-pointer text-[#5fa505] ">
                   {id !== 6 ? (
@@ -235,21 +283,15 @@ function RehouserFAQ() {
                 ${id === 6 ? "block" : "hidden"}`}
               >
                 <li>
-                  Some people using iPhones to take photos will be saving their
-                  photos as HEIC files. PetCares, like many other platforms, can
-                  only accept .jpg .jpeg or .png files.
-                </li>
-                <li>
-                  To change your camera settings on your iPhone so that photos
-                  are saved as .JPEG's you will need to do the following:
-                </li>
-                <li>
-                  In your "Settings" menu, find and tap on "Camera". In the
-                  "Camera" menu, tap on "Formats" at the very top of the menu.
-                  Here you can select either "High Efficiency" which will allow
-                  your iPhone to shoot and store HEIC files, or "Most
-                  Compatible", which will have your phone capture JPEG's. re
-                  wirte in same number of pera and words
+                  We're glad that you want to give your new rabbit a great life.
+                  For information about how to care for a rabbit and preparing
+                  for your new rabbit{" "}
+                  <Link
+                    to="/preparing-for-your-rabbit"
+                    className=" text-[#5fa505] font-bold"
+                  >
+                    click here
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -259,7 +301,8 @@ function RehouserFAQ() {
             >
               <div className=" flex justify-between items-center gap-6 max-[650px]:items-start">
                 <h1 className=" font-semibold text-lg ">
-                  Do I have to pay a fee to rehouse my pet through PetCares?
+                  I've adopted a cat! I want to make sure that I'm giving them
+                  the best care, so what should I do next?
                 </h1>
                 <span className=" cursor-pointer text-[#5fa505] ">
                   {id !== 7 ? (
@@ -275,9 +318,15 @@ function RehouserFAQ() {
                 ${id === 7 ? "block" : "hidden"}`}
               >
                 <li>
-                  Instead of you paying, the person adopting your pet will pay a
-                  fee similar to what rescue centers charge. We think this is
-                  fair.
+                  We're glad that you want to give your new cat a great life.
+                  For information about how to care for a cat and preparing for
+                  your new cat{" "}
+                  <Link
+                    to="/preparing-for-your-cat"
+                    className=" text-[#96C830] font-bold"
+                  >
+                    click here
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -287,8 +336,8 @@ function RehouserFAQ() {
             >
               <div className=" flex justify-between items-center gap-6 max-[650px]:items-start">
                 <h1 className=" font-semibold text-lg ">
-                  My pet has behavioural problems. Can I use the PetCares
-                  website to find them a new home?
+                  I've adopted a parrot! I want to make sure that I'm giving
+                  them the best care, so what should I do next?
                 </h1>
                 <span className=" cursor-pointer text-[#5fa505] ">
                   {id !== 8 ? (
@@ -304,22 +353,15 @@ function RehouserFAQ() {
                 ${id === 8 ? "block" : "hidden"}`}
               >
                 <li>
-                  If your pet is{" "}
-                  <span className=" font-bold">
-                    aggressive, dangerous or too difficult
-                  </span>{" "}
-                  for you to manage, you should
-                  <span className=" font-bold">
-                    speak to a rescue organisation
-                  </span>{" "}
-                  immediately and you
-                  <span className=" font-bold"> must not</span> list your pet
-                  here.
-                </li>
-                <li>
-                  We connect people who want to rehome pets with those looking
-                  to adopt through our website. We don't evaluate behavior, so
-                  we rely on honesty about pets' temperaments.
+                  We're glad that you want to give your new parrot a great life.
+                  For information about how to care for a parrot and preparing
+                  for your new parrot{" "}
+                  <Link
+                    to="/preparing-for-your-parrot"
+                    className=" text-[#96C830] font-bold"
+                  >
+                    click here
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -329,7 +371,7 @@ function RehouserFAQ() {
             >
               <div className=" flex justify-between items-center gap-6 max-[650px]:items-start">
                 <h1 className=" font-semibold text-lg ">
-                  How do I delete my Account ?
+                  Why do I have to pay an adoption fee before I get the pet?
                 </h1>
                 <span className=" cursor-pointer text-[#5fa505] ">
                   {id !== 9 ? (
@@ -343,6 +385,128 @@ function RehouserFAQ() {
                 className={`py-2.5 flex flex-col gap-3  text-sm text-[#646060]
                 duration-300 ease-in-out tracking-wide
                 ${id === 9 ? "block" : "hidden"}`}
+              >
+                <li>
+                  We want people to adopt pets responsibly. By paying the fee at
+                  this point in the process, you're demonstrating to the
+                  rehouser that you are very serious about adopting their pet.
+                </li>
+                <li>
+                  We know from our research that it can be very frustrating if
+                  you are one of many people trying to adopt the same pet. Your
+                  payment stops any further applications from being made, and
+                  the pet is reserved for you. Assuming all is well with the
+                  home check, you can then meet the pet and proceed with the
+                  adoption.
+                </li>
+                <li>
+                  We will hold the fee safely and securely in an account which
+                  will be <span className=" font-bold"> fully refunded </span>{" "}
+                  to you if you don't end up adopting the pet.
+                </li>
+                <li>
+                  By paying the fee to us at this stage, it will also deter
+                  scammers from using the website.
+                </li>
+              </ul>
+            </div>
+            <div
+              className=" border-b-2 border-dotted py-5 cursor-pointer"
+              onClick={() => (id === 10 ? setId(0) : setId(10))}
+            >
+              <div className=" flex justify-between items-center gap-6 max-[650px]:items-start">
+                <h1 className=" font-semibold text-lg ">
+                  How does PetCares deal with scammers or pet sellers?
+                </h1>
+                <span className=" cursor-pointer text-[#5fa505] ">
+                  {id !== 10 ? (
+                    <FaPlus className=" text-2xl" />
+                  ) : (
+                    <PiMinusBold className=" text-2xl" />
+                  )}
+                </span>
+              </div>
+              <ul
+                className={`py-2.5 flex flex-col gap-3  text-sm text-[#646060]
+                duration-300 ease-in-out tracking-wide
+                ${id === 10 ? "block" : "hidden"}`}
+              >
+                <li>
+                  The PetCares team monitors the messaging and profiles on our
+                  website. Anyone flagged as a potential scammer or pet seller
+                  is suspended and removed from our website.{" "}
+                  <span className=" font-bold">
+                    {" "}
+                    For safety reasons we strongly advise not to participate in
+                    any messaging or meeting up outside of the site.
+                  </span>
+                </li>
+                <li>
+                  PetCares is strictly for rehousing pets responsibly, and will
+                  never be for the sale of pets.
+                </li>
+              </ul>
+            </div>
+            <div
+              className=" border-b-2 border-dotted py-5 cursor-pointer"
+              onClick={() => (id === 11 ? setId(0) : setId(11))}
+            >
+              <div className=" flex justify-between items-center gap-6 max-[650px]:items-start">
+                <h1 className=" font-semibold text-lg ">
+                  Does PetCares verify the pet's health record before listing?
+                </h1>
+                <span className=" cursor-pointer text-[#5fa505] ">
+                  {id !== 11 ? (
+                    <FaPlus className=" text-2xl" />
+                  ) : (
+                    <PiMinusBold className=" text-2xl" />
+                  )}
+                </span>
+              </div>
+              <ul
+                className={`py-2.5 flex flex-col gap-3  text-sm text-[#646060]
+                duration-300 ease-in-out tracking-wide
+                ${id === 11 ? "block" : "hidden"}`}
+              >
+                <li>
+                  No, we ask the pet's owner to be honest about any health
+                  issues or concerns they may have (or have had) and include the
+                  information in the listing.
+                </li>
+                <li>
+                  We strongly advise that prior to confirming any adoption (and
+                  after reserving the pet) you ask the rehouser to show you any
+                  relevant documentation about the pet including any vet
+                  records. You can also ask the rehouser to give you the vet's
+                  telephone number so that you can make your own enquiries if
+                  you wish to do so.
+                </li>
+                <li>
+                  If you don't do this, you cannot go back to the rehomer after
+                  you have accepted and adopted the pet.
+                </li>
+              </ul>
+            </div>
+            <div
+              className=" border-b-2 border-dotted py-5 cursor-pointer"
+              onClick={() => (id === 12 ? setId(0) : setId(12))}
+            >
+              <div className=" flex justify-between items-center gap-6 max-[650px]:items-start">
+                <h1 className=" font-semibold text-lg ">
+                  How do I delete my Account ?
+                </h1>
+                <span className=" cursor-pointer text-[#5fa505] ">
+                  {id !== 12 ? (
+                    <FaPlus className=" text-2xl" />
+                  ) : (
+                    <PiMinusBold className=" text-2xl" />
+                  )}
+                </span>
+              </div>
+              <ul
+                className={`py-2.5 flex flex-col gap-3  text-sm text-[#646060]
+                duration-300 ease-in-out tracking-wide
+                ${id === 12 ? "block" : "hidden"}`}
               >
                 <li>
                   Please{" "}
@@ -364,4 +528,4 @@ function RehouserFAQ() {
   );
 }
 
-export default RehouserFAQ;
+export default AdopterFAQ;

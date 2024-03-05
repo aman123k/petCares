@@ -43,6 +43,7 @@ import Confirm from "./pages/ListPetToRehouse/Confirm";
 import About from "./pages/About";
 import RehouserFAQ from "./pages/FAQ/RehouserFAQ";
 import { ChatContextProvider } from "./globleContext/ChatContext";
+import AdopterFAQ from "./pages/FAQ/AdopterFAQ";
 
 function App() {
   const clintId = process.env.REACT_APP_GOOGLE_CLIENT_ID as string;
@@ -125,6 +126,7 @@ function App() {
                   <Route path="/p" element={<P />} />
                   <Route path="/about" element={<About />} />
                   <Route path="/rehousers-faq" element={<RehouserFAQ />} />
+                  <Route path="/adopters-faqs" element={<AdopterFAQ />} />
                 </Routes>
               </ChatContextProvider>
             </ListingContextProvider>
