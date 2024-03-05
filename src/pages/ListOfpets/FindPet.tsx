@@ -1,22 +1,17 @@
-import React, { useContext } from "react";
+import React from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import CardForPet from "./CardForPet";
 import { FaAngleDown } from "react-icons/fa";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import InfiniteScroll from "react-infinite-scroll-component";
-import {
-  FindingPetContext,
-  PetsdataType,
-} from "../../globleContext/FindPetContext";
+import loader from "../../images/loader.gif";
+import useRecivePets from "../../customHooks/RecivePetsData";
 
 function FindPet() {
-  const { fetchPetData, allPetsdata, totalDoc } = useContext(
-    FindingPetContext
-  ) as {
-    fetchPetData: () => {};
-    allPetsdata: Array<PetsdataType>;
-    totalDoc: number;
+  const { allPetsdata, setPage, totalDoc } = useRecivePets();
+  const hasModedata = () => {
+    setPage((pre) => pre + 1);
   };
 
   return (
@@ -55,9 +50,18 @@ function FindPet() {
           </div>
         </section>
         <InfiniteScroll
-          next={fetchPetData}
+          next={hasModedata}
           hasMore={allPetsdata.length < (totalDoc ?? 0)}
-          loader={<h4>Loading...</h4>}
+          pullDownToRefreshThreshold={1000000}
+          loader={
+            <h1 className="pb-8">
+              <img
+                src={loader}
+                className=" h-16 w-16 absolute left-[50%] translate-x-[-50%] "
+                alt=""
+              />
+            </h1>
+          }
           dataLength={allPetsdata.length}
           className=" grid grid-cols-3 justify-center max-[650px]:grid-cols-1
             max-[650px]:px-8 max-[650px]:gap-y-4 max-[650px]:py-8 gap-8 min-[1200px]:grid-cols-4 px-10 py-14"
@@ -67,8 +71,9 @@ function FindPet() {
           })}
         </InfiniteScroll>
       </section>
-
-      <Footer />
+      <section id="footer">
+        <Footer />
+      </section>
     </>
   );
 }

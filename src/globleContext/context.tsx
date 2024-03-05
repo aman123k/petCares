@@ -1,9 +1,21 @@
-import React, { createContext, useCallback, useState } from "react";
+import React, { createContext, useCallback, useState, useEffect } from "react";
 import { User } from "../interface/interface";
 
-const ThemeContext = createContext<object>({});
+const ThemeContext = createContext<{
+  getUser: () => Promise<void>;
+  userDetails: User | undefined;
+  loading: boolean;
+  setUserDetails: React.Dispatch<React.SetStateAction<User | undefined>>;
+}>({
+  getUser: async () => {},
+  userDetails: undefined,
+  loading: true,
+  setUserDetails: () => {},
+});
 
-function ThemeContextProvider(props: { children: React.ReactNode }) {
+const ThemeContextProvider: React.FC<{ children: React.ReactNode }> = (
+  props
+) => {
   const [userDetails, setUserDetails] = useState<User | undefined>(undefined);
   const [loading, setLoading] = useState<boolean>(true);
 
@@ -15,18 +27,23 @@ function ThemeContextProvider(props: { children: React.ReactNode }) {
       });
       const result = await response.json();
       if (result?.success) {
-        setLoading(true);
         setUserDetails(result.response);
+        setLoading(false); // Adjusted the setLoading call position
       } else {
         setUserDetails(undefined);
         setLoading(false);
       }
     } catch (error) {
+      console.log("Error fetching user data:", error);
       setLoading(false);
       setUserDetails(undefined);
-      console.log("Error fetching user data:", error);
     }
   }, []);
+
+  // Fetch user data on component mount
+  useEffect(() => {
+    getUser();
+  }, [getUser]);
 
   return (
     <ThemeContext.Provider
@@ -35,6 +52,8 @@ function ThemeContextProvider(props: { children: React.ReactNode }) {
       {props.children}
     </ThemeContext.Provider>
   );
-}
+};
 
-export { ThemeContext, ThemeContextProvider };
+// Custom hook to use the theme context
+
+export { ThemeContextProvider, ThemeContext };

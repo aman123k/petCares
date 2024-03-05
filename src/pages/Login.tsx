@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub, FaRegEyeSlash } from "react-icons/fa6";
 import { MdOutlineEmail } from "react-icons/md";
-import { Toaster } from "react-hot-toast";
+import toast, { Toaster } from "react-hot-toast";
 import useLogin from "../customHooks/loginFunction";
 import { UserLoginData } from "../interface/interface";
 import { HiOutlineEye } from "react-icons/hi2";
@@ -32,6 +32,10 @@ function Login() {
   };
   const handleSubmit = (e: React.FormEvent<HTMLElement>): void => {
     e.preventDefault();
+    if (!userInfo.username) {
+      toast.error("Please enter name");
+      return;
+    }
     login();
   };
 

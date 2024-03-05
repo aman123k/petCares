@@ -4,10 +4,13 @@ import { FaRegHeart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import addFavourite from "../../function/addFaviourite";
 import { Toaster } from "react-hot-toast";
+import getTime from "../../function/getTime";
 interface petList {
   _id: string;
   petImage: string[];
   characteristics: { petAge: number; petBreed: string; petName: string };
+  postAddTime: string;
+  Auth: { name: string };
 }
 
 function CardForPet({ PetsData }: { PetsData: petList }) {
@@ -43,7 +46,7 @@ function CardForPet({ PetsData }: { PetsData: petList }) {
               {PetsData.characteristics.petBreed}
             </h3>
             <h1 className=" capitalize font-bold text-[#595959] text-xl my-1">
-              {PetsData.characteristics.petName}
+              {PetsData.Auth.name}
             </h1>
             <div className=" flex items-center gap-2 text-[#8d8c8c] text-sm font-semibold tracking-wide">
               <CiLocationOn /> Milton Keynes
@@ -51,7 +54,7 @@ function CardForPet({ PetsData }: { PetsData: petList }) {
           </div>
           <div className=" border-t text-[#8d8c8c] py-4">
             <h6 className=" text-sm my-1 font-semibold">Ad Posted</h6>
-            <p className=" text-[#595959]">today</p>
+            <p className=" text-[#595959]">{getTime(PetsData.postAddTime)}</p>
           </div>
         </Link>
       </section>

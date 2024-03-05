@@ -126,11 +126,17 @@ const Header: React.FC = () => {
                 src={userDetails?.picture}
                 alt=""
                 className=" overflow-hidden h-10 w-10 rounded-full  "
+                onClick={() => {
+                  setOpenMenu(true);
+                }}
               />
             ) : (
               <div
                 className=" text-white h-10 w-10 bg-[#B9C2CA] text-center  rounded-full
               font-bold  flex justify-center items-center tex-center drop-shadow-lg"
+                onClick={() => {
+                  setOpenMenu(true);
+                }}
               >
                 {userDetails?.username?.split(" ")[0]?.charAt(0)}
                 {userDetails?.username?.split(" ")[1]?.charAt(0)}

@@ -39,9 +39,10 @@ import ThirdStep from "./pages/ListPetToRehouse/ThirdStep";
 import PreparingParrot from "./pages/Animal/PreparingParrot";
 import P from "./P";
 import Confirm from "./pages/ListPetToRehouse/Confirm";
-import { FindingContextProvider } from "./globleContext/FindPetContext";
+
 import About from "./pages/About";
 import RehouserFAQ from "./pages/FAQ/RehouserFAQ";
+import { ChatContextProvider } from "./globleContext/ChatContext";
 
 function App() {
   const clintId = process.env.REACT_APP_GOOGLE_CLIENT_ID as string;
@@ -51,7 +52,7 @@ function App() {
         <BrowserRouter>
           <ThemeContextProvider>
             <ListingContextProvider>
-              <FindingContextProvider>
+              <ChatContextProvider>
                 <Routes>
                   <Route path="/" element={<Home />} />
                   <Route path="/login" element={<Login />} />
@@ -106,6 +107,7 @@ function App() {
                   <Route path="/dashboard" element={<Dashboard />} />
                   <Route path="/profile" element={<Profile />} />
                   <Route path="/messages" element={<Messages />} />
+                  <Route path="/messages/:id" element={<Messages />} />
                   <Route path="/favourites" element={<Favourites />} />
                   <Route path="/forgot-password" element={<ForgetPass />} />
                   <Route path="/adopt-a-pet" element={<FindPet />} />
@@ -124,7 +126,7 @@ function App() {
                   <Route path="/about" element={<About />} />
                   <Route path="/rehousers-faq" element={<RehouserFAQ />} />
                 </Routes>
-              </FindingContextProvider>
+              </ChatContextProvider>
             </ListingContextProvider>
           </ThemeContextProvider>
         </BrowserRouter>

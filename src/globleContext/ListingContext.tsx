@@ -1,9 +1,63 @@
 import React, { createContext, useState } from "react";
 import { Characteristics, KeyFacts } from "../interface/interface";
 
-const ListingContext = createContext<object>({});
+interface ListingContextType {
+  pet: string;
+  setPet: React.Dispatch<React.SetStateAction<string>>;
+  reason: string;
+  setReason: React.Dispatch<React.SetStateAction<string>>;
+  time: string;
+  setTime: React.Dispatch<React.SetStateAction<string>>;
+  handleChange: (
+    e: React.ChangeEvent<HTMLSelectElement | HTMLInputElement>
+  ) => void;
+  petImage: string[];
+  setPetImage: React.Dispatch<React.SetStateAction<string[]>>;
+  petStory: string;
+  setPetStory: React.Dispatch<React.SetStateAction<string>>;
+  characteristics: Characteristics;
+  setCharacteristics: React.Dispatch<React.SetStateAction<Characteristics>>;
+  keyFact: KeyFacts;
+  setKeyFact: React.Dispatch<React.SetStateAction<KeyFacts>>;
+}
 
-function ListingContextProvider(props: { children: React.ReactNode }) {
+const ListingContext = createContext<ListingContextType>({
+  pet: "",
+  setPet: () => {},
+  reason: "",
+  setReason: () => {},
+  time: "",
+  setTime: () => {},
+  handleChange: () => {},
+  petImage: [],
+  setPetImage: () => {},
+  petStory: "",
+  setPetStory: () => {},
+  characteristics: {
+    petName: "",
+    petAge: 0,
+    petSize: "",
+    petColor: "",
+    petSex: "",
+    petBreed: "",
+  },
+  setCharacteristics: () => {},
+  keyFact: {
+    Microchipped: "",
+    HouseTrained: "",
+    GoodWithCat: "",
+    GoodWithDog: "",
+    GoodWithChild: "",
+    SpeciallNeed: "",
+    BehaviourIssues: "",
+    purebred: "",
+  },
+  setKeyFact: () => {},
+});
+
+const ListingContextProvider: React.FC<{ children: React.ReactNode }> = (
+  props
+) => {
   const [pet, setPet] = useState<string>("");
   const [reason, setReason] = useState<string>("");
   const [time, setTime] = useState<string>("");
@@ -60,6 +114,6 @@ function ListingContextProvider(props: { children: React.ReactNode }) {
       {props.children}
     </ListingContext.Provider>
   );
-}
+};
 
 export { ListingContext, ListingContextProvider };

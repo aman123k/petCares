@@ -1,40 +1,45 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import { FaRegHeart } from "react-icons/fa";
 import { IoMdArrowRoundBack } from "react-icons/io";
 import { FaHeart } from "react-icons/fa";
 import Slider from "./Slider";
-import {
-  FindingPetContext,
-  PetsdataType,
-} from "../../globleContext/FindPetContext";
 import getFavourites from "../../function/getFaviourite";
 import addFavourite from "../../function/addFaviourite";
 import { Toaster } from "react-hot-toast";
 import { ThemeContext } from "../../globleContext/context";
 import { User } from "../../interface/interface";
+import { GoPerson } from "react-icons/go";
+import checkfee from "../../function/checkFeeFun";
+import useCreateChat from "../../customHooks/CreateChat";
+import useRecivePets, { PetsdataType } from "../../customHooks/RecivePetsData";
+const url = process.env.REACT_APP_URL as string;
 
 function PetDetails() {
   const { id } = useParams();
   const { userDetails }: { userDetails?: User } = useContext(ThemeContext);
   const [showImage, setShowImage] = useState<boolean>(false);
-  const { allPetsdata } = useContext(FindingPetContext) as {
-    allPetsdata: Array<PetsdataType>;
-  };
+  // const navigator = useNavigate();
+  const { allPetsdata } = useRecivePets();
   const [favourites, setFavourites] = useState<Array<PetsdataType> | null>(
     null
   );
   const [currentPetsInfo, setCurentPetInfo] = useState<
     PetsdataType | undefined | null
   >();
+  const free = checkfee(
+    currentPetsInfo?.petType,
+    currentPetsInfo?.characteristics.petAge
+  );
   useEffect(() => {
     getFavourites({ setItems: setFavourites });
   }, []);
   const petdata: PetsdataType = allPetsdata.filter(
     (pets) => pets._id === id
   )[0];
+
   const favPet: PetsdataType | null =
     favourites?.filter((pets) => pets._id === id)[0] ?? null;
   useEffect(() => {
@@ -45,6 +50,7 @@ function PetDetails() {
     }
   }, [petdata, favPet]);
   const [showFav, setShowFav] = useState<boolean>(false);
+
   useEffect(() => {
     if (currentPetsInfo?.Favourites?.includes(userDetails?.email ?? "")) {
       setShowFav(
@@ -52,6 +58,8 @@ function PetDetails() {
       );
     }
   }, [currentPetsInfo, userDetails]);
+
+  const { chat } = useCreateChat({ url, email: currentPetsInfo?.Auth?.email });
 
   return (
     <section
@@ -206,7 +214,7 @@ function PetDetails() {
             <div className=" grid grid-cols-2 gap-6"></div>
           </div>
         </section>
-        <section className="w-[35%] font-Nunito max-[650px]:w-full max-[650px]:mt-5">
+        <section className="w-[35%] font-Nunito max-[650px]:w-full flex-col flex gap-5 max-[650px]:mt-5">
           <div className=" bg-white drop-shadow-md px-6 py-4 rounded-lg">
             <h1 className=" my-4 text-[#595959] font-bold text-lg">
               Animal Location
@@ -215,10 +223,55 @@ function PetDetails() {
               I'm being cared for by:
             </p>
             <p className=" my-2 text-[#595959] font-bold text-lg">
-              Private Owner, Glasgow
+              Private Owner, {currentPetsInfo?.Auth?.name}
             </p>
-            <p className=" text-[#96C830] font-bold text-lg">Adoption Fee: </p>
+            <div className=" flex justify-between items-center">
+              <p className=" text-[#96C830] font-bold text-lg">
+                Adoption Fee:{" "}
+                {currentPetsInfo?.petType === "parrot"
+                  ? "₹ 1200"
+                  : currentPetsInfo?.petType === "rabbit"
+                  ? "₹ 500"
+                  : ""}
+                {free}
+              </p>
+              {currentPetsInfo?.Auth?.email !== userDetails?.email ? (
+                <button
+                  className="bg-[#96C830] text-white px-3 py-1.5 font-semibold rounded-lg
+              border-[#96C830] border-2 hover:bg-white hover:text-[#96C830]"
+                  onClick={() => chat()}
+                >
+                  Chat with owner
+                </button>
+              ) : (
+                ""
+              )}
+            </div>
           </div>
+          {!userDetails && (
+            <div
+              className=" bg-white drop-shadow-md px-6 py-4 rounded-lg flex-col flex
+           gap-5 p-3 font-Nunito"
+            >
+              <h1 className="text-[#595959] font-bold text-lg">
+                Thinking about adoption...
+              </h1>
+              <p className=" tracking-wide text-[#A49F9F] font-semibold text-[1rem]">
+                If you would like to make an application, please log in or
+                register. As a first step, you will need to complete your
+                adopter's profile.
+              </p>
+
+              <Link
+                to="/login"
+                className=" text-white bg-[#96C830] font-bold  py-2 border-[#96C830] border-2
+                flex items-center gap-2 tracking-wide rounded-lg hover:text-[#96C830]
+                hover:bg-white justify-center"
+              >
+                <GoPerson className=" text-xl" /> Login to Apply
+              </Link>
+            </div>
+          )}
         </section>
       </section>
       <Footer />

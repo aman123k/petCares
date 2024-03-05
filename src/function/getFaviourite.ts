@@ -1,5 +1,5 @@
 import toast from "react-hot-toast";
-import { PetsdataType } from "../globleContext/FindPetContext";
+import { PetsdataType } from "../customHooks/RecivePetsData";
 
 const getFavourites = async ({
   setItems,

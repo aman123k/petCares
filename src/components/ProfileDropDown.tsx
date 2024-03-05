@@ -7,7 +7,8 @@ import { Toaster } from "react-hot-toast";
 
 function Profiledropdown() {
   const { userDetails }: { userDetails?: User } = useContext(ThemeContext);
-  const { logOut } = useLogOut("http://localhost:8080/logOut");
+  const url = process.env.REACT_APP_URL as string;
+  const { logOut } = useLogOut(`${url}/logOut`);
 
   return (
     <>

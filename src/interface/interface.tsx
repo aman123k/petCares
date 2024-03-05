@@ -39,6 +39,7 @@ export type User = {
   picture: string;
   registerType: string[];
   loginType: string;
+  _id: string;
 };
 
 export type Characteristics = {
@@ -60,3 +61,20 @@ export type KeyFacts = {
   BehaviourIssues: string;
   purebred: string;
 };
+export interface ChatConnection {
+  _id: string;
+  firstUser: {
+    username: string;
+    email: string;
+    picture: string;
+  };
+  secondUser: {
+    username: string;
+    email: string;
+    picture: string;
+  };
+  userEmail: string[];
+  isBlock: string;
+  lastMessage: string;
+  time: string;
+}

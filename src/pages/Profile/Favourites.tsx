@@ -4,8 +4,8 @@ import Footer from "../../components/Footer";
 import { Link } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import getFavourites from "../../function/getFaviourite";
-import { PetsdataType } from "../../globleContext/FindPetContext";
 import CardForPet from "../ListOfpets/CardForPet";
+import { PetsdataType } from "../../customHooks/RecivePetsData";
 
 function Favourites() {
   const [favourites, setFavourites] = useState<Array<PetsdataType> | null>(

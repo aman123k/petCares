@@ -1,19 +1,25 @@
-import React from "react";
+import React, { useContext } from "react";
 import { RxCross2 } from "react-icons/rx";
 import { Link } from "react-router-dom";
 import logo from "../images/logo.png";
 import { ImPencil } from "react-icons/im";
 import { MdPersonOutline } from "react-icons/md";
+import { User } from "../interface/interface";
+import { ThemeContext } from "../globleContext/context";
+import useLogOut from "../customHooks/logOutFun";
 
-interface ParentComponentProps {
+export interface ParentComponentProps {
   openMenu: boolean;
   setOpenMenu: React.Dispatch<React.SetStateAction<boolean>>;
 }
-
+const url = process.env.REACT_APP_URL as string;
 const Mobilemenu: React.FC<ParentComponentProps> = ({
   openMenu,
   setOpenMenu,
 }) => {
+  const { userDetails }: { userDetails?: User } = useContext(ThemeContext);
+  const { logOut } = useLogOut(`${url}/logOut`);
+
   return (
     <>
       <section
@@ -96,23 +102,62 @@ const Mobilemenu: React.FC<ParentComponentProps> = ({
                 Contact PetCares
               </li>
             </Link>
-            <Link to="/">
+            <Link to="/about">
               <li className=" border-b py-4 hover:bg-[#F7F7F7] text-sm font-semibold px-6">
                 About Us
               </li>
             </Link>
-            <Link to="/login">
-              <li className=" border-b py-4 flex items-center gap-2 hover:bg-[#F7F7F7] text-sm font-semibold px-6">
-                <MdPersonOutline className=" text-xl" />
-                Login
-              </li>
-            </Link>
-            <Link to="/register">
-              <li className=" border-b py-4 flex items-center gap-2 hover:bg-[#F7F7F7] text-sm font-semibold px-6">
-                <ImPencil />
-                Register
-              </li>
-            </Link>
+            {!userDetails ? (
+              <>
+                <Link to="/login">
+                  <li className=" border-b py-4 flex items-center gap-2 hover:bg-[#F7F7F7] text-sm font-semibold px-6">
+                    <MdPersonOutline className=" text-xl" />
+                    Login
+                  </li>
+                </Link>
+                <Link to="/register">
+                  <li className=" border-b py-4 flex items-center gap-2 hover:bg-[#F7F7F7] text-sm font-semibold px-6">
+                    <ImPencil />
+                    Register
+                  </li>
+                </Link>
+              </>
+            ) : (
+              <>
+                <Link to="/dashboard">
+                  <li className=" border-b py-4 flex items-center gap-2 hover:bg-[#F7F7F7] text-sm font-semibold px-6">
+                    My Dashboard
+                  </li>
+                </Link>
+                <Link to="/messages">
+                  <li className=" border-b py-4 flex items-center gap-2 hover:bg-[#F7F7F7] text-sm font-semibold px-6">
+                    My Messages
+                  </li>
+                </Link>
+                <Link to="/profile">
+                  <li className=" border-b py-4 flex items-center gap-2 hover:bg-[#F7F7F7] text-sm font-semibold px-6">
+                    My Profile
+                  </li>
+                </Link>
+                <Link to="/notification">
+                  <li className=" border-b py-4 flex items-center gap-2 hover:bg-[#F7F7F7] text-sm font-semibold px-6">
+                    My Notification
+                  </li>
+                </Link>
+                <Link to="/favourites">
+                  <li className=" border-b py-4 flex items-center gap-2 hover:bg-[#F7F7F7] text-sm font-semibold px-6">
+                    Favourites
+                  </li>
+                </Link>
+
+                <li
+                  className=" cursor-pointer py-4 flex items-center gap-2 hover:bg-[#F7F7F7] text-sm font-semibold px-6"
+                  onClick={() => logOut()}
+                >
+                  Log out
+                </li>
+              </>
+            )}
           </ul>
         </nav>
       </section>
