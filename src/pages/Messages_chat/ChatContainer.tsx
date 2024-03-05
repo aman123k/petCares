@@ -4,7 +4,7 @@ import ChatFooter from "./helper/ChatFooter";
 import { useParams } from "react-router-dom";
 import { ChatContext } from "../../globleContext/ChatContext";
 import getTime from "../../function/getTime";
-import { User } from "../../interface/interface";
+import { ChatConnection, User } from "../../interface/interface";
 import { ThemeContext } from "../../globleContext/context";
 import { IoArrowDown } from "react-icons/io5";
 import useGetMessages from "../../customHooks/GetMessages";
@@ -17,9 +17,16 @@ function ChatContainer() {
   const { allMessages, messages, setMessages, intialmessage } = useGetMessages({
     id,
   });
+
+  const { connections } = useContext(ChatContext) as {
+    connections: Array<ChatConnection>;
+  };
   const [showScroll, setShowScroll] = useState<boolean>(false);
   const scrollRef = useRef<HTMLDivElement>(null);
   const [time, setTime] = useState<string>("");
+  const chatUser = connections?.filter((connection) => {
+    return connection?._id === id;
+  })[0];
 
   useEffect(() => {
     socket.current?.on("message", (user) => {
@@ -64,7 +71,7 @@ function ChatContainer() {
       <ChatHeader />
       <section
         className="h-[calc(100vh-160px-72px-84px)] relative overflow-y-scroll
-      bg-[#EEEEEE] max-[650px]:h-[calc(100vh-104px-72px-84px)] "
+      bg-[#EEEEEE] max-[650px]:h-[calc(100vh-104px-72px-84px)] pb-2"
         ref={scrollRef}
       >
         <section className=" py-4 px-5 font-Nunito flex flex-col gap-4">
@@ -166,6 +173,28 @@ function ChatContainer() {
         >
           <IoArrowDown className="text-xl" />
         </button>
+        {chatUser?.isBlock.includes(chatUser?.firstUser.email) ? (
+          <div
+            className="p-1.5 ml-[50%] w-max  
+            translate-x-[-50% text-center rounded-lg text-[12px] bg-white"
+          >
+            {chatUser.firstUser.email !== userDetails?.email
+              ? `You block ${chatUser.firstUser.username}`
+              : `${chatUser.secondUser.username} block You`}
+          </div>
+        ) : null}
+        {chatUser?.isBlock.includes(chatUser?.secondUser.email) ? (
+          <div
+            className="p-1.5 ml-[50%] w-max  mt-2
+            translate-x-[-50% text-center rounded-lg text-[12px] bg-white"
+          >
+            {chatUser.secondUser.email !== userDetails?.email
+              ? `You block ${chatUser.firstUser.username}`
+              : `${chatUser.secondUser.username} block You`}
+          </div>
+        ) : (
+          ""
+        )}
       </section>
       <ChatFooter />
     </section>

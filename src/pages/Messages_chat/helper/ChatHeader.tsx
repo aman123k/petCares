@@ -51,7 +51,8 @@ function ChatHeader() {
                     onClick={() => navegator("/messages")}
                   />
                   <>
-                    {chats?.firstUser?.picture ? (
+                    {chats?.firstUser?.picture &&
+                    !chats.isBlock.includes(chats.secondUser.email) ? (
                       <img
                         src={chats.firstUser.picture}
                         alt=""
@@ -75,7 +76,10 @@ function ChatHeader() {
                       {chats.firstUser.username}
                     </h1>
                     <p className=" text-[#787272] text-sm tracking-wide">
-                      {online.includes(chats?.firstUser?.email) ? "online" : ""}
+                      {online.includes(chats?.firstUser?.email) &&
+                      !chats.isBlock.includes(chats.secondUser.email)
+                        ? "online"
+                        : ""}
                     </p>
                   </div>
                 </div>
@@ -96,7 +100,8 @@ function ChatHeader() {
                     onClick={() => navegator("/messages")}
                   />
                   <>
-                    {chats?.secondUser?.picture ? (
+                    {chats?.secondUser?.picture &&
+                    !chats.isBlock.includes(chats.firstUser.email) ? (
                       <img
                         src={chats.secondUser.picture}
                         alt=""
@@ -119,7 +124,8 @@ function ChatHeader() {
                       {chats.secondUser.username}
                     </h1>
                     <p className=" text-[#787272] text-sm tracking-wide">
-                      {online.includes(chats?.secondUser?.email)
+                      {online.includes(chats?.secondUser?.email) &&
+                      !chats.isBlock.includes(chats.firstUser.email)
                         ? "online"
                         : ""}
                     </p>

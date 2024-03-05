@@ -8,6 +8,8 @@ import { HiOutlineMailOpen } from "react-icons/hi";
 import { MdOutlineDelete } from "react-icons/md";
 import { MdBlock } from "react-icons/md";
 import useDeleteChat from "../../../customHooks/deleteChat";
+import useBlock from "../../../customHooks/blockUser";
+import { Toaster } from "react-hot-toast";
 
 const UserProfile = ({
   setOpenMenu,
@@ -24,6 +26,7 @@ const UserProfile = ({
   });
   const { userDetails }: { userDetails?: User } = useContext(ThemeContext);
   const { deleteChat } = useDeleteChat({ id, url: `${url}/deleteChat` });
+  const { blockUser } = useBlock({ id, url: `${url}/blockUser` });
 
   return (
     <section className=" h-full overflow-y-scroll font-Nunito">
@@ -40,7 +43,8 @@ const UserProfile = ({
             return (
               <section key={index} className=" bg-red-50 w-full h-96">
                 <>
-                  {chats?.firstUser?.picture ? (
+                  {chats?.firstUser?.picture &&
+                  !chats.isBlock.includes(chats.secondUser.email) ? (
                     <img
                       src={chats.firstUser.picture}
                       alt=""
@@ -86,13 +90,26 @@ const UserProfile = ({
                     </div>
                   </div>
                   <div
-                    className=" flex gap-5 items-center cursor-pointer hover:bg-[#F4F4F5]
-                  rounded-lg px-4 py-3"
+                    className={` flex gap-5 items-center cursor-pointer hover:bg-[#F4F4F5]
+                    rounded-lg px-4 py-3 ${
+                      chats.isBlock.includes(chats.firstUser.email)
+                        ? "text-[#96C830]"
+                        : "text-red-600 "
+                    }`}
+                    onClick={() =>
+                      blockUser({
+                        email: chats.firstUser.email,
+                        name: chats.firstUser.username,
+                      })
+                    }
                   >
-                    <MdBlock className=" text-3xl text-red-600" />
+                    <MdBlock className=" text-3xl" />
 
-                    <span className=" text-red-600 font-bold text-lg">
-                      Block {chats.firstUser.username}
+                    <span className=" font-bold text-lg">
+                      {chats.isBlock.includes(chats.firstUser.email)
+                        ? "Unblock"
+                        : "Block"}{" "}
+                      {chats.firstUser.username}
                     </span>
                   </div>
                   <div
@@ -113,7 +130,8 @@ const UserProfile = ({
             return (
               <section key={index} className="w-full h-96">
                 <>
-                  {chats?.secondUser?.picture ? (
+                  {chats?.secondUser?.picture &&
+                  !chats.isBlock.includes(chats.firstUser.email) ? (
                     <img
                       src={chats.secondUser.picture}
                       alt=""
@@ -159,13 +177,26 @@ const UserProfile = ({
                     </div>
                   </div>
                   <div
-                    className=" flex gap-5 items-center cursor-pointer hover:bg-[#F4F4F5]
-                  rounded-lg px-4 py-3"
+                    className={` flex gap-5 items-center cursor-pointer hover:bg-[#F4F4F5]
+                    rounded-lg px-4 py-3 ${
+                      chats.isBlock.includes(chats.secondUser.email)
+                        ? "text-[#96C830]"
+                        : "text-red-600 "
+                    }`}
+                    onClick={() =>
+                      blockUser({
+                        email: chats.secondUser.email,
+                        name: chats.secondUser.username,
+                      })
+                    }
                   >
-                    <MdBlock className=" text-3xl text-red-600" />
+                    <MdBlock className=" text-3xl" />
 
-                    <span className=" text-red-600 font-bold text-lg">
-                      Block {chats.secondUser.username}
+                    <span className="  font-bold text-lg">
+                      {chats.isBlock.includes(chats.secondUser.email)
+                        ? "Unblock"
+                        : "Block"}{" "}
+                      {chats.secondUser.username}
                     </span>
                   </div>
                   <div
@@ -184,6 +215,7 @@ const UserProfile = ({
             );
           }
         })}
+      <Toaster />
     </section>
   );
 };

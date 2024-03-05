@@ -25,15 +25,15 @@ const ChatFooter = () => {
     socket: React.MutableRefObject<Socket | null>;
     connections: Array<ChatConnection>;
   };
-  const reciver = connections
-    ?.filter((connection) => {
-      return connection?._id === id;
-    })[0]
-    .userEmail.filter((reciver) => reciver !== userDetails?.email);
-  console.log(reciver);
+  const currentConnection = connections?.filter((connection) => {
+    return connection?._id === id;
+  });
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const reciver = currentConnection[0].userEmail.filter(
+    (reciver) => reciver !== userDetails?.email
+  );
+
+  const handleSubmit = async () => {
     socket.current?.emit("message", {
       inputText,
       id,
@@ -61,36 +61,101 @@ const ChatFooter = () => {
   return (
     <>
       <section className=" w-full bg-[#F9F9F9] rounded-lg p-4 font-Nunito ">
-        <form
-          action=""
-          className="flex items-center w-full gap-3"
-          onSubmit={handleSubmit}
-        >
-          {showEmoji ? (
-            <RxCross2
-              className="flex-shrink-0 cursor-pointer font-bold text-3xl text-[#1D7628]"
-              onClick={() => setShowEmoji(false)}
-            />
-          ) : (
-            <HiOutlineEmojiHappy
-              className="flex-shrink-0 cursor-pointer font-bold text-3xl text-[#1D7628]"
-              onClick={() => setShowEmoji(true)}
-            />
-          )}
-          <input
-            type="text"
-            value={inputText}
-            className="py-2.5 px-3.5 outline-none drop-shadow-md 
-           w-full rounded-lg text-lg "
-            placeholder="Type a message "
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-              setInputtext(e.currentTarget.value)
-            }
-          />
-          <button>
-            <IoSend className=" text-2xl flex-shrink-0 text-[#1D7628]" />
-          </button>
-        </form>
+        {currentConnection.map((currnetChat, index) => {
+          if (currnetChat.firstUser.email !== userDetails?.email) {
+            return (
+              <form
+                action=""
+                className="flex items-center w-full gap-3"
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  if (
+                    !currnetChat?.isBlock.includes(
+                      currnetChat.firstUser.email
+                    ) &&
+                    !currnetChat?.isBlock.includes(userDetails?.email ?? "")
+                  ) {
+                    handleSubmit();
+                  } else {
+                    toast.error("you Can't send message");
+                  }
+                }}
+                key={index}
+              >
+                {showEmoji ? (
+                  <RxCross2
+                    className="flex-shrink-0 cursor-pointer font-bold text-3xl text-[#1D7628]"
+                    onClick={() => setShowEmoji(false)}
+                  />
+                ) : (
+                  <HiOutlineEmojiHappy
+                    className="flex-shrink-0 cursor-pointer font-bold text-3xl text-[#1D7628]"
+                    onClick={() => setShowEmoji(true)}
+                  />
+                )}
+                <input
+                  type="text"
+                  value={inputText}
+                  className="py-2.5 px-3.5 outline-none drop-shadow-md 
+         w-full rounded-lg text-lg "
+                  placeholder="Type a message "
+                  onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                    setInputtext(e.currentTarget.value)
+                  }
+                />
+                <button>
+                  <IoSend className=" text-2xl flex-shrink-0 text-[#1D7628]" />
+                </button>
+              </form>
+            );
+          } else {
+            return (
+              <form
+                action=""
+                className="flex items-center w-full gap-3"
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  if (
+                    !currnetChat?.isBlock.includes(
+                      currnetChat.secondUser.email
+                    ) &&
+                    !currnetChat?.isBlock.includes(userDetails?.email ?? "")
+                  ) {
+                    handleSubmit();
+                  } else {
+                    toast.error("you Can't send message");
+                  }
+                }}
+                key={index}
+              >
+                {showEmoji ? (
+                  <RxCross2
+                    className="flex-shrink-0 cursor-pointer font-bold text-3xl text-[#1D7628]"
+                    onClick={() => setShowEmoji(false)}
+                  />
+                ) : (
+                  <HiOutlineEmojiHappy
+                    className="flex-shrink-0 cursor-pointer font-bold text-3xl text-[#1D7628]"
+                    onClick={() => setShowEmoji(true)}
+                  />
+                )}
+                <input
+                  type="text"
+                  value={inputText}
+                  className="py-2.5 px-3.5 outline-none drop-shadow-md 
+     w-full rounded-lg text-lg "
+                  placeholder="Type a message "
+                  onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                    setInputtext(e.currentTarget.value)
+                  }
+                />
+                <button>
+                  <IoSend className=" text-2xl flex-shrink-0 text-[#1D7628]" />
+                </button>
+              </form>
+            );
+          }
+        })}
         <div
           className={`absolute bottom-[4.5rem] ${
             showEmoji ? "block" : "hidden"

@@ -97,7 +97,10 @@ function MessageList() {
                   >
                     <div className=" flex items-center gap-3 w-[80%]">
                       <>
-                        {connection?.firstUser?.picture ? (
+                        {connection?.firstUser?.picture &&
+                        !connection.isBlock.includes(
+                          connection.secondUser.email
+                        ) ? (
                           <img
                             src={connection?.firstUser.picture}
                             alt=""
@@ -153,7 +156,10 @@ function MessageList() {
                   >
                     <div className=" flex items-center gap-3 w-[80%]">
                       <>
-                        {connection?.secondUser?.picture ? (
+                        {connection?.secondUser?.picture &&
+                        !connection.isBlock.includes(
+                          connection.firstUser.email
+                        ) ? (
                           <img
                             src={connection?.secondUser.picture}
                             alt=""
