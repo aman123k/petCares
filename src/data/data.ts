@@ -359,6 +359,16 @@ const parrotBread: string[] = [
   "Pionus Parrot",
   "Quaker Parrot",
 ];
+const KeyFect: string[] = [
+  "Microchipped",
+  "House-trained",
+  "Can Live With Other Dogs",
+  "Can Live With Other Cats",
+  "Can Live With Children Of Any Age",
+  "Has Special Needs",
+  "Has Behavioural Issues",
+  "Purebred",
+];
 
 export {
   RehosingReason,
@@ -371,4 +381,5 @@ export {
   catBread,
   parrotBread,
   rabbitBread,
+  KeyFect,
 };

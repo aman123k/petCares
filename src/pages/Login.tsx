@@ -1,15 +1,16 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub, FaRegEyeSlash } from "react-icons/fa6";
 import { MdOutlineEmail } from "react-icons/md";
 import toast, { Toaster } from "react-hot-toast";
 import useLogin from "../customHooks/loginFunction";
-import { UserLoginData } from "../interface/interface";
+import { User, UserLoginData } from "../interface/interface";
 import { HiOutlineEye } from "react-icons/hi2";
 import useGoogleAuth from "../function/googleAuth";
+import { ThemeContext } from "../globleContext/context";
 
 function Login() {
   const [showPassword, setShowPassword] = useState<boolean>(false);
@@ -17,6 +18,18 @@ function Login() {
     username: "",
     email: "",
   });
+  const {
+    userDetails,
+    loading = true,
+  }: { userDetails?: User; loading?: boolean } = useContext(ThemeContext);
+  const navigator = useNavigate();
+
+  useEffect(() => {
+    if (!loading) {
+      if (userDetails !== undefined) navigator("/");
+      return;
+    }
+  }, [navigator, loading, userDetails]);
 
   const url = process.env.REACT_APP_URL as string;
   const { login } = useLogin({

@@ -44,13 +44,13 @@ function Footer() {
               to="/register"
               className=" hover:translate-x-3 ease-in-out duration-200"
             >
-              <li>Register for a free PetRehomer Account</li>
+              <li>Register for a free PetCares Account</li>
             </Link>
             <Link
               to="/login"
               className=" hover:translate-x-3 ease-in-out duration-200"
             >
-              <li>Login to your PetRehomer Account</li>
+              <li>Login to your PetCares Account</li>
             </Link>
             <Link
               to="/tips-for-adopters"

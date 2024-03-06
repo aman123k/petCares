@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import { FaRegHeart } from "react-icons/fa";
@@ -15,13 +15,14 @@ import { GoPerson } from "react-icons/go";
 import checkfee from "../../function/checkFeeFun";
 import useCreateChat from "../../customHooks/CreateChat";
 import useRecivePets, { PetsdataType } from "../../customHooks/RecivePetsData";
+import { KeyFect } from "../../data/data";
+import { GoCheck } from "react-icons/go";
 const url = process.env.REACT_APP_URL as string;
 
 function PetDetails() {
   const { id } = useParams();
   const { userDetails }: { userDetails?: User } = useContext(ThemeContext);
   const [showImage, setShowImage] = useState<boolean>(false);
-  // const navigator = useNavigate();
   const { allPetsdata } = useRecivePets();
   const [favourites, setFavourites] = useState<Array<PetsdataType> | null>(
     null
@@ -58,7 +59,6 @@ function PetDetails() {
       );
     }
   }, [currentPetsInfo, userDetails]);
-
   const { chat } = useCreateChat({ url, email: currentPetsInfo?.Auth?.email });
 
   return (
@@ -179,10 +179,8 @@ function PetDetails() {
                   </span>
                 </div>
                 <div className=" flex gap-5">
-                  <span className="text-[#595959]">Colour: </span>
-                  <span className=" font-bold">
-                    {currentPetsInfo?.characteristics?.petColor}
-                  </span>
+                  <span className="text-[#595959]">Reason for rehoming: </span>
+                  <span className=" font-bold">{currentPetsInfo?.reason}</span>
                 </div>
               </div>
 
@@ -199,19 +197,101 @@ function PetDetails() {
                     {currentPetsInfo?.characteristics?.petBreed}
                   </span>
                 </div>
-
                 <div className=" flex gap-5">
-                  <span className="text-[#595959]">Reason for rehoming: </span>
-                  <span className=" font-bold">{currentPetsInfo?.reason}</span>
+                  <span className="text-[#595959]">Colour: </span>
+                  <span className=" font-bold">
+                    {currentPetsInfo?.characteristics?.petColor}
+                  </span>
                 </div>
               </div>
             </div>
           </div>
           <div className=" bg-white drop-shadow-lg rounded-lg px-8 py-6">
-            <h1 className=" my-3 font-bold  text-lg text-[#595959]">
-              Featuress
+            <h1 className=" my-3 font-bold  text-xl text-[#595959]">
+              Features
             </h1>
-            <div className=" grid grid-cols-2 gap-6"></div>
+            <div className=" grid grid-cols-2 gap-3 mt-2 text-sm tracking-wider">
+              <div className=" flex items-center gap-3">
+                <GoCheck
+                  className={`flex items-center gap-3 ${
+                    currentPetsInfo?.keyFact.Microchipped === "yes"
+                      ? "block"
+                      : "hidden"
+                  }`}
+                />
+                {currentPetsInfo?.keyFact.Microchipped ? KeyFect[0] : ""}
+              </div>
+              <div
+                className={`flex items-center gap-3 ${
+                  currentPetsInfo?.keyFact.HouseTrained === "yes"
+                    ? "block"
+                    : "hidden"
+                }`}
+              >
+                <GoCheck className=" text-xl flex-shrink-0 text-[#9BCC3A]" />
+                {currentPetsInfo?.keyFact.HouseTrained ? KeyFect[1] : ""}
+              </div>
+              <div
+                className={`flex items-center gap-3 ${
+                  currentPetsInfo?.keyFact.GoodWithDog === "yes"
+                    ? "block"
+                    : "hidden"
+                }`}
+              >
+                <GoCheck className=" text-xl flex-shrink-0 text-[#9BCC3A]" />
+                {currentPetsInfo?.keyFact.GoodWithDog ? KeyFect[2] : ""}
+              </div>
+              <div
+                className={`flex items-center gap-3 ${
+                  currentPetsInfo?.keyFact.GoodWithCat === "yes"
+                    ? "block"
+                    : "hidden"
+                }`}
+              >
+                <GoCheck className=" text-xl flex-shrink-0 text-[#9BCC3A]" />
+                {currentPetsInfo?.keyFact.GoodWithCat ? KeyFect[3] : ""}
+              </div>
+              <div
+                className={`flex items-center gap-3 ${
+                  currentPetsInfo?.keyFact.GoodWithChild === "yes"
+                    ? "block"
+                    : "hidden"
+                }`}
+              >
+                <GoCheck className=" text-xl flex-shrink-0 text-[#9BCC3A]" />
+                {currentPetsInfo?.keyFact.GoodWithChild ? KeyFect[4] : ""}
+              </div>
+              <div
+                className={`flex items-center gap-3 ${
+                  currentPetsInfo?.keyFact.SpeciallNeed === "yes"
+                    ? "block"
+                    : "hidden"
+                }`}
+              >
+                <GoCheck className=" text-xl flex-shrink-0 text-[#9BCC3A]" />
+                {currentPetsInfo?.keyFact.SpeciallNeed ? KeyFect[5] : ""}
+              </div>
+              <div
+                className={`flex items-center gap-3 ${
+                  currentPetsInfo?.keyFact.BehaviourIssues === "yes"
+                    ? "block"
+                    : "hidden"
+                }`}
+              >
+                <GoCheck className=" text-xl flex-shrink-0 text-[#9BCC3A]" />
+                {currentPetsInfo?.keyFact.BehaviourIssues ? KeyFect[6] : ""}
+              </div>
+              <div
+                className={`flex items-center gap-3 ${
+                  currentPetsInfo?.keyFact.purebred === "yes"
+                    ? "block"
+                    : "hidden"
+                }`}
+              >
+                <GoCheck className=" text-xl flex-shrink-0 text-[#9BCC3A]" />
+                {currentPetsInfo?.keyFact.purebred ? KeyFect[7] : ""}
+              </div>
+            </div>
           </div>
         </section>
         <section className="w-[35%] font-Nunito max-[650px]:w-full flex-col flex gap-5 max-[650px]:mt-5">
@@ -235,7 +315,8 @@ function PetDetails() {
                   : ""}
                 {free}
               </p>
-              {currentPetsInfo?.Auth?.email !== userDetails?.email ? (
+              {currentPetsInfo?.Auth?.email !== userDetails?.email &&
+              userDetails ? (
                 <button
                   className="bg-[#96C830] text-white px-3 py-1.5 font-semibold rounded-lg
               border-[#96C830] border-2 hover:bg-white hover:text-[#96C830]"
@@ -247,6 +328,14 @@ function PetDetails() {
                 ""
               )}
             </div>
+            {userDetails && (
+              <button
+                className="bg-[#96C830] text-white px-3 py-1.5 my-2 font-semibold rounded-lg
+              border-[#96C830] border-2 w-full hover:bg-white hover:text-[#96C830]"
+              >
+                Get Your New Best Friend
+              </button>
+            )}
           </div>
           {!userDetails && (
             <div

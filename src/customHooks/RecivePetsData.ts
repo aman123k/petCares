@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 import { Characteristics, KeyFacts } from "../interface/interface";
 
 export interface PetsdataType {
@@ -15,10 +15,6 @@ export interface PetsdataType {
   postAddTime: string;
 }
 
-interface FetchDataResponse {
-  response: PetsdataType[];
-  totalDoc: number;
-}
 const url = process.env.REACT_APP_URL as string;
 
 const fetchPetData = async (page: number) => {

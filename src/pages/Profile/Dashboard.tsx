@@ -55,7 +55,7 @@ function Dashboard() {
                         {userDetails?.username}
                       </h2>
                     </div>
-                    <Link to="">
+                    <Link to="/messages">
                       <div
                         className="border border-[#96C830] hover:border-2 text-[#96C830] flex items-center 
                     gap-2 px-3 py-2 rounded-lg max-[650px]:px-2 max-[650px]:py-1.5 max-[650px]:text-sm "

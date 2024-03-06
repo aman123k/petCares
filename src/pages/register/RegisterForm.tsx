@@ -1,16 +1,17 @@
 import { GoPerson } from "react-icons/go";
 import { MdOutlineEmail } from "react-icons/md";
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
 import useRegister from "../../customHooks/registerFunction";
-import React, { useState } from "react";
-import { UserRegistrationData } from "../../interface/interface";
+import React, { useContext, useEffect, useState } from "react";
+import { User, UserRegistrationData } from "../../interface/interface";
 import toast from "react-hot-toast";
 import { FaRegEyeSlash } from "react-icons/fa";
 import { HiOutlineEye } from "react-icons/hi2";
 import useGoogleAuth from "../../function/googleAuth";
+import { ThemeContext } from "../../globleContext/context";
 
 const RegisterForm: React.FC = () => {
   const [showPassord, setShowPassword] = useState<boolean>(false);
@@ -21,6 +22,18 @@ const RegisterForm: React.FC = () => {
     picture: "",
     registerType: [""],
   });
+  const {
+    userDetails,
+    loading = true,
+  }: { userDetails?: User; loading?: boolean } = useContext(ThemeContext);
+  const navigator = useNavigate();
+
+  useEffect(() => {
+    if (!loading) {
+      if (userDetails !== undefined) navigator("/");
+      return;
+    }
+  }, [navigator, loading, userDetails]);
   const url = process.env.REACT_APP_URL as string;
 
   const { register } = useRegister({
