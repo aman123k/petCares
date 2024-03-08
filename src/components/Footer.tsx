@@ -152,14 +152,14 @@ function Footer() {
         </section>
         <section>
           <h1 className="font-bold text-2xl tracking-wide">Follow Us</h1>
-          <div className=" flex gap-4 justify-between max-[1000px]:justify-start mt-4 max-[650px]:justify-start">
-            <Link to="/">
+          <div className=" flex gap-10 max-[650px]:gap-6 justify-start mt-4 max-[650px]:justify-start">
+            <Link to="https://twitter.com/Sudeesh76639641">
               <FaTwitter className="text-2xl" />
             </Link>
-            <Link to="/">
+            <Link to="https://www.facebook.com/profile.php?id=100031828202887">
               <IoLogoFacebook className="text-2xl" />
             </Link>
-            <Link to="/">
+            <Link to="https://www.instagram.com/aman_kashyap2.0">
               <FaInstagram className="text-2xl" />
             </Link>
           </div>

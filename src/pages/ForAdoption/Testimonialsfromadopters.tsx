@@ -1,7 +1,6 @@
 import React from "react";
 
 import Footer from "../../components/Footer";
-import { RxDotFilled } from "react-icons/rx";
 
 import one_bed from "../../images/1-create-safe-space.jpg";
 import food from "../../images/2-set-up-litter-tray.jpg";

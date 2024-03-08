@@ -45,6 +45,7 @@ import AdopterFAQ from "./pages/FAQ/AdopterFAQ";
 import DonateNeuter from "./pages/DonateNeuter";
 import TestimonialsRehousers from "./pages/ForRehouser/TestimonialsRehousers";
 import Testimonialsfromadopters from "./pages/ForAdoption/Testimonialsfromadopters";
+import PageNotFound from "./pages/PageNotFound";
 
 function App() {
   const clintId = process.env.REACT_APP_GOOGLE_CLIENT_ID as string;
@@ -136,6 +137,7 @@ function App() {
                     path="/testimonials-from-adopters"
                     element={<Testimonialsfromadopters />}
                   />
+                  <Route path="*" element={<PageNotFound />} />
                 </Routes>
               </ChatContextProvider>
             </ListingContextProvider>

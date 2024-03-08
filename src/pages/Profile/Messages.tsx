@@ -35,8 +35,9 @@ function Messages() {
       {connections && connections?.length === 0 ? (
         <>
           <ProfileHeader />
-          <section>
-            <h1>Messages Not Found</h1>
+          <section className=" px-10 pb-10 font-Nunito">
+            <h1>Messages Not Found...</h1>
+            <div className=" h-[450px]"></div>
           </section>
           <Footer />
         </>

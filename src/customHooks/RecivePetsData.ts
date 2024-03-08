@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Characteristics, KeyFacts } from "../interface/interface";
+import toast from "react-hot-toast";
 
 export interface PetsdataType {
   _id: string;
@@ -34,9 +35,13 @@ const useRecivePets = () => {
 
   useEffect(() => {
     const fetch = async () => {
-      const data = await fetchPetData(page);
-      setAllPetsdata((pre) => [...pre, ...data.response]);
-      setTotalDoc(data.totalDoc);
+      try {
+        const data = await fetchPetData(page);
+        setAllPetsdata((pre) => [...pre, ...data.response]);
+        setTotalDoc(data.totalDoc);
+      } catch {
+        toast.error("server error");
+      }
     };
 
     fetch();

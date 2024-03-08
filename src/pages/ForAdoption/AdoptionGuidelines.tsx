@@ -81,31 +81,31 @@ function AdoptionGuidelines() {
             </h1>
 
             <ul className=" mt-4 flex flex-col text-[#595959] gap-2.5">
-              <li className=" flex items-center gap-2">
+              <li className=" flex items-center gap-2 max-[650px]:items-start">
                 <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                 Be at least 18 years old
               </li>
-              <li className=" flex items-center gap-2">
+              <li className=" flex items-center gap-2 max-[650px]:items-start">
                 <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                 Prove your identity with photo ID such as a driving license ,
                 addharcard passport
               </li>
-              <li className=" flex items-center gap-2">
+              <li className=" flex items-center gap-2 max-[650px]:items-start">
                 <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                 Prove your home address with a utility bill, mortgage statement
                 or similar official document from the past three months
               </li>
-              <li className=" flex items-center gap-2">
+              <li className=" flex items-center gap-2 max-[650px]:items-start">
                 <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                 Get permission from your landlord or check the terms of your
                 lease before you start the adoption process to make sure you’re
                 allowed a pet
               </li>
-              <li className=" flex items-center gap-2">
+              <li className=" flex items-center gap-2 max-[650px]:items-start">
                 <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                 Agree to having a home check
               </li>
-              <li className=" flex items-center gap-2">
+              <li className=" flex items-center gap-2 max-[650px]:items-start">
                 <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                 Agree to buy your pet appropriate food, equipment and shelter
               </li>
@@ -114,17 +114,17 @@ function AdoptionGuidelines() {
                 Agree to continue with any training or behavioural
                 rehabilitation
               </li>
-              <li className=" flex items-center gap-2">
+              <li className=" flex items-center gap-2 max-[650px]:items-start">
                 <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                 Agree to pay for veterinary care, regular flea and worm
                 treatments, and neutering if the pet is old enough
               </li>
-              <li className=" flex items-center gap-2">
+              <li className=" flex items-center gap-2 max-[650px]:items-start">
                 <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                 Agree to care for your pet’s mental and physical health at all
                 times
               </li>
-              <li className=" flex items-center gap-2">
+              <li className=" flex items-center gap-2 max-[650px]:items-start">
                 <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                 Seriously consider taking out pet insurance. We strongly
                 encourage everyone to get their pets insured
@@ -137,27 +137,27 @@ function AdoptionGuidelines() {
            max-[850px]:flex-col max-[850px]:w-full max-[850px]:mx-3 max-[650px]:mx-0 max-[650px]:px-0"
         >
           <div className=" flex flex-col gap-3 w-[50%] max-[850px]:w-full">
-            <h1 className=" font-bold text-2xl ">
+            <h1 className=" font-bold text-2xl  max-[650px]:items-start">
               You cannot adopt a pet through PetCares if…
             </h1>
             <ul className=" mt-4 flex flex-col text-[#595959] gap-2.5">
-              <li className=" flex items-center gap-2">
+              <li className=" flex items-center gap-2  max-[650px]:items-start">
                 <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                 You or anyone you live with has ever been convicted of an
                 offence relating to animals
               </li>
-              <li className=" flex items-center gap-2">
+              <li className=" flex items-center gap-2  max-[650px]:items-start">
                 <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                 You own or live with an unneutered animal that’s the same
                 species as the pet you want to adopt
               </li>
-              <li className=" flex items-center gap-2">
+              <li className=" flex items-center gap-2  max-[650px]:items-start">
                 <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                 You plan to use this pet for breeding, hunting, racing,
                 fighting, entertainment or any other ‘non pet’ or illegal
                 activity
               </li>
-              <li className=" flex items-center gap-2">
+              <li className=" flex items-center gap-2  max-[650px]:items-start">
                 <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                 The pet is a gift for someone else
               </li>
@@ -184,32 +184,32 @@ function AdoptionGuidelines() {
               If you want to adopt a dog through PetCares , you must…
             </p>
             <ul className=" mt-4 flex flex-col text-[#595959]  gap-2.5">
-              <li className=" flex items-center gap-2">
+              <li className=" flex items-center gap-2  max-[650px]:items-start">
                 <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                 Have enough space for them to live inside. You’ll fail the home
                 check if we suspect you plan to chain or tether them up outside.
                 In rare cases, it may be better for a certain breed to live
                 outside but we’ll discuss this with you if needed
               </li>
-              <li className=" flex items-center gap-2">
+              <li className=" flex items-center gap-2  max-[650px]:items-start">
                 <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                 Be able to give them the amount of exercise they need
               </li>
-              <li className=" flex items-center gap-2">
+              <li className=" flex items-center gap-2  max-[650px]:items-start">
                 <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                 Be able to let them outside to go to the toilet regularly
               </li>
-              <li className=" flex items-center gap-2">
+              <li className=" flex items-center gap-2  max-[650px]:items-start">
                 <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                 Make sure they’re not left on their own for longer than they can
                 cope with. The maximum is usually four hours but for many dogs,
                 it’s less
               </li>
-              <li className=" flex items-center gap-2">
+              <li className=" flex items-center gap-2  max-[650px]:items-start">
                 <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                 Not crate or confine them for long periods of time
               </li>
-              <li className=" flex items-center text-[#595959] gap-2">
+              <li className=" flex items-center text-[#595959] gap-2  max-[650px]:items-start">
                 <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                 Never use shock collars or anti-bark collars
               </li>
@@ -234,23 +234,23 @@ function AdoptionGuidelines() {
               If you want to adopt a cat through PetCares, you must…
             </p>
             <ul className=" mt-4 flex flex-col text-[#595959] gap-4">
-              <li className=" flex items-center gap-2">
+              <li className=" flex items-center gap-2  max-[650px]:items-start">
                 <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                 Not live on a busy road, unless you’re adopting an indoor cat.
               </li>
-              <li className=" flex items-center gap-2">
+              <li className=" flex items-center gap-2  max-[650px]:items-start">
                 <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                 Allow the cat to have outdoor access if this is what they’re
                 used to. If you don’t have a cat flap, you’ll need to let them
                 outside regularly
               </li>
-              <li className=" flex items-center gap-2">
+              <li className=" flex items-center gap-2  max-[650px]:items-start">
                 <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                 Allow the cat to have outdoor access if this is what they’re
                 used to. If you don’t have a cat flap, you’ll need to let them
                 outside regularly
               </li>
-              <li className=" flex items-center gap-2">
+              <li className=" flex items-center gap-2  max-[650px]:items-start">
                 <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                 Not own or live in a house with a dog or other pet that isn’t
                 used to cats
@@ -294,19 +294,19 @@ function AdoptionGuidelines() {
                 potential hazards and create a secure space to prevent accidents
                 or injuries.
               </li>
-              <li className=" flex items-center gap-2">
+              <li className=" flex items-center gap-2  max-[650px]:items-start">
                 <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                 Parrots are generally kept indoors. Make sure you can provide a
                 suitable indoor space with appropriate cage dimensions, perches,
                 and environmental enrichment.
               </li>
-              <li className=" flex items-center gap-2">
+              <li className=" flex items-center gap-2  max-[650px]:items-start">
                 <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                 Parrots have unique dietary, social, and mental stimulation
                 needs. Ensure that you are knowledgeable about the specific
                 requirements of the parrot species you intend to adopt.
               </li>
-              <li className=" flex items-center gap-2">
+              <li className=" flex items-center gap-2  max-[650px]:items-start">
                 <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                 Not own or live in a house with a dog or other pet that isn’t
                 used to parrots
@@ -334,12 +334,12 @@ function AdoptionGuidelines() {
               If you want to adopt a rabbit through PetRehomer, you must…
             </p>
             <ul className=" mt-4 flex flex-col  gap-4">
-              <li className=" flex items-center text-[#595959] gap-2">
+              <li className=" flex items-center text-[#595959] gap-2  max-[650px]:items-start">
                 <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                 Already have a rabbit or adopt two rabbits at the same time.
                 They’re social creatures who need to have company
               </li>
-              <li className=" flex items-center text-[#595959] gap-2">
+              <li className=" flex items-center text-[#595959] gap-2  max-[650px]:items-start">
                 <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                 Make sure the rabbit’s accommodation meets the minimum welfare
                 standards. The more space your rabbit has, the better. At the
@@ -347,11 +347,11 @@ function AdoptionGuidelines() {
                 have a space that’s at least 3m x 2m x 1m or 10ft x 3ft x 6ft
                 (length x width x height).
               </li>
-              <li className=" flex items-center text-[#595959] gap-2">
+              <li className=" flex items-center text-[#595959] gap-2  max-[650px]:items-start">
                 <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                 Send us photos and measurements of the rabbit’s accommodation
               </li>
-              <li className=" flex items-center text-[#595959] gap-2">
+              <li className=" flex items-center text-[#595959] gap-2  max-[650px]:items-start">
                 <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                 Show proof that your existing rabbit has been neutered
               </li>

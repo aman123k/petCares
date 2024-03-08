@@ -155,13 +155,13 @@ function Contact() {
           <div className=" bg-white h-max px-8 py-8 flex rounded-lg flex-col gap-5 w-[35%] max-[850px]:w-full">
             <h2 className=" text-xl font-bold">Follow Us</h2>
             <div className=" flex gap-5">
-              <Link to="/">
+              <Link to="https://www.facebook.com/profile.php?id=100031828202887">
                 <IoLogoFacebook className=" bg-[#F7F7F7] p-3 text-5xl rounded-lg" />
               </Link>
-              <Link to="/">
+              <Link to="https://www.instagram.com/aman_kashyap2.0">
                 <FaInstagram className=" bg-[#F7F7F7] p-3 text-5xl rounded-lg" />
               </Link>
-              <Link to="/">
+              <Link to="https://twitter.com/Sudeesh76639641">
                 <FaTwitter className=" bg-[#F7F7F7] p-3 text-5xl rounded-lg" />
               </Link>
             </div>

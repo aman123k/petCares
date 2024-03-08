@@ -175,8 +175,8 @@ function ChatContainer() {
         </button>
         {chatUser?.isBlock.includes(chatUser?.firstUser.email) ? (
           <div
-            className="p-1.5 ml-[50%] w-max  
-            translate-x-[-50% text-center rounded-lg text-[12px] bg-white"
+            className="p-1.5 ml-[50%] w-max  mt-2
+          translate-x-[-50%] text-center rounded-lg text-[12px] bg-white"
           >
             {chatUser.firstUser.email !== userDetails?.email
               ? `You block ${chatUser.firstUser.username}`
@@ -186,7 +186,7 @@ function ChatContainer() {
         {chatUser?.isBlock.includes(chatUser?.secondUser.email) ? (
           <div
             className="p-1.5 ml-[50%] w-max  mt-2
-            translate-x-[-50% text-center rounded-lg text-[12px] bg-white"
+            translate-x-[-50%] text-center rounded-lg text-[12px] bg-white"
           >
             {chatUser.secondUser.email !== userDetails?.email
               ? `You block ${chatUser.firstUser.username}`
