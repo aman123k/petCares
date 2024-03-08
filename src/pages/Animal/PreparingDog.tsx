@@ -162,7 +162,7 @@ function PreparingDog() {
           </section>
           <section
             className=" flex mx-14 px-5 mt-16 gap-4 pb-12 items-center border-b max-[650px]:mt-10
-           max-[850px]:flex-col-reverse max-[850px]:w-full max-[850px]:mx-3 max-[650px]:mx-0 max-[650px]:px-0 "
+           max-[850px]:flex-col max-[850px]:w-full max-[850px]:mx-3 max-[650px]:mx-0 max-[650px]:px-0 "
           >
             <div className=" flex flex-col gap-3 max-[850px]:w-full w-[50%]">
               <h1 className=" font-bold text-2xl ">
@@ -200,7 +200,7 @@ function PreparingDog() {
           </section>
           <section
             className=" flex mx-14 px-5 mt-16 gap-4 pb-12 items-center max-[650px]:mt-10
-           max-[850px]:flex-col max-[850px]:w-full max-[850px]:mx-3 max-[650px]:mx-0 max-[650px]:px-0 "
+           max-[850px]:flex-col-reverse max-[850px]:w-full max-[850px]:mx-3 max-[650px]:mx-0 max-[650px]:px-0 "
           >
             <img
               src={register}

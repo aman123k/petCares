@@ -23,7 +23,7 @@ function PreparingRabbit() {
               How to prepare for your new rabbit:
             </h1>
             <h3 className="font-bold text-3xl max-[650px]:text-2xl">
-              5 things you must do
+              6 things you must do
             </h3>
             <p className=" mt-3 text-base">
               Adopting a rabbit is a wonderful thing to do, but these small

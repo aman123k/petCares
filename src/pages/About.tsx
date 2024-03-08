@@ -35,7 +35,7 @@ function About() {
     max-[850px]:gap-6 max-[650px]:gap-0 max-[650px]:px-8 pb-7 max-[950px]:px-10"
       >
         <section
-          className=" flex mx-6 px-5 mt-10 items-center max-[650px]:mt-10 max-[850px]:gap-4
+          className=" flex mx-6 px-5 mt-10 items-center max-[850px]:gap-4
        max-[850px]:flex-col max-[850px]:w-full max-[850px]:mx-3 max-[650px]:mx-0 max-[650px]:px-0 "
         >
           <div className=" flex flex-col gap-5 max-[850px]:w-full w-[55%] text-[#595959]">
@@ -139,7 +139,7 @@ function About() {
           </div>
         </section>
       </section>
-      <section className=" bg-[#EEEEEE] font-Nunito px-10 py-7">
+      <section className=" bg-[#EEEEEE] font-Nunito px-10 max-[650px]:px-6 py-7">
         <h1 className=" text-center text-3xl font-bold">Our Values</h1>
         <HomeCard />
       </section>

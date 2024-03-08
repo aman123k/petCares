@@ -4,7 +4,7 @@ import { FaRegHeart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import addFavourite from "../../function/addFaviourite";
 import { Toaster } from "react-hot-toast";
-import getTime from "../../function/getTime";
+import day from "../../function/getDay";
 interface petList {
   _id: string;
   petImage: string[];
@@ -24,9 +24,14 @@ function CardForPet({ PetsData }: { PetsData: petList }) {
               alt=""
               className=" w-full h-52 rounded-lg max-[650px]:h-52 object-cover"
             />
-            <p className=" absolute top-2.5 left-3.5 text-white bg-[#3E4C66] px-2 text-sm py-1 rounded-md tracking-wide">
-              New
-            </p>
+            {day(PetsData.postAddTime) === "Today" ||
+            day(PetsData.postAddTime) === "Yesterday" ? (
+              <p className=" absolute top-2.5 left-3.5 text-white bg-[#3E4C66] px-2 text-sm py-1 rounded-md tracking-wide">
+                New
+              </p>
+            ) : (
+              ""
+            )}
           </Link>
           <div className=" flex items-center absolute w-full text-white bottom-3.5 px-4 justify-between">
             <h2 className=" font-bold tracking-wide text-lg">
@@ -54,7 +59,7 @@ function CardForPet({ PetsData }: { PetsData: petList }) {
           </div>
           <div className=" border-t text-[#8d8c8c] py-4">
             <h6 className=" text-sm my-1 font-semibold">Ad Posted</h6>
-            <p className=" text-[#595959]">{getTime(PetsData.postAddTime)}</p>
+            <p className=" text-[#595959]">{day(PetsData.postAddTime)}</p>
           </div>
         </Link>
       </section>

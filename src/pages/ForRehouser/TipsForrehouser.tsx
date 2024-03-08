@@ -54,47 +54,47 @@ function TipsForrehouser() {
                 the adoption journey.
               </p>
               <ul className=" mt-4 flex flex-col  gap-4">
-                <li className=" flex items-center text-[#595959] gap-2">
+                <li className=" flex items-center text-[#595959] gap-2 max-[650px]:items-start">
                   <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                   Pet's past: ownership duration, origin, rehoming
                   necessity—essential details for potential adopters to
                   understand your pet's history.
                 </li>
-                <li className=" flex items-center text-[#595959] gap-2">
+                <li className=" flex items-center text-[#595959] gap-2 max-[650px]:items-start">
                   <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                   Share your pet's living history, including interactions with
                   children and other pets, for adopter insight.
                 </li>
-                <li className=" flex items-center text-[#595959] gap-2">
+                <li className=" flex items-center text-[#595959] gap-2 max-[650px]:items-start">
                   <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                   Highlight your pet's joys: favorite activities, toys, creating
                   a charming profile for adopters.
                 </li>
-                <li className=" flex items-center text-[#595959] gap-2">
+                <li className=" flex items-center text-[#595959] gap-2 max-[650px]:items-start">
                   <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                   Summarize personality, preferences, habits for a concise,
                   insightful pet description.
                 </li>
-                <li className=" flex items-center text-[#595959] gap-2">
+                <li className=" flex items-center text-[#595959] gap-2 max-[650px]:items-start">
                   <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                   Note fears like fireworks, uniforms, and other animals for
                   adopter awareness.
                 </li>
-                <li className=" flex items-center text-[#595959] gap-2">
+                <li className=" flex items-center text-[#595959] gap-2 max-[650px]:items-start">
                   <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                   Specify food brand and amount for clear dietary information
                   about your pet.
                 </li>
-                <li className=" flex items-center text-[#595959] gap-2">
+                <li className=" flex items-center text-[#595959] gap-2 max-[650px]:items-start">
                   <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                   List allergies, health conditions, and medications for
                   transparent pet health details.
                 </li>
-                <li className=" flex items-center text-[#595959] gap-2">
+                <li className=" flex items-center text-[#595959] gap-2 max-[650px]:items-start">
                   <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                   Specify spay/neuter status briefly for a concise pet profile.
                 </li>
-                <li className=" flex items-center text-[#595959] gap-2">
+                <li className=" flex items-center text-[#595959] gap-2 max-[650px]:items-start">
                   <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                   Indicate microchip status briefly for a complete pet profile.
                 </li>

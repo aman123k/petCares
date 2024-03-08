@@ -72,7 +72,7 @@ const Mobilemenu: React.FC<ParentComponentProps> = ({
                 Frequently Asked Questions
               </li>
             </Link>
-            <Link to="/frequently-asked-questions">
+            <Link to="/donate-to-neuter">
               <li className=" border-b py-4 hover:bg-[#F7F7F7] text-sm font-semibold px-6">
                 Donate to Neuter
               </li>

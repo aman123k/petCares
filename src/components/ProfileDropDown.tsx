@@ -12,7 +12,7 @@ function Profiledropdown() {
 
   return (
     <>
-      <div className="absolute top-40 right-36 z-50 font-Nunito min-w-80">
+      <div className="absolute top-40 right-32  z-50 font-Nunito min-w-80">
         <nav className="  bg-white px-8  py-7 rounded-md drop-shadow-xl">
           <div className="w-6 bg-white h-6 absolute drop-shadow-xl top-[-24px] right-8 [clip-path:polygon(51%_40%,0_100%,100%_100%)]"></div>
           <header>

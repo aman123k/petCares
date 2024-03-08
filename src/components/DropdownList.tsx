@@ -38,7 +38,7 @@ function DropdownListAdopter() {
               </li>
               <hr />
             </Link>
-            <Link to="/">
+            <Link to="/testimonials-from-adopters">
               <li className="text-[#595959] pb-4 hover:text-[#5FA501] hover:translate-x-3 duration-200 ease-in-out">
                 Testimonials from Adopters
               </li>
@@ -104,7 +104,7 @@ function DropdownListRehouse() {
               </li>
               <hr />
             </Link>
-            <Link to="/">
+            <Link to="/testimonials-from-rehouser">
               <li className="pb-4 text-[#595959] hover:text-[#5FA501] hover:translate-x-3 duration-200 ease-in-out">
                 Testimonials from Rehousers
               </li>
@@ -142,11 +142,11 @@ function DropdownListOther() {
             </Link>
             <Link to="/contact-petcares">
               <li className=" pb-4 text-[#595959] hover:text-[#5FA501] hover:translate-x-3 duration-200 ease-in-out">
-                Contact PetRehomer
+                Contact PetCares
               </li>
               <hr />
             </Link>
-            <Link to="/">
+            <Link to="/donate-to-neuter">
               <li className=" pb-4 text-[#595959] hover:text-[#5FA501] hover:translate-x-3 duration-200 ease-in-out">
                 Donate to Neuter
               </li>

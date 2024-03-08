@@ -37,13 +37,14 @@ import SecoundStep from "./pages/ListPetToRehouse/SecoundStep";
 import { ListingContextProvider } from "./globleContext/ListingContext";
 import ThirdStep from "./pages/ListPetToRehouse/ThirdStep";
 import PreparingParrot from "./pages/Animal/PreparingParrot";
-import P from "./P";
 import Confirm from "./pages/ListPetToRehouse/Confirm";
-
 import About from "./pages/About";
 import RehouserFAQ from "./pages/FAQ/RehouserFAQ";
 import { ChatContextProvider } from "./globleContext/ChatContext";
 import AdopterFAQ from "./pages/FAQ/AdopterFAQ";
+import DonateNeuter from "./pages/DonateNeuter";
+import TestimonialsRehousers from "./pages/ForRehouser/TestimonialsRehousers";
+import Testimonialsfromadopters from "./pages/ForAdoption/Testimonialsfromadopters";
 
 function App() {
   const clintId = process.env.REACT_APP_GOOGLE_CLIENT_ID as string;
@@ -123,10 +124,18 @@ function App() {
                     element={<ThirdStep />}
                   />
                   <Route path="/rehouse-a-pet/confirm" element={<Confirm />} />
-                  <Route path="/p" element={<P />} />
                   <Route path="/about" element={<About />} />
+                  <Route path="/donate-to-neuter" element={<DonateNeuter />} />
                   <Route path="/rehousers-faq" element={<RehouserFAQ />} />
                   <Route path="/adopters-faqs" element={<AdopterFAQ />} />
+                  <Route
+                    path="/testimonials-from-rehouser"
+                    element={<TestimonialsRehousers />}
+                  />
+                  <Route
+                    path="/testimonials-from-adopters"
+                    element={<Testimonialsfromadopters />}
+                  />
                 </Routes>
               </ChatContextProvider>
             </ListingContextProvider>

@@ -36,8 +36,8 @@ function Adopter() {
             Benefits of a PetCares Adopters Account?
           </h1>
           <p className=" mt-2 max-[650px]:mt-1">
-            Creating a PetRehomer account is easy and free, it gives you access
-            to features such as:
+            Creating a PetCares account is easy and free, it gives you access to
+            features such as:
           </p>
           <ul
             className="text-[#595959] flex flex-col gap-3.5 my-6 max-[650px]:my-3 max-[850px]:px-4

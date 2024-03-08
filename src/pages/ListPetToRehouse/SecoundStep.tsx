@@ -47,39 +47,37 @@ function SecoundStep() {
         </p>
       </section>
       <section
-        className="justify-center items-center max-[950px]:px-16 max-[650px]:ml-0 bg-[#DCEAC9] max-[650px]:mx-0
+        className="justify-center  items-center max-[950px]:px-16 max-[650px]:ml-0 bg-[#DCEAC9] max-[650px]:mx-0
       max-[650px]:px-10 max-[650px]:py-10 flex flex-col gap-8 py-16 font-Nunito"
       >
         {!userDetails && (
           <section className=" w-[800px] max-[950px]:w-[600px] flex-col flex gap-6 max-[650px]:w-full">
-            <section className=" flex justify-between  pb-4 items-center">
+            <section className=" flex justify-between max-[650px]:items-start  pb-4 items-center max-[650px]:flex-col max-[650px]:gap-5">
               <h1 className=" text-lg tracking-wide text-[#131212] font-bold">
                 Already registered?
               </h1>
-              <Link to="/login">
-                <div
-                  className="w-[350px] max-[950px]:w-[250px]  ml-auto bg-[#5FA501] border-[#5FA501] border-2
+              <Link
+                to="/login"
+                className="w-[350px] max-[950px]:w-[250px] max-[650px]:w-full  ml-auto bg-[#5FA501] border-[#5FA501] border-2
              rounded-lg py-3 px-3.5 text-white flex items-center gap-2 tracking-wide
               justify-center hover:bg-white hover:text-[#5FA501]"
-                >
-                  <GoPerson className=" text-xl" />
-                  LogIn Here
-                </div>
+              >
+                <GoPerson className=" text-xl" />
+                LogIn Here
               </Link>
             </section>
-            <section className=" flex justify-between border-b border-[#777777] pb-5 items-center">
+            <section className=" flex justify-between max-[650px]:items-start border-b border-[#777777] pb-5 items-center max-[650px]:gap-5 max-[650px]:flex-col">
               <h1 className=" text-lg tracking-wide text-[#131212] font-bold">
                 Not registered?
               </h1>
-              <Link to="/register">
-                <div
-                  className="w-[350px] max-[950px]:w-[250px]  ml-auto bg-[#5FA501] border-[#5FA501] border-2
+              <Link
+                to="/register"
+                className="w-[350px] max-[950px]:w-[250px] max-[650px]:w-full  ml-auto bg-[#5FA501] border-[#5FA501] border-2
              rounded-lg py-3 px-3.5 text-white flex items-center gap-2 tracking-wide
               justify-center hover:bg-white hover:text-[#5FA501]"
-                >
-                  <GoPerson className=" text-xl" />
-                  Registere Here
-                </div>
+              >
+                <GoPerson className=" text-xl" />
+                Registere Here
               </Link>
             </section>
           </section>

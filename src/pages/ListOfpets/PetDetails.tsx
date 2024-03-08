@@ -211,14 +211,14 @@ function PetDetails() {
               Features
             </h1>
             <div className=" grid grid-cols-2 gap-3 mt-2 text-sm tracking-wider">
-              <div className=" flex items-center gap-3">
-                <GoCheck
-                  className={`flex items-center gap-3 ${
-                    currentPetsInfo?.keyFact.Microchipped === "yes"
-                      ? "block"
-                      : "hidden"
-                  }`}
-                />
+              <div
+                className={`flex items-center gap-3 ${
+                  currentPetsInfo?.keyFact.Microchipped === "yes"
+                    ? "block"
+                    : "hidden"
+                }`}
+              >
+                <GoCheck className=" text-xl flex-shrink-0 text-[#9BCC3A]" />
                 {currentPetsInfo?.keyFact.Microchipped ? KeyFect[0] : ""}
               </div>
               <div

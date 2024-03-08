@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
@@ -6,8 +6,68 @@ import contactBanner from "../images/contact.png";
 import { FaTwitter } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { IoLogoFacebook } from "react-icons/io5";
+import toast, { Toaster } from "react-hot-toast";
+import useContactPetCares from "../customHooks/contactPetCares";
+interface petCaresContect {
+  name: string;
+  email: string;
+  phone: string;
+  enquriyAbout: string;
+  enquriyIs: string;
+}
+const url = process.env.REACT_APP_URL as string;
 
 function Contact() {
+  const [contectPetCares, setContactPetCares] = useState<petCaresContect>({
+    name: "",
+    email: "",
+    phone: "",
+    enquriyAbout: "",
+    enquriyIs: "",
+  });
+
+  const handelChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setContactPetCares({
+      ...contectPetCares,
+      [e.target.name]: e.target.value,
+    });
+  };
+  const { contactPetCares } = useContactPetCares({
+    url,
+    name: contectPetCares.name,
+    email: contectPetCares.email,
+    phone: contectPetCares.phone,
+    enquriyAbout: contectPetCares.enquriyAbout,
+    enquriyIs: contectPetCares.enquriyIs,
+  });
+  const handelSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (!contectPetCares.name) {
+      toast.error("Please enter name");
+    } else if (!contectPetCares.email) {
+      toast.error("Please enter email");
+    } else if (
+      !contectPetCares.phone &&
+      !contectPetCares.phone.match(/^[1-9]\d{9}$|^(?!0{10})\d{10}$/)
+    ) {
+      toast.error("please enter phone number");
+    } else if (!contectPetCares.enquriyAbout) {
+      toast.error("Enter what is your enquiry about");
+    } else if (!contectPetCares.enquriyIs) {
+      toast.error("Enter what is your enquiry ");
+    } else {
+      contactPetCares();
+      setContactPetCares({
+        name: "",
+        email: "",
+        phone: "",
+        enquriyAbout: "",
+        enquriyIs: "",
+      });
+    }
+  };
   return (
     <>
       <Header />
@@ -41,36 +101,51 @@ function Contact() {
               what the enquiry is about and we'll respond as soon as we can.
             </p>
             <form
-              action=""
+              action="#"
+              onSubmit={handelSubmit}
               className=" grid grid-cols-2 gap-y-5 gap-x-6 max-[650px]:grid-cols-1"
             >
               <input
                 type="text"
                 placeholder="Full name"
+                value={contectPetCares?.name}
+                onChange={handelChange}
+                name="name"
                 className=" border rounded-lg px-4 py-3 outline-none"
               />
               <input
                 type="email"
                 placeholder="Email"
+                name="email"
+                value={contectPetCares?.email}
+                onChange={handelChange}
                 className=" border rounded-lg px-4 py-3 outline-none"
               />
               <input
                 type="text"
                 placeholder="Phone number"
+                name="phone"
+                value={contectPetCares.phone}
+                onChange={handelChange}
                 className=" border rounded-lg px-4 py-3 outline-none"
               />
               <input
                 type="text"
                 placeholder="What is your enquiry about"
+                name="enquriyAbout"
+                value={contectPetCares.enquriyAbout}
+                onChange={handelChange}
                 className=" border rounded-lg px-4 py-3 outline-none"
               />
               <textarea
-                name=""
+                name="enquriyIs"
                 placeholder="What is your enquiry"
                 className=" border rounded-lg col-span-2 px-4 py-3 outline-none max-[650px]:col-auto"
                 rows={5}
                 cols={50}
                 id=""
+                value={contectPetCares.enquriyIs}
+                onChange={handelChange}
               ></textarea>
               <button className=" text-white bg-[#5EAE46] font-semibold py-3.5 rounded-lg">
                 Send Message
@@ -94,6 +169,7 @@ function Contact() {
         </section>
       </section>
       <Footer />
+      <Toaster />
     </>
   );
 }

@@ -9,10 +9,10 @@ function Footer() {
   return (
     <>
       <section
-        className="bg-[#595959] text-white flex justify-between px-8 py-6
-       max-[650px]:flex-col max-[650px]:gap-8 gap-8 font-Nunito  "
+        className="bg-[#595959] max-[650px]:flex max-[1000px]:grid-cols-2 text-white grid grid-cols-5 justify-between px-8 py-6
+       max-[650px]:flex-col max-[650px]:gap-8 gap-8 max-[650px]:text-sm font-Nunito  "
       >
-        <div className=" w-[30rem] max-[650px]:w-full">
+        <section className="col-span-2 max-[1000px]:col-span-1 max-[650px]:grid-cols-1 max-[650px]:w-full">
           <h1 className="font-bold text-2xl tracking-wide">About PetCares</h1>
           <p className="pt-5 tracking-wide leading-8">
             We are revolutionizing the responsible rehousing and adoption of
@@ -24,8 +24,8 @@ function Footer() {
             compassionate and improved adoption process, making it better for
             pets, great for people, and ultimately safer for everyone involved.
           </p>
-        </div>
-        <div>
+        </section>
+        <section>
           <h1 className="font-bold text-2xl tracking-wide">Quick Links</h1>
           <ul className="mt-4 flex flex-col gap-2.5">
             <Link
@@ -77,8 +77,14 @@ function Footer() {
             >
               <li>About Us</li>
             </Link>
+            <Link
+              to="/testimonials-from-adopters"
+              className=" hover:translate-x-3 ease-in-out duration-200"
+            >
+              <li>Testimonials from Adopter</li>
+            </Link>
           </ul>
-        </div>
+        </section>
         <section>
           <h1 className="font-bold text-2xl tracking-wide">Quick Links</h1>
           <ul className="mt-4 flex flex-col gap-2.5">
@@ -131,13 +137,13 @@ function Footer() {
               <li>Pet Care Information</li>
             </Link>
             <Link
-              to="/pet-welfare"
+              to="/testimonials-from-rehouser"
               className=" hover:translate-x-3 ease-in-out duration-200"
             >
               <li>Testimonials from Rehousers</li>
             </Link>
             <Link
-              to="/pet-welfare"
+              to="/donate-to-neuter"
               className=" hover:translate-x-3 ease-in-out duration-200"
             >
               <li>Donate to Neuter</li>
@@ -146,7 +152,7 @@ function Footer() {
         </section>
         <section>
           <h1 className="font-bold text-2xl tracking-wide">Follow Us</h1>
-          <div className=" flex gap-4 justify-between mt-4 max-[650px]:justify-start">
+          <div className=" flex gap-4 justify-between max-[1000px]:justify-start mt-4 max-[650px]:justify-start">
             <Link to="/">
               <FaTwitter className="text-2xl" />
             </Link>

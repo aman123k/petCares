@@ -48,23 +48,23 @@ function ForRehouser() {
                 of your pet. Make sure you include:
               </p>
               <ul className=" mt-4 flex flex-col text-[#595959] gap-4">
-                <li className=" flex items-center gap-2">
+                <li className=" flex items-center gap-2  max-[650px]:items-start">
                   <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                   Their breed, age, size, any health conditions, microchip
                   status and if they’ve been neutered.
                 </li>
-                <li className=" flex items-center gap-2">
+                <li className=" flex items-center gap-2 max-[650px]:items-start">
                   <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                   Description of their personality, habits, likes and dislikes,
                   how much exercise they’re used to.
                 </li>
-                <li className=" flex items-center gap-2">
+                <li className=" flex items-center gap-2 max-[650px]:items-start">
                   <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                   What sort of home they need. Could they potentially live with
                   other pets or children? Are they used to having a garden or
                   outdoor access?
                 </li>
-                <li className=" flex items-center gap-2">
+                <li className=" flex items-center gap-2 max-[650px]:items-start">
                   <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                   Recent pictures. Use square or landscape images in .jpeg or
                   .jpg format.
@@ -86,15 +86,15 @@ function ForRehouser() {
                 site, we’ll:
               </p>
               <ul className=" mt-4 flex flex-col text-[#595959] gap-4">
-                <li className=" flex items-center gap-2">
+                <li className=" flex items-center gap-2 max-[650px]:items-start">
                   <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                   Check your pet’s profile thoroughly
                 </li>
-                <li className=" flex items-center gap-2">
+                <li className=" flex items-center gap-2 max-[650px]:items-start">
                   <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                   If we’re happy, we’ll post your pet’s profile on the site
                 </li>
-                <li className=" flex items-center gap-2">
+                <li className=" flex items-center gap-2 max-[650px]:items-start">
                   <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                   We may call you to clarify any points that we need to
                 </li>
@@ -124,12 +124,12 @@ function ForRehouser() {
                 applications for pets and rule out any that aren’t suitable.
               </p>
               <ul className=" mt-4 flex flex-col  gap-4">
-                <li className=" flex items-center text-[#595959] gap-2">
+                <li className=" flex items-center text-[#595959] gap-2 max-[650px]:items-start">
                   <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                   We’ll let you know on your PetCares dashboard if we find any
                   potentially good matches.
                 </li>
-                <li className=" flex items-center text-[#595959] gap-2">
+                <li className=" flex items-center text-[#595959] gap-2 max-[650px]:items-start">
                   <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                   You review the shortlist then decide who you want to take to
                   the next stage, if anyone, and turn down the rest.
@@ -150,18 +150,18 @@ function ForRehouser() {
                 application, then we….
               </p>
               <ul className=" mt-4 flex flex-col text-[#595959] gap-4">
-                <li className=" flex items-center gap-2">
+                <li className=" flex items-center gap-2 max-[650px]:items-start">
                   <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                   Ask them to reserve your pet by paying a fully refundable fee.
                   Once the funds have been received, no one else can apply for
                   your pet.
                 </li>
-                <li className=" flex items-center gap-2">
+                <li className=" flex items-center gap-2 max-[650px]:items-start">
                   <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                   Arrange for them to have a home check to make sure their
                   living environment is suitable for your pet.
                 </li>
-                <li className=" flex items-center gap-2">
+                <li className=" flex items-center gap-2 max-[650px]:items-start">
                   <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                   We use the results of the home check to make a recommendation.
                   If the adopter fails the home check, we’ll get in touch to
@@ -191,13 +191,13 @@ function ForRehouser() {
                 directly using our messaging service.
               </p>
               <ul className=" mt-4 flex flex-col text-[#595959] gap-4">
-                <li className=" flex items-center gap-2">
+                <li className=" flex items-center gap-2 max-[650px]:items-start">
                   <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                   Feel free to ask lots of questions. You’re not locked into
                   anything at this stage, so it’s ok to change your mind if it
                   doesn’t feel right.
                 </li>
-                <li className=" flex items-center gap-2">
+                <li className=" flex items-center gap-2 max-[650px]:items-start">
                   <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                   <p>
                     To keep all pets and humans safe,{" "}
@@ -235,21 +235,21 @@ function ForRehouser() {
                 When an adopter passes the home check…
               </p>
               <ul className=" mt-4 flex flex-col text-[#595959] gap-4">
-                <li className=" flex items-center  gap-2">
+                <li className=" flex items-center  gap-2 max-[650px]:items-start">
                   <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                   Arrange for the adopter to meet the pet at your house.
                 </li>
-                <li className=" flex items-center  gap-2">
+                <li className=" flex items-center  gap-2 max-[650px]:items-start">
                   <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                   If everyone is happy on the day, the adopter can take the pet
                   home or you can agree to meet up again before finalising.
                 </li>
-                <li className=" flex items-center  gap-2 ">
+                <li className=" flex items-center  gap-2 max-[650px]:items-start ">
                   <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                   If something doesn’t feel right, you don’t have to go through
                   with the adoption.
                 </li>
-                <li className=" flex items-center gap-2 ">
+                <li className=" flex items-center gap-2 max-[650px]:items-start ">
                   <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                   The adopter becomes the legal owner of your pet as soon as
                   they leave your house with the pet. So please make sure you’re

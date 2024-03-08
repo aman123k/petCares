@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "../../components/Header";
+
 import Footer from "../../components/Footer";
 import { RxDotFilled } from "react-icons/rx";
 
@@ -9,61 +9,36 @@ import game from "../../images/3-food.jpg";
 import companion from "../../images/4-scratch-post.jpg";
 import register from "../../images/5-holidays.jpg";
 import vet from "../../images/6-vet.jpg";
+import Header from "../../components/Header";
+import { Link } from "react-router-dom";
 
-function PreparingCat() {
+function Testimonialsfromadopters() {
   return (
     <>
       <Header />
       <section className=" bg-[#F9F9F9] max-[650px]:py-8 py-12 px-10 max-[650px]:px-5">
         <section
           className=" font-Nunito flex flex-col bg-white drop-shadow-xl max-[650px]:w-full max-[650px]:rounded-3xl
-        max-[850px]:gap-4 max-[650px]:gap-0 rounded-[32px] py-14 px-8 max-[650px]:py-10"
+    max-[850px]:gap-4 max-[650px]:gap-0 rounded-[32px] py-14 px-8 max-[650px]:py-10"
         >
-          <section className=" px-[17%] flex flex-col gap-4 mb-4 max-[850px]:px-5 max-[650px]:px-0 text-[#595959]">
-            <h1 className="font-bold text-4xl max-[650px]:text-3xl">
-              How to prepare for your new cat:
+          <section className="  text-center flex gap-2 flex-col text-[#595959]">
+            <h1 className="font-bold text-3xl max-[650px]:text-3xl">
+              Testimonials from Rehomers
             </h1>
-            <h3 className="font-bold text-3xl max-[650px]:text-2xl">
-              6 things you must do
-            </h3>
-            <p className=" mt-3 text-base">
-              Congratulations on welcoming your new cat into your home! To
-              assist you in preparing for their arrival, we've compiled a
-              checklist of things to do, and our veterinarian, Harriet, has
-              created a helpful video packed with valuable advice.
+            <p className="tracking-wide tex-[13px] ">
+              We empathize with the challenges of parting with a pet. Our
+              dedicated team of animal enthusiasts is committed to assisting you
+              every
+              <br /> step of the way. We strive to simplify the process,
+              allowing you ton <br /> select your pet's new home with ease{" "}
+              <br /> However, don't just take our word for it. Here are
+              testimonials from individuals who have utilized our services to
+              find their pet's new home.
             </p>
-            <p className=" mt-3 text-base">
-              By adhering to this list and heeding Harriet's guidance, you'll
-              not only be well-prepared for your new cat's arrival but also
-              fulfill your legal obligations. Under the India's Animal Welfare
-              Act, it's mandatory to provide your cat with:
-            </p>
-            <ul className=" mt-4 flex flex-col  gap-2">
-              <li className=" flex items-center text-[#595959] gap-2">
-                <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
-                A suitable place to live
-              </li>
-              <li className=" flex items-center text-[#595959] gap-2">
-                <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
-                A healthy diet and access to clean water
-              </li>
-              <li className=" flex items-center text-[#595959] gap-2">
-                <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
-                The ability to behave normally
-              </li>
-              <li className=" flex items-center text-[#595959] gap-2">
-                <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
-                Appropriate company
-              </li>
-              <li className=" flex items-center text-[#595959] gap-2">
-                <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
-                Protection from pain, injury, suffering and disease
-              </li>
-            </ul>
           </section>
           <section
             className=" flex mx-14 px-5 mt-16 gap-4 pb-12 items-center border-b max-[650px]:mt-10
-           max-[850px]:flex-col-reverse max-[850px]:w-full max-[850px]:mx-3 max-[650px]:mx-0 max-[650px]:px-0 "
+       max-[850px]:flex-col-reverse max-[850px]:w-full max-[850px]:mx-3 max-[650px]:mx-0 max-[650px]:px-0 "
           >
             <img
               src={one_bed}
@@ -100,7 +75,7 @@ function PreparingCat() {
           </section>
           <section
             className=" flex mx-14 px-5 mt-16 gap-4 pb-12 items-center border-b max-[650px]:mt-10
-           max-[850px]:flex-col max-[850px]:w-full max-[850px]:mx-3 max-[650px]:mx-0 max-[650px]:px-0 "
+       max-[850px]:flex-col max-[850px]:w-full max-[850px]:mx-3 max-[650px]:mx-0 max-[650px]:px-0 "
           >
             <div className=" flex flex-col gap-3 max-[850px]:w-full w-[50%]">
               <h1 className=" font-bold text-2xl ">
@@ -133,7 +108,7 @@ function PreparingCat() {
           </section>
           <section
             className=" flex mx-14 px-5 mt-16 gap-4 pb-12 items-center border-b max-[650px]:mt-10
-           max-[850px]:flex-col-reverse max-[850px]:w-full max-[850px]:mx-3 max-[650px]:mx-0 max-[650px]:px-0 "
+       max-[850px]:flex-col-reverse max-[850px]:w-full max-[850px]:mx-3 max-[650px]:mx-0 max-[650px]:px-0 "
           >
             <img
               src={game}
@@ -168,7 +143,7 @@ function PreparingCat() {
           </section>
           <section
             className=" flex mx-14 px-5 mt-16 gap-4 pb-12 items-center border-b max-[650px]:mt-10
-           max-[850px]:flex-col max-[850px]:w-full max-[850px]:mx-3 max-[650px]:mx-0 max-[650px]:px-0 "
+       max-[850px]:flex-col max-[850px]:w-full max-[850px]:mx-3 max-[650px]:mx-0 max-[650px]:px-0 "
           >
             <div className=" flex flex-col gap-3 max-[850px]:w-full w-[50%]">
               <h1 className=" font-bold text-2xl ">4. Get a scratch post</h1>
@@ -196,7 +171,7 @@ function PreparingCat() {
           </section>
           <section
             className=" flex mx-14 px-5 mt-16 gap-4 pb-12 border-b  items-center max-[650px]:mt-10
-           max-[850px]:flex-col-reverse max-[850px]:w-full max-[850px]:mx-3 max-[650px]:mx-0 max-[650px]:px-0 "
+       max-[850px]:flex-col-reverse max-[850px]:w-full max-[850px]:mx-3 max-[650px]:mx-0 max-[650px]:px-0 "
           >
             <img
               src={register}
@@ -217,8 +192,8 @@ function PreparingCat() {
             </div>
           </section>
           <section
-            className=" flex mx-14 px-5 mt-16 gap-4 pb-12  items-center max-[650px]:mt-10
-           max-[850px]:flex-col max-[850px]:w-full max-[850px]:mx-3 max-[650px]:mx-0 max-[650px]:px-0 "
+            className=" flex mx-14 border-b  px-5 mt-16 gap-4 pb-12  items-center max-[650px]:mt-10
+       max-[850px]:flex-col max-[850px]:w-full max-[850px]:mx-3 max-[650px]:mx-0 max-[650px]:px-0 "
           >
             <div className=" flex flex-col gap-3 max-[850px]:w-full w-[50%]">
               <h1 className=" font-bold text-2xl ">6. Register with a vet</h1>
@@ -245,6 +220,12 @@ function PreparingCat() {
               className="w-[50%]  max-[850px]:w-[80%] max-[650px]:w-full min-[1350px]:h-[28rem] object-contain"
             />
           </section>
+          <button
+            className="mt-10 text-white bg-[#5E9E3C] px-7 py-4 hover:bg-white hover:border-[#5E9E3C] hover:border hover:text-[#5E9E3C] tracking-wide font-semibold
+   w-max ml-[50%] translate-x-[-50%] rounded-lg"
+          >
+            <Link to="/adopt-a-pet">Search for pet</Link>
+          </button>
         </section>
       </section>
       <Footer />
@@ -252,4 +233,4 @@ function PreparingCat() {
   );
 }
 
-export default PreparingCat;
+export default Testimonialsfromadopters;
