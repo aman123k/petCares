@@ -72,13 +72,13 @@ function Adopter() {
               <GiCheckMark className="text-[#8bc27b] flex-shrink-0" />
               <p>
                 {" "}
-                Make
+                Make{" "}
                 <span className="text-black font-semibold">
                   adoption applications
                 </span>{" "}
                 and{" "}
                 <span className="text-black font-semibold">
-                  message pet rehomers
+                  message pet rehousers
                 </span>
               </p>
             </li>

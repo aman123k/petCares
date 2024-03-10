@@ -46,30 +46,26 @@ function Testimonialsfromadopters() {
             />
             <div className=" flex flex-col gap-3 max-[850px]:w-full w-[50%]">
               <h1 className=" font-bold text-2xl ">
-                Here's what Ann said following the adoption of Oreo...
+                Here's what Ann said following the adoption of Dakota...
               </h1>
               <ul className=" mt-4 flex flex-col  gap-4 text-[#595959]">
                 <li>
-                  For cats to feel safe and secure, they require their own bed,
-                  secluded hiding spots, and elevated areas to observe their
-                  surroundings.
+                  I stumbled upon PetCares thanks to a Facebook post shared by
+                  someone in my network. Now, we are thrilled to welcome the
+                  adorable Alfie into our family, and our gratitude towards
+                  PetCares, especially Colleen, knows no bounds.
                 </li>
                 <li>
-                  Purchase a cozy and warm cat bed, such as an igloo or hammock,
-                  and place it in a quiet area. Consider acquiring multiple beds
-                  and positioning them in various rooms for added comfort and
-                  convenience.
+                  From the initial email I sent, I was met with prompt and
+                  efficient responses. Colleen went above and beyond, ensuring
+                  that the application process was smooth and hassle-free. The
+                  transition was seamless, and Colleen's care and communication
+                  were exemplary throughout.
                 </li>
                 <li>
-                  You can also create beds and hiding places yourself. Simply
-                  take an appropriately-sized cardboard box, turn it on its
-                  side, and place a soft blanket inside. Once again, position
-                  this homemade shelter in a quiet area for your cat's comfort.
-                </li>
-                <li>
-                  Adding cozy blankets on top of wardrobes, shelves, and
-                  windowsills is an excellent method to provide your cat with
-                  elevated hiding spots.
+                  Thank you immensely for facilitating such a positive and
+                  enjoyable adoption experience. We couldn't be happier with our
+                  decision.
                 </li>
               </ul>
             </div>
@@ -80,24 +76,31 @@ function Testimonialsfromadopters() {
           >
             <div className=" flex flex-col gap-3 max-[850px]:w-full w-[50%]">
               <h1 className=" font-bold text-2xl ">
-                2. Set up a litter tray or outside toilet
+                Here's what Ramona said following the adoption of Thumper...
               </h1>
 
               <ul className=" mt-4 flex flex-col  gap-4 text-[#595959]">
                 <li>
-                  Cats like to go to the toilet where they feel safe, and in a
-                  place that allows them to bury their waste afterwards.
+                  After the loss of my beloved Frenchie in July, I strongly felt
+                  the desire to provide another dog with a loving home,
+                  especially to keep my other little dog, Dolly, company. After
+                  searching for a while, I came across Thumper on PetCares, and
+                  her adorable little face captured my heart.
                 </li>
                 <li>
-                  If your cat already uses a litter tray or you don’t have a
-                  garden, you’ll need to set up a litter tray before they
-                  arrive.
+                  I applied for Thumper, and I was pleasantly surprised by how
+                  smoothly everything went. Colleen was wonderful, and the
+                  communication was excellent.
                 </li>
                 <li>
-                  If your cat prefers to toilet outside and you’ve got a garden,
-                  or you want to train them to toilet outside, pick an area
-                  that’s close to the house yet private. Once they arrive, you
-                  can encourage them to toilet there.
+                  Following the home check meeting, we arranged a 'meet and
+                  greet' with Thumper, and it's been two weeks since we brought
+                  her home. She's settling in beautifully and already feels like
+                  part of the family!
+                </li>
+                <li>
+                  I wholeheartedly recommend PetCares to anyone looking to adopt
+                  a pet.
                 </li>
               </ul>
             </div>
@@ -118,26 +121,36 @@ function Testimonialsfromadopters() {
             />
             <div className=" flex flex-col gap-3 max-[850px]:w-full w-[50%]">
               <h1 className=" font-bold text-2xl ">
-                3. Stock up on the right food
+                Here's what Tucker's adopter, Pinki said...
               </h1>
 
               <ul className=" mt-4 flex flex-col  gap-4 text-[#595959]">
                 <li>
-                  Cats require healthy, balanced diets and constant access to
-                  fresh water. Initially, it's advisable to stick to the food
-                  the cat is accustomed to. Consult the person you're adopting
-                  from to determine the cat's current diet and ensure an ample
-                  supply of it.
+                  We are overjoyed to have welcomed our beloved dog into our
+                  family through PetCares. The adoption process was friendly and
+                  straightforward, with PetRehomer ensuring a thorough check
+                  before allowing us to bring our furry friend home.
                 </li>
                 <li>
-                  Even if you intend to change their diet, it's essential to do
-                  so gradually and under the guidance of your veterinarian.
+                  In just a few days, we arranged for the collection of our dog
+                  from their temporary home. The process was seamless and
+                  hassle-free.
                 </li>
                 <li>
-                  Many cats enjoy eating a special type of grass called
-                  Cocksfoot because it aids in clearing furballs. Having some in
-                  the house can help prevent them from chewing on other
-                  houseplants!
+                  Since coming home, our dog took a little time to settle in and
+                  build their confidence. However, they have quickly become a
+                  cherished member of our family, alternating between playful
+                  explorations in our yard and seeking affectionate cuddles.
+                </li>
+                <li>
+                  We are grateful to PetCares for their support and for
+                  including our dog in their neuter scheme, covering 75% of the
+                  cost. Our dog has brought immense joy and love into our lives,
+                  exceeding all our expectations.
+                </li>
+                <li>
+                  Thank you, PetCares, for helping us find our perfect canine
+                  companion!
                 </li>
               </ul>
             </div>
@@ -147,20 +160,28 @@ function Testimonialsfromadopters() {
        max-[850px]:flex-col max-[850px]:w-full max-[850px]:mx-3 max-[650px]:mx-0 max-[650px]:px-0 "
           >
             <div className=" flex flex-col gap-3 max-[850px]:w-full w-[50%]">
-              <h1 className=" font-bold text-2xl ">4. Get a scratch post</h1>
+              <h1 className=" font-bold text-2xl ">
+                From Sheena, Salem's new pet parent
+              </h1>
 
               <ul className=" mt-4 flex flex-col  gap-4 text-[#595959]">
                 <li>
-                  Scratching is a natural behavior for cats. Encourage them to
-                  engage in this behavior by investing in a proper scratching
-                  post. This will not only fulfill their natural instincts but
-                  also discourage them from scratching and stretching on your
-                  furniture.
+                  Following the passing of our last cat nearly a year ago, we
+                  felt ready to open our hearts and home to another feline
+                  companion. That's when we found Salem through PetCares, and
+                  she has brought immeasurable joy into our lives.
                 </li>
                 <li>
-                  Place the scratching post near their bed so they can stretch
-                  and scratch when they wake up, as this is a common behavior
-                  for most cats.
+                  Salem is the epitome of adorableness, and she fits into our
+                  family perfectly. We specifically sought out an older cat, and
+                  she is exactly what we were looking for. Welcoming her into
+                  our home feels incredibly rewarding, and we are grateful to
+                  petCares for facilitating this wonderful adoption.
+                </li>
+                <li>
+                  We cannot thank PetCares enough for connecting us with Smokey.
+                  We highly recommend their services to anyone looking to find
+                  their perfect furry friend.
                 </li>
               </ul>
             </div>
@@ -180,14 +201,27 @@ function Testimonialsfromadopters() {
               className="w-[50%]  max-[850px]:w-[80%] max-[650px]:w-full min-[1350px]:h-[28rem] object-contain"
             />
             <div className=" flex flex-col gap-3 max-[850px]:w-full w-[50%]">
-              <h1 className=" font-bold text-2xl ">5. Plan for holidays</h1>
+              <h1 className=" font-bold text-2xl ">
+                From Lawrence & Carrie, Harly's new family
+              </h1>
               <ul className=" mt-4 flex flex-col  gap-4 text-[#595959]">
                 <li>
-                  Even though cats are relatively independent pets, they can’t
-                  be left alone for long periods of time. When you go away,
-                  you’ll need to find a cat-sitter or put them in a cattery.
-                  Research your options early so you don’t end up in a difficult
-                  situation.
+                  We've been following PetCares since its inception, back when
+                  it was just an idea. Knowing the Founder personally, I had
+                  full confidence in the quality of service PetCares would
+                  provide.
+                </li>
+                <li>
+                  After adopting Harly from PetCares, we've maintained regular
+                  contact and eagerly await Harly's weekly updates, which I
+                  accompany with my doodles on Saturdays (check out "Carrie’s
+                  Column" on the PetCares Facebook page).
+                </li>
+                <li>
+                  The adoption process was seamless, and we are thrilled to have
+                  found IvyBird and welcomed her into our lives. She has settled
+                  in wonderfully, and our experience with PetCares has been
+                  nothing short of excellent!
                 </li>
               </ul>
             </div>
@@ -197,22 +231,15 @@ function Testimonialsfromadopters() {
        max-[850px]:flex-col max-[850px]:w-full max-[850px]:mx-3 max-[650px]:mx-0 max-[650px]:px-0 "
           >
             <div className=" flex flex-col gap-3 max-[850px]:w-full w-[50%]">
-              <h1 className=" font-bold text-2xl ">6. Register with a vet</h1>
+              <h1 className=" font-bold text-2xl ">
+                From Chals, Henry's new adopter
+              </h1>
               <ul className=" mt-4 flex flex-col  gap-4 text-[#595959]">
                 <li>
-                  You have a continuous responsibility to maintain your cat's
-                  health, so it's crucial to register your cat with a vet as
-                  soon as possible. Watch Harriet's video to understand why this
-                  step is vital.
+                  "I'm ecstatic! He's lovely, an absolute dream, and couldn't be
+                  more loved. Such a happy boy, bringing so much joy!"
                 </li>
-                <li>
-                  As Harriet explains, it's important to gather as much
-                  information as possible about your cat's health from their
-                  previous owner. Be sure to ask for details such as their old
-                  vet's contact information, vaccination records, any
-                  information about existing health conditions and medications,
-                  and whether or not they've been microchipped.
-                </li>
+                <li>I’m delighted with the service, Thank you PetCares."</li>
               </ul>
             </div>
             <img
