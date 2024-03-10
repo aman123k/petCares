@@ -61,7 +61,7 @@ function DonateNeuter() {
               <p className="tracking-wide text-[#777777]">
                 We understand that neutering can be an additional expense for
                 adopters. Therefore, we've established our Neuter Fund to
-                support PetRehomer adopters in taking the responsible step.
+                support PetCares adopters in taking the responsible step.
               </p>
               <p className="tracking-wide text-[#777777]">
                 This initiative marks just the beginning of our journey. With
@@ -110,7 +110,7 @@ function DonateNeuter() {
             <p className="tracking-wide text-[#777777]">
               Pending availability of funds, we can reimburse a portion of the
               cost once the procedure has been performed by a qualified
-              veterinarian at a veterinary practice in the UK.
+              veterinarian at a veterinary practice in the India.
             </p>
             <p className="tracking-wide text-[#777777]">
               If you have used our service and would like to request our help,

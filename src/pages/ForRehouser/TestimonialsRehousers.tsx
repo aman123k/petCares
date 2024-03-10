@@ -1,14 +1,12 @@
 import React from "react";
 
 import Footer from "../../components/Footer";
-import { RxDotFilled } from "react-icons/rx";
 
-import one_bed from "../../images/1-create-safe-space.jpg";
-import food from "../../images/2-set-up-litter-tray.jpg";
-import game from "../../images/3-food.jpg";
-import companion from "../../images/4-scratch-post.jpg";
-import register from "../../images/5-holidays.jpg";
-import vet from "../../images/6-vet.jpg";
+import smokey from "../../images/smokey.png";
+import oreo from "../../images/oreo.png";
+import ganger from "../../images/granger.png";
+import kitty from "../../images/kitty.png";
+import blueberry from "../../images/blurbarry.png";
 import Header from "../../components/Header";
 import { Link } from "react-router-dom";
 
@@ -41,34 +39,31 @@ function TestimonialsRehousers() {
            max-[850px]:flex-col-reverse max-[850px]:w-full max-[850px]:mx-3 max-[650px]:mx-0 max-[650px]:px-0 "
           >
             <img
-              src={one_bed}
+              src={smokey}
               alt=""
               className="w-[50%]  max-[850px]:w-[80%] max-[650px]:w-full min-[1350px]:h-[28rem] object-contain"
             />
             <div className=" flex flex-col gap-3 max-[850px]:w-full w-[50%]">
-              <h1 className=" font-bold text-2xl ">1. Create safe spaces</h1>
+              <h1 className=" font-bold text-2xl ">
+                From Aman, Smokey's Rehouser
+              </h1>
               <ul className=" mt-4 flex flex-col  gap-4 text-[#595959]">
                 <li>
-                  For cats to feel safe and secure, they require their own bed,
-                  secluded hiding spots, and elevated areas to observe their
-                  surroundings.
+                  I extend my heartfelt gratitude to PetCares, particularly Eden
+                  and Colleen, for their outstanding service and genuine concern
+                  in rehousing my cat.
                 </li>
                 <li>
-                  Purchase a cozy and warm cat bed, such as an igloo or hammock,
-                  and place it in a quiet area. Consider acquiring multiple beds
-                  and positioning them in various rooms for added comfort and
-                  convenience.
+                  The experience was incredibly emotional and saddening for me.
+                  However, PetCares alleviated my worries and ultimately brought
+                  me immense relief. Within just two weeks, my cat found a
+                  wonderful new home.
                 </li>
                 <li>
-                  You can also create beds and hiding places yourself. Simply
-                  take an appropriately-sized cardboard box, turn it on its
-                  side, and place a soft blanket inside. Once again, position
-                  this homemade shelter in a quiet area for your cat's comfort.
-                </li>
-                <li>
-                  Adding cozy blankets on top of wardrobes, shelves, and
-                  windowsills is an excellent method to provide your cat with
-                  elevated hiding spots.
+                  I am profoundly moved by PetCares's dedication and commitment
+                  to pet welfare. I wholeheartedly recommend their services to
+                  anyone in need of rehoming their beloved pets. Thank you once
+                  again!
                 </li>
               </ul>
             </div>
@@ -79,29 +74,29 @@ function TestimonialsRehousers() {
           >
             <div className=" flex flex-col gap-3 max-[850px]:w-full w-[50%]">
               <h1 className=" font-bold text-2xl ">
-                2. Set up a litter tray or outside toilet
+                From Khushboo, OREO's Rehouser
               </h1>
 
               <ul className=" mt-4 flex flex-col  gap-4 text-[#595959]">
                 <li>
-                  Cats like to go to the toilet where they feel safe, and in a
-                  place that allows them to bury their waste afterwards.
+                  " I wanted to inform you that 'Pirate' OREO has successfully
+                  transitioned to his new home, where he will be embraced by his
+                  new family.
+                </li>
+                <li>We intend to maintain regular contact in the future.</li>
+                <li>
+                  I sincerely express my gratitude to you and the entire
+                  PetCares team for ensuring a safe and seamless transition.
                 </li>
                 <li>
-                  If your cat already uses a litter tray or you don’t have a
-                  garden, you’ll need to set up a litter tray before they
-                  arrive.
-                </li>
-                <li>
-                  If your cat prefers to toilet outside and you’ve got a garden,
-                  or you want to train them to toilet outside, pick an area
-                  that’s close to the house yet private. Once they arrive, you
-                  can encourage them to toilet there.
+                  Warm regards,
+                  <br />
+                  Khushboo "
                 </li>
               </ul>
             </div>
             <img
-              src={food}
+              src={oreo}
               alt=""
               className="w-[50%]  max-[850px]:w-[80%] max-[650px]:w-full min-[1350px]:h-[28rem] object-contain"
             />
@@ -111,32 +106,29 @@ function TestimonialsRehousers() {
            max-[850px]:flex-col-reverse max-[850px]:w-full max-[850px]:mx-3 max-[650px]:mx-0 max-[650px]:px-0 "
           >
             <img
-              src={game}
+              src={ganger}
               alt=""
               className="w-[50%]  max-[850px]:w-[80%] max-[650px]:w-full min-[1350px]:h-[28rem] object-contain"
             />
             <div className=" flex flex-col gap-3 max-[850px]:w-full w-[50%]">
               <h1 className=" font-bold text-2xl ">
-                3. Stock up on the right food
+                From UV, Ganger's Rehouser
               </h1>
 
               <ul className=" mt-4 flex flex-col  gap-4 text-[#595959]">
                 <li>
-                  Cats require healthy, balanced diets and constant access to
-                  fresh water. Initially, it's advisable to stick to the food
-                  the cat is accustomed to. Consult the person you're adopting
-                  from to determine the cat's current diet and ensure an ample
-                  supply of it.
+                  " I must commend you for providing an exceptional service. I
+                  am thoroughly impressed with the entire system. It's evident
+                  how paramount the welfare of the animals is and the emphasis
+                  placed on ensuring a harmonious match for both pet and
+                  adopter.
                 </li>
                 <li>
-                  Even if you intend to change their diet, it's essential to do
-                  so gradually and under the guidance of your veterinarian.
+                  I will certainly recommend PetCares to anyone considering pet
+                  adoption.
                 </li>
                 <li>
-                  Many cats enjoy eating a special type of grass called
-                  Cocksfoot because it aids in clearing furballs. Having some in
-                  the house can help prevent them from chewing on other
-                  houseplants!
+                  Best regards, <br /> Phil "
                 </li>
               </ul>
             </div>
@@ -146,79 +138,82 @@ function TestimonialsRehousers() {
            max-[850px]:flex-col max-[850px]:w-full max-[850px]:mx-3 max-[650px]:mx-0 max-[650px]:px-0 "
           >
             <div className=" flex flex-col gap-3 max-[850px]:w-full w-[50%]">
-              <h1 className=" font-bold text-2xl ">4. Get a scratch post</h1>
+              <h1 className=" font-bold text-2xl ">
+                From Jaanvi, Kitty's Rehouser
+              </h1>
 
               <ul className=" mt-4 flex flex-col  gap-4 text-[#595959]">
+                <li>" Hello, I'm Jaanvi,</li>
                 <li>
-                  Scratching is a natural behavior for cats. Encourage them to
-                  engage in this behavior by investing in a proper scratching
-                  post. This will not only fulfill their natural instincts but
-                  also discourage them from scratching and stretching on your
-                  furniture.
+                  In my search to rehome my kitten Hazel, I discovered PetCares.
+                  I must say, from the beginning to the end, the service was
+                  exceptional. I received all the necessary information along
+                  the way, keeping me informed at every stage.
                 </li>
                 <li>
-                  Place the scratching post near their bed so they can stretch
-                  and scratch when they wake up, as this is a common behavior
-                  for most cats.
+                  Within just 2 weeks, Hazel found herself in a lovely new home,
+                  and I couldn't be happier for her. I wholeheartedly recommend
+                  PetRehomer to anyone in need of pet rehoming services. x "
                 </li>
               </ul>
             </div>
             <img
-              src={companion}
+              src={kitty}
               alt=""
               className="w-[50%]  max-[850px]:w-[80%] max-[650px]:w-full min-[1350px]:h-[28rem] object-contain"
             />
-          </section>
-          <section
-            className=" flex mx-14 px-5 mt-16 gap-4 pb-12 border-b  items-center max-[650px]:mt-10
-           max-[850px]:flex-col-reverse max-[850px]:w-full max-[850px]:mx-3 max-[650px]:mx-0 max-[650px]:px-0 "
-          >
-            <img
-              src={register}
-              alt=""
-              className="w-[50%]  max-[850px]:w-[80%] max-[650px]:w-full min-[1350px]:h-[28rem] object-contain"
-            />
-            <div className=" flex flex-col gap-3 max-[850px]:w-full w-[50%]">
-              <h1 className=" font-bold text-2xl ">5. Plan for holidays</h1>
-              <ul className=" mt-4 flex flex-col  gap-4 text-[#595959]">
-                <li>
-                  Even though cats are relatively independent pets, they can’t
-                  be left alone for long periods of time. When you go away,
-                  you’ll need to find a cat-sitter or put them in a cattery.
-                  Research your options early so you don’t end up in a difficult
-                  situation.
-                </li>
-              </ul>
-            </div>
           </section>
           <section
             className=" flex mx-14 border-b  px-5 mt-16 gap-4 pb-12  items-center max-[650px]:mt-10
-           max-[850px]:flex-col max-[850px]:w-full max-[850px]:mx-3 max-[650px]:mx-0 max-[650px]:px-0 "
+           max-[850px]:flex-col-reverse max-[850px]:w-full max-[850px]:mx-3 max-[650px]:mx-0 max-[650px]:px-0 "
           >
-            <div className=" flex flex-col gap-3 max-[850px]:w-full w-[50%]">
-              <h1 className=" font-bold text-2xl ">6. Register with a vet</h1>
-              <ul className=" mt-4 flex flex-col  gap-4 text-[#595959]">
-                <li>
-                  You have a continuous responsibility to maintain your cat's
-                  health, so it's crucial to register your cat with a vet as
-                  soon as possible. Watch Harriet's video to understand why this
-                  step is vital.
-                </li>
-                <li>
-                  As Harriet explains, it's important to gather as much
-                  information as possible about your cat's health from their
-                  previous owner. Be sure to ask for details such as their old
-                  vet's contact information, vaccination records, any
-                  information about existing health conditions and medications,
-                  and whether or not they've been microchipped.
-                </li>
-              </ul>
-            </div>
             <img
-              src={vet}
+              src={blueberry}
               alt=""
               className="w-[50%]  max-[850px]:w-[80%] max-[650px]:w-full min-[1350px]:h-[28rem] object-contain"
             />
+            <div className=" flex flex-col gap-3 max-[850px]:w-full w-[50%]">
+              <h1 className=" font-bold text-2xl ">
+                From Sukhdeep, Blueberry's Rehouser
+              </h1>
+              <ul className=" mt-4 flex flex-col  gap-4 text-[#595959]">
+                <li>Hello PetCares Team,</li>
+                <li>
+                  I wanted to take a moment to express my heartfelt gratitude
+                  for your assistance and support in rehoming my beloved parrot,
+                  Blueberry.
+                </li>
+                <li>
+                  The decision to rehouse Blueberry was incredibly difficult and
+                  not one that I made lightly. I adore Blueberry dearly, and it
+                  pained me to see him unhappy. I truly appreciate the kindness
+                  and compassion you showed throughout the process, and for
+                  helping me find a home where he can thrive.
+                </li>
+                <li>
+                  I am delighted that Blueberry is now living with Emily. I
+                  couldn't have wished for a better match or a more loving home
+                  for him to go to. Though saying goodbye was bittersweet,
+                  seeing him settle in so beautifully with Emily in such a short
+                  time reassured me that prioritizing his well-being was the
+                  right decision.
+                </li>
+                <li>
+                  In addition to welcoming Blueberry into her home, Emily has
+                  been incredibly kind to me and has graciously kept me updated
+                  on Ezra's progress. This ongoing communication is something I
+                  deeply appreciate and is a significant benefit of rehoming him
+                  through PetCares.
+                </li>
+                <li>
+                  Thank you immensely for helping Blueberry find his happiness.
+                  Though he cannot express it himself, he is incredibly grateful
+                </li>
+                <li>
+                  Best wishes, <br /> Sukhdeep
+                </li>
+              </ul>
+            </div>
           </section>
           <button
             className="mt-10 text-white bg-[#5E9E3C] px-7 py-4 hover:bg-white hover:border-[#5E9E3C] hover:border hover:text-[#5E9E3C] tracking-wide font-semibold

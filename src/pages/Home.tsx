@@ -81,12 +81,12 @@ function Home() {
        py-8  flex-col flex gap-6 bg-[#EEEEEE] drop-shadow-md"
       >
         <h1 className=" text-2xl font-bold text-[#595959]">
-          Straightforward Pet Rehoming And Adoption
+          Straightforward Pet Rehousing And Adoption
         </h1>
         <p>
           PetCares is an innovative digital platform where real individuals
           facilitate connections between prospective pet adopters and pet owners
-          in need of rehoming their animals. Our platform simplifies the
+          in need of rehousing their animals. Our platform simplifies the
           adoption process, ensuring that caring individuals find the perfect
           companion while increasing the likelihood of pets finding their
           forever homes.

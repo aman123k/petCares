@@ -17,6 +17,7 @@ import useCreateChat from "../../customHooks/CreateChat";
 import useRecivePets, { PetsdataType } from "../../customHooks/RecivePetsData";
 import { KeyFect } from "../../data/data";
 import { GoCheck } from "react-icons/go";
+import useStripe from "../../customHooks/UseStripe";
 const url = process.env.REACT_APP_URL as string;
 
 function PetDetails() {
@@ -30,7 +31,7 @@ function PetDetails() {
   const [currentPetsInfo, setCurentPetInfo] = useState<
     PetsdataType | undefined | null
   >();
-  const free = checkfee(
+  const fee = checkfee(
     currentPetsInfo?.petType,
     currentPetsInfo?.characteristics.petAge
   );
@@ -60,6 +61,11 @@ function PetDetails() {
     }
   }, [currentPetsInfo, userDetails]);
   const { chat } = useCreateChat({ url, email: currentPetsInfo?.Auth?.email });
+
+  const { checkOut } = useStripe({
+    Petdetails: currentPetsInfo,
+    fee: fee,
+  });
 
   return (
     <section
@@ -307,13 +313,7 @@ function PetDetails() {
             </p>
             <div className=" flex justify-between items-center">
               <p className=" text-[#96C830] font-bold text-lg">
-                Adoption Fee:{" "}
-                {currentPetsInfo?.petType === "parrot"
-                  ? "₹ 1200"
-                  : currentPetsInfo?.petType === "rabbit"
-                  ? "₹ 500"
-                  : ""}
-                {free}
+                Adoption Fee: ₹ {fee}
               </p>
               {currentPetsInfo?.Auth?.email !== userDetails?.email &&
               userDetails ? (
@@ -332,6 +332,7 @@ function PetDetails() {
               <button
                 className="bg-[#96C830] text-white px-3 py-1.5 my-2 font-semibold rounded-lg
               border-[#96C830] border-2 w-full hover:bg-white hover:text-[#96C830]"
+                onClick={checkOut}
               >
                 Get Your New Best Friend
               </button>

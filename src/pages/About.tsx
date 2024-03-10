@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import aboutBnner from "../images/green-hand-paw-1.png";
 import { Link } from "react-router-dom";
 import helperImage from "../images/adoption-giving-up-a-catsmall.jpg";
-import helper2Image from "../images/about-us-2nd.jpg";
+import helper2Image from "../images/about-us-2nd 1.png";
 import { FcHome } from "react-icons/fc";
 import { GoPerson } from "react-icons/go";
 import { FaHandsHelping } from "react-icons/fa";

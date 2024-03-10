@@ -10,7 +10,7 @@ export interface UseRegisterProps {
   data: UserRegistrationData;
 }
 export interface UserLoginData {
-  username: string;
+  password: string;
   email: string;
 }
 export interface UserUpadteData {

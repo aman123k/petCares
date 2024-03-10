@@ -36,7 +36,7 @@ function FirstStep() {
           Please make sure you’ve read and agree to these points before you
           create a listing.
         </p>
-        <ul className="text-[#777777] flex flex-col gap-3 mt-4">
+        <ul className="text-[#777777] flex flex-col gap-3 my-7">
           <li>
             1. Listing your pet with our Site is free of charge, but{" "}
             <span className="font-bold"> you won't receive payment </span> for

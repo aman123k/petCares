@@ -15,8 +15,8 @@ import { ThemeContext } from "../globleContext/context";
 function Login() {
   const [showPassword, setShowPassword] = useState<boolean>(false);
   const [userInfo, setUserInfo] = useState<UserLoginData>({
-    username: "",
     email: "",
+    password: "",
   });
   const {
     userDetails,
@@ -45,9 +45,11 @@ function Login() {
   };
   const handleSubmit = (e: React.FormEvent<HTMLElement>): void => {
     e.preventDefault();
-    if (!userInfo.username) {
-      toast.error("Please enter name");
+    if (!userInfo.email) {
+      toast.error("Please enter email");
       return;
+    } else if (!userInfo?.password) {
+      toast.error("Please enter password");
     }
     login();
   };

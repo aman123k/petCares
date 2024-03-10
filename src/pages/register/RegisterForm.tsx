@@ -72,7 +72,7 @@ const RegisterForm: React.FC = () => {
       register();
     }
   };
-  const googleLogin = useGoogleAuth(`http://localhost:8080/googleAuth`);
+  const googleLogin = useGoogleAuth(`${url}/googleAuth`);
 
   const CLIENT_ID: string = process.env.REACT_APP_CLIENT_ID || "";
 

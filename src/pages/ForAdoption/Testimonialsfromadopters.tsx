@@ -2,12 +2,12 @@ import React from "react";
 
 import Footer from "../../components/Footer";
 
-import one_bed from "../../images/1-create-safe-space.jpg";
-import food from "../../images/2-set-up-litter-tray.jpg";
-import game from "../../images/3-food.jpg";
-import companion from "../../images/4-scratch-post.jpg";
-import register from "../../images/5-holidays.jpg";
-import vet from "../../images/6-vet.jpg";
+import dakota from "../../images/dakota.png";
+import harly from "../../images/harly.png";
+import henry from "../../images/henry.png";
+import salem from "../../images/salem.png";
+import thumper from "../../images/thumper.png";
+import turker from "../../images/turker.png";
 import Header from "../../components/Header";
 import { Link } from "react-router-dom";
 
@@ -40,12 +40,14 @@ function Testimonialsfromadopters() {
        max-[850px]:flex-col-reverse max-[850px]:w-full max-[850px]:mx-3 max-[650px]:mx-0 max-[650px]:px-0 "
           >
             <img
-              src={one_bed}
+              src={dakota}
               alt=""
               className="w-[50%]  max-[850px]:w-[80%] max-[650px]:w-full min-[1350px]:h-[28rem] object-contain"
             />
             <div className=" flex flex-col gap-3 max-[850px]:w-full w-[50%]">
-              <h1 className=" font-bold text-2xl ">1. Create safe spaces</h1>
+              <h1 className=" font-bold text-2xl ">
+                Here's what Ann said following the adoption of Oreo...
+              </h1>
               <ul className=" mt-4 flex flex-col  gap-4 text-[#595959]">
                 <li>
                   For cats to feel safe and secure, they require their own bed,
@@ -100,7 +102,7 @@ function Testimonialsfromadopters() {
               </ul>
             </div>
             <img
-              src={food}
+              src={thumper}
               alt=""
               className="w-[50%]  max-[850px]:w-[80%] max-[650px]:w-full min-[1350px]:h-[28rem] object-contain"
             />
@@ -110,7 +112,7 @@ function Testimonialsfromadopters() {
        max-[850px]:flex-col-reverse max-[850px]:w-full max-[850px]:mx-3 max-[650px]:mx-0 max-[650px]:px-0 "
           >
             <img
-              src={game}
+              src={turker}
               alt=""
               className="w-[50%]  max-[850px]:w-[80%] max-[650px]:w-full min-[1350px]:h-[28rem] object-contain"
             />
@@ -163,7 +165,7 @@ function Testimonialsfromadopters() {
               </ul>
             </div>
             <img
-              src={companion}
+              src={salem}
               alt=""
               className="w-[50%]  max-[850px]:w-[80%] max-[650px]:w-full min-[1350px]:h-[28rem] object-contain"
             />
@@ -173,7 +175,7 @@ function Testimonialsfromadopters() {
        max-[850px]:flex-col-reverse max-[850px]:w-full max-[850px]:mx-3 max-[650px]:mx-0 max-[650px]:px-0 "
           >
             <img
-              src={register}
+              src={harly}
               alt=""
               className="w-[50%]  max-[850px]:w-[80%] max-[650px]:w-full min-[1350px]:h-[28rem] object-contain"
             />
@@ -214,7 +216,7 @@ function Testimonialsfromadopters() {
               </ul>
             </div>
             <img
-              src={vet}
+              src={henry}
               alt=""
               className="w-[50%]  max-[850px]:w-[80%] max-[650px]:w-full min-[1350px]:h-[28rem] object-contain"
             />
