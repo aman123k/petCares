@@ -3,7 +3,7 @@ import { useRef } from "react";
 import toast from "react-hot-toast";
 const STRIPE_PUBLIC_API_KEY = process.env
   .REACT_APP_STRIPE_PUBLIC_API_KEY as string;
-const url = process.env.REACT_APP_URL;
+const url = process.env.REACT_APP_URL as string;
 const useStripe = ({
   id,
   fee,
@@ -26,13 +26,14 @@ const useStripe = ({
         credentials: "include",
       });
       const json = await response.json();
-      if (json.success) {
-        toast.success("stripe loaded", { id: toastId.current });
-        stripe?.redirectToCheckout({
-          sessionId: json.sessionId,
-        });
-      }
-    } catch {
+
+      toast.success("stripe loaded", { id: toastId.current });
+      stripe?.redirectToCheckout({
+        sessionId: json.sessionId,
+      });
+      console.log(json.sessionId);
+    } catch (err) {
+      console.log("froentEnd", err);
       toast.error("server error");
     }
   };

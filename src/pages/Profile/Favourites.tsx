@@ -31,8 +31,8 @@ function Favourites() {
 
         {favourites?.length !== 0 ? (
           <section
-            className=" grid grid-cols-3 justify-center max-[650px]:grid-cols-1
-          max-[650px]:px-6 max-[650px]:gap-y-4 max-[650px]:py-8 gap-8 min-[1200px]:grid-cols-4 px-8 py-14"
+            className=" grid grid-cols-3 justify-center max-[650px]:grid-cols-1 max-[950px]:grid-cols-2
+          max-[650px]:px-0 max-[650px]:gap-y-4 max-[650px]:py-8 gap-8 min-[1200px]:grid-cols-4 px-8 py-14"
           >
             {favourites?.map((favourite, index) => {
               return <CardForPet key={index} PetsData={favourite} />;

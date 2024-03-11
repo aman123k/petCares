@@ -28,13 +28,13 @@ function GithubAuth() {
           toast.error(json.response);
           setTimeout(() => {
             navigator("/");
-          }, 200);
+          }, 4000);
         }
       } catch {
         toast.error("server error");
         setTimeout(() => {
           navigator("/");
-        }, 2000);
+        }, 4000);
       }
     },
 

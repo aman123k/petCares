@@ -63,7 +63,7 @@ function FindPet() {
             </h1>
           }
           dataLength={allPetsdata.length}
-          className=" grid grid-cols-3 justify-center max-[650px]:grid-cols-1
+          className=" grid grid-cols-3 justify-center max-[650px]:grid-cols-1 max-[950px]:grid-cols-2
             max-[650px]:px-8 max-[650px]:gap-y-4 max-[650px]:py-8 gap-8 min-[1200px]:grid-cols-4 px-10 py-14"
         >
           {allPetsdata?.map((petData, index) => {
