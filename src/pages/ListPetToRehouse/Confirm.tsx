@@ -114,7 +114,7 @@ function Confirm() {
         setPetImage([]);
         setPetStory("");
       } else {
-        toast.success(json.response, {
+        toast.error(json.response, {
           id: toastId.current,
         });
       }
