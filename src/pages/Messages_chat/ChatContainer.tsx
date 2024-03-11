@@ -205,8 +205,8 @@ function ChatContainer() {
              translate-x-[-50%] text-center rounded-lg text-[12px] bg-white"
               >
                 {chatUser.secondUser.email !== userDetails?.email
-                  ? `You block ${chatUser.firstUser.username}`
-                  : `${chatUser.secondUser.username} block You`}
+                  ? `You block ${chatUser.secondUser.username}`
+                  : `${chatUser.firstUser.username} block You`}
               </div>
             ) : (
               ""
