@@ -38,7 +38,10 @@ function ChatScreen() {
             <ChatContainer />
           </section>
         ) : (
-          <div className=" font-Nunito font-bold text-2xl text-center items-center flex justify-center w-[68%] max-[950px]:w-[60%]">
+          <div
+            className=" font-Nunito font-bold text-2xl text-center
+          max-[650px]:hidden items-center flex justify-center w-[68%] max-[950px]:w-[60%]"
+          >
             Chat not selected yet!
           </div>
         )}

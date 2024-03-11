@@ -23,7 +23,7 @@ function GithubAuth() {
           toast.success(json.response);
           setTimeout(() => {
             navigator("/");
-          }, 200);
+          }, 4000);
         } else {
           toast.error(json.response);
           setTimeout(() => {

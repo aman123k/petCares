@@ -109,6 +109,7 @@ function ForgetPass() {
                 className={`bg-[#96C830] py-2.5 font-bold rounded-lg text-white`}
                 onClick={(e: React.FormEvent<HTMLElement>) => {
                   e.preventDefault();
+                  if (!email) toast.error("Enter email..");
                   sendMail({ email, setSendEmail });
                 }}
               >

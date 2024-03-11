@@ -63,7 +63,7 @@ function PetDetails() {
   const { chat } = useCreateChat({ url, email: currentPetsInfo?.Auth?.email });
 
   const { checkOut } = useStripe({
-    Petdetails: currentPetsInfo,
+    id: id,
     fee: fee,
   });
 
@@ -72,7 +72,7 @@ function PetDetails() {
       className={`${showImage ? "h-screen overflow-hidden" : ""} capitalize`}
     >
       <Header />
-      <section className=" bg-[#F9F9F9] font-Nunito px-8 flex items-center justify-between py-10">
+      <section className=" bg-[#F9F9F9] font-Nunito max-[650px]:px-6 px-8 flex items-center justify-between py-10">
         <div>
           <Link to="/adopt-a-pet">
             <p className=" flex items-center gap-2 text-[#99CB36] font-semibold text-sm">
@@ -113,7 +113,7 @@ function PetDetails() {
           )}
         </div>
       </section>
-      <section className="bg-[#F9F9F9] px-8 flex gap-[2.5%] max-[650px]:gap-10 max-[650px]:flex-col pb-10 h-max">
+      <section className="bg-[#F9F9F9] max-[650px]:px-6 px-8 flex gap-[2.5%] max-[650px]:gap-10 max-[650px]:flex-col pb-10 h-max">
         <div
           className=" w-[63%] rounded-lg overflow-hidden drop-shadow-md max-[650px]:w-full max-[650px]:h-auto 
         max-[950px]:h-auto items-start h-[30rem]"
@@ -156,7 +156,7 @@ function PetDetails() {
           </div>
         </div>
       </section>
-      <section className="bg-[#F9F9F9] px-8 flex gap-[3%] border-t capitalize py-10 max-[650px]:flex-col">
+      <section className="bg-[#F9F9F9] max-[650px]:px-6 px-8 flex gap-[3%] border-t capitalize py-10 max-[650px]:flex-col">
         <section className="w-[63%] max-[650px]:w-full font-Nunito flex flex-col gap-6">
           <div className=" bg-white drop-shadow-lg rounded-lg px-8 py-6">
             <h1 className=" my-3 font-bold  text-2xl text-[#595959]">
@@ -216,7 +216,7 @@ function PetDetails() {
             <h1 className=" my-3 font-bold  text-xl text-[#595959]">
               Features
             </h1>
-            <div className=" grid grid-cols-2 gap-3 mt-2 text-sm tracking-wider">
+            <div className=" grid grid-cols-2 gap-3 max-[650px]:grid-cols-1 mt-2 text-sm tracking-wider">
               <div
                 className={`flex items-center gap-3 ${
                   currentPetsInfo?.keyFact.Microchipped === "yes"
@@ -311,7 +311,7 @@ function PetDetails() {
             <p className=" my-2 text-[#595959] font-bold text-lg">
               Private Owner, {currentPetsInfo?.Auth?.name}
             </p>
-            <div className=" flex justify-between items-center">
+            <div className=" flex justify-between items-center max-[650px]:flex-col gap-3 max-[650px]:items-start">
               <p className=" text-[#96C830] font-bold text-lg">
                 Adoption Fee: ₹ {fee}
               </p>

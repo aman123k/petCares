@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Characteristics, KeyFacts } from "../interface/interface";
 import toast from "react-hot-toast";
 
@@ -33,12 +33,15 @@ const useRecivePets = () => {
   const [page, setPage] = useState<number>(1);
   const [totalDoc, setTotalDoc] = useState<number>(0);
 
+  const toastId = useRef("");
   useEffect(() => {
     const fetch = async () => {
       try {
+        toastId.current = toast.loading("Please wait...");
         const data = await fetchPetData(page);
         setAllPetsdata((pre) => [...pre, ...data.response]);
         setTotalDoc(data.totalDoc);
+        toast.success("Pets details loaded", { id: toastId.current });
       } catch {
         toast.error("server error");
       }

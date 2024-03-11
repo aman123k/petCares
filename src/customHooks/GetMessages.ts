@@ -11,6 +11,7 @@ interface messages {
   chatId: string;
 }
 const url = process.env.REACT_APP_URL as string;
+
 const fetchMessages = async (id: string) => {
   try {
     const response = await fetch(`${url}/reciveMessage`, {
@@ -28,25 +29,39 @@ const fetchMessages = async (id: string) => {
   }
 };
 const useGetMessages = ({ id }: { id: string | undefined }) => {
+  const [loading, setLoading] = useState<boolean>(false);
   const [allMessages, setAllMessages] = useState<Array<fetchMessage>>([]);
   const [messages, setMessages] = useState<Array<messageType>>([]);
   const [intialmessage, setIntialmessage] = useState<string>("");
 
   useEffect(() => {
-    if (id) {
-      setAllMessages([]);
-      const fetch = async () => {
-        const data = await fetchMessages(id);
-        setAllMessages(data.response);
-        setIntialmessage(data.intialmessage);
-        setMessages([]);
-      };
+    try {
+      if (id) {
+        setAllMessages([]);
+        setLoading(true);
+        const fetch = async () => {
+          const data = await fetchMessages(id);
+          setAllMessages(data?.response);
+          setIntialmessage(data.intialmessage);
+          setMessages([]);
+          setLoading(false);
+        };
 
-      fetch();
+        fetch();
+      }
+    } catch (err) {
+      console.log(err);
     }
   }, [id]);
 
-  return { fetchMessages, allMessages, messages, setMessages, intialmessage };
+  return {
+    fetchMessages,
+    allMessages,
+    messages,
+    setMessages,
+    intialmessage,
+    loading,
+  };
 };
 
 export default useGetMessages;
