@@ -16,6 +16,7 @@ const useStripe = ({
     try {
       const stripe = await loadStripe(STRIPE_PUBLIC_API_KEY);
       toastId.current = toast.loading("Please wait...");
+      console.log("ji");
       const response = await fetch(`${url}/create-check-out`, {
         method: "post",
         headers: {

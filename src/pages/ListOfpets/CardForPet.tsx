@@ -51,10 +51,10 @@ function CardForPet({ PetsData }: { PetsData: petList }) {
               {PetsData.characteristics.petBreed}
             </h3>
             <h1 className=" capitalize font-bold text-[#595959] text-xl my-1">
-              {PetsData.Auth.name}
+              {PetsData.characteristics?.petName}
             </h1>
             <div className=" flex items-center gap-2 text-[#8d8c8c] text-sm font-semibold tracking-wide">
-              <CiLocationOn /> Milton Keynes
+              <CiLocationOn /> Milton Delhi
             </div>
           </div>
           <div className=" border-t text-[#8d8c8c] py-4">

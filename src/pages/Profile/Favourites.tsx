@@ -32,7 +32,7 @@ function Favourites() {
         {favourites?.length !== 0 ? (
           <section
             className=" grid grid-cols-3 justify-center max-[650px]:grid-cols-1
-          max-[650px]:px-8 max-[650px]:gap-y-4 max-[650px]:py-8 gap-8 min-[1200px]:grid-cols-4 px-10 py-14"
+          max-[650px]:px-6 max-[650px]:gap-y-4 max-[650px]:py-8 gap-8 min-[1200px]:grid-cols-4 px-8 py-14"
           >
             {favourites?.map((favourite, index) => {
               return <CardForPet key={index} PetsData={favourite} />;
@@ -41,7 +41,7 @@ function Favourites() {
         ) : (
           <div
             className=" bg-white rounded-lg drop-shadow-md gap-4 text-center
-      py-8 flex-col flex  max-[650px]: px-6 mt-6"
+      py-8 flex-col flex  px-6 mt-6"
           >
             <h1 className=" text-[#484848] font-bold text-2xl">
               No favourites
