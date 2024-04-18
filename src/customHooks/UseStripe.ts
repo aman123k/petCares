@@ -1,8 +1,8 @@
 import { loadStripe } from "@stripe/stripe-js";
 import { useRef } from "react";
 import toast from "react-hot-toast";
-const STRIPE_PUBLIC_API_KEY =
-  "pk_test_51OqvnjSGTzTAboR8TMmifMME7V6oCf3j8ulYiAom1NdjBOpfxbab9XqCIqTSajVylXfXwR9DY9rNZzFWJcNv5Ysk00qA1QA9PU";
+const STRIPE_PUBLIC_API_KEY = process.env
+  .REACT_APP_STRIPE_PUBLIC_API_KEY as string;
 const url = process.env.REACT_APP_URL as string;
 const useStripe = ({
   id,
