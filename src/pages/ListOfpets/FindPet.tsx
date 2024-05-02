@@ -1,21 +1,49 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import CardForPet from "./CardForPet";
 import { FaAngleDown } from "react-icons/fa";
-import { BsThreeDotsVertical } from "react-icons/bs";
 import InfiniteScroll from "react-infinite-scroll-component";
+import Catloader from "../../data/loader.json";
 import loader from "../../images/loader.gif";
 import useRecivePets from "../../customHooks/RecivePetsData";
 import { animals } from "../../data/data";
-
+import Lottie from "react-lottie";
 function FindPet() {
   const { allPetsdata, setPage, totalDoc } = useRecivePets();
   const hasModedata = () => {
     setPage((pre) => pre + 1);
   };
-  console.log("helo", allPetsdata);
-  console.log("helo", totalDoc);
+  const [dimensions, setDimensions] = useState({ width: "100%", height: 300 });
+
+  useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth > 1200) {
+        setDimensions({ width: "40%", height: 500 });
+      } else if (window.innerWidth > 800) {
+        setDimensions({ width: "70%", height: 400 });
+      } else if (window.innerWidth > 650 && window.innerWidth < 800) {
+        setDimensions({ width: "70%", height: 400 });
+      } else {
+        setDimensions({ width: "100%", height: 300 });
+      }
+    }
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: Catloader,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
 
   return (
     <>
@@ -63,10 +91,10 @@ function FindPet() {
           </div>
         </section>
         {allPetsdata.length === 0 || totalDoc === 0 ? (
-          <img
-            src={loader}
-            className=" ml-[50%] translate-x-[-50%] py-10 h-56"
-            alt=""
+          <Lottie
+            options={defaultOptions}
+            height={dimensions.height}
+            width={dimensions.width}
           />
         ) : (
           <InfiniteScroll

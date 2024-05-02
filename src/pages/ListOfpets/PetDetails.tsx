@@ -328,15 +328,16 @@ function PetDetails() {
                 ""
               )}
             </div>
-            {userDetails && (
-              <button
-                className="bg-[#96C830] text-white px-3 py-1.5 my-2 font-semibold rounded-lg
+            {userDetails &&
+              currentPetsInfo?.Auth?.email !== userDetails?.email && (
+                <button
+                  className="bg-[#96C830] text-white px-3 py-1.5 my-2 font-semibold rounded-lg
               border-[#96C830] border-2 w-full hover:bg-white hover:text-[#96C830]"
-                onClick={checkOut}
-              >
-                Get Your New Best Friend
-              </button>
-            )}
+                  onClick={checkOut}
+                >
+                  Get Your New Best Friend
+                </button>
+              )}
           </div>
           {!userDetails && (
             <div
