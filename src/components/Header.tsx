@@ -56,13 +56,25 @@ const Header: React.FC = () => {
       <Mobilemenu openMenu={openMenu} setOpenMenu={setOpenMenu} />
       <nav className=" flex flex-col gap-2 max-[950px]:hidden">
         <ul className="flex gap-6 relative">
-          <Link to="/" className="hover:text-[#5FA501]">
+          <Link
+            to="/"
+            className="hover:text-[#5FA501]"
+            onClick={() => window.scrollTo(0, 0)}
+          >
             <li>Home</li>
           </Link>
-          <Link to="/adopt-a-pet" className="hover:text-[#5FA501]">
+          <Link
+            to="/adopt-a-pet"
+            className="hover:text-[#5FA501]"
+            onClick={() => window.scrollTo(0, 0)}
+          >
             <li>Find a pet</li>
           </Link>
-          <Link to="/rehouse-a-pet" className="hover:text-[#5FA501]">
+          <Link
+            to="/rehouse-a-pet"
+            className="hover:text-[#5FA501]"
+            onClick={() => window.scrollTo(0, 0)}
+          >
             <li>List a pet</li>
           </Link>
 
@@ -89,7 +101,11 @@ const Header: React.FC = () => {
             </li>
             {rehouseList && <DropdownListRehouse />}
           </div>
-          <Link to="/about" className="hover:text-[#5FA501]">
+          <Link
+            to="/about"
+            className="hover:text-[#5FA501]"
+            onClick={() => window.scrollTo(0, 0)}
+          >
             <li>About us</li>
           </Link>
           <div

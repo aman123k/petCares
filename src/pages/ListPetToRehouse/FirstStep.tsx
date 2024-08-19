@@ -20,7 +20,10 @@ function FirstStep() {
     if (!pet) return toast.error("Select a pet to rehouse...");
     else if (!reason) return toast.error("Select a reason of rehousing...");
     else if (!time) return toast.error("Select time...");
-    else navigator("/rehouse-a-pet/about-you");
+    else {
+      navigator("/rehouse-a-pet/about-you");
+      window.scrollTo(0, 0);
+    }
   };
 
   return (

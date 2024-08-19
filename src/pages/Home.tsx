@@ -58,7 +58,7 @@ function Home() {
                 I Need to rehouse my pet
               </h1>
               <p className="font-Nunito text-[16px] tracking-wide pt-2 max-[650px]:pt-1  ">
-                Start the process. It's free to liste your pet on petCreas
+                Start the process. It's free to liste your pet on petCares
               </p>
             </div>
           </div>

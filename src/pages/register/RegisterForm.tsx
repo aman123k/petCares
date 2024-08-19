@@ -55,7 +55,7 @@ const RegisterForm: React.FC = () => {
   };
   const handleSubmit = (e: React.FormEvent<HTMLElement>) => {
     e.preventDefault();
-    if (data.username === "") {
+    if (data.username.trim() === "") {
       toast.error("Please enter name");
       return;
     } else if (!data.email.match(/^[a-zA-Z0-9._%+-]+@gmail\.com$/)) {

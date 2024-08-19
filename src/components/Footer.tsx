@@ -31,42 +31,49 @@ function Footer() {
             <Link
               to="/frequently-asked-questions"
               className=" hover:translate-x-3 ease-in-out duration-200"
+              onClick={() => window.scrollTo(0, 0)}
             >
               <li>Frequently Asked Questions</li>
             </Link>
             <Link
               to="/are-you-ready-to-adopt-a-pet"
               className=" hover:translate-x-3 ease-in-out duration-200"
+              onClick={() => window.scrollTo(0, 0)}
             >
               <li>Check If You're Ready To Adopt A Pet</li>
             </Link>
             <Link
               to="/register"
               className=" hover:translate-x-3 ease-in-out duration-200"
+              onClick={() => window.scrollTo(0, 0)}
             >
               <li>Register for a free PetCares Account</li>
             </Link>
             <Link
               to="/login"
               className=" hover:translate-x-3 ease-in-out duration-200"
+              onClick={() => window.scrollTo(0, 0)}
             >
               <li>Login to your PetCares Account</li>
             </Link>
             <Link
               to="/tips-for-adopters"
               className=" hover:translate-x-3 ease-in-out duration-200"
+              onClick={() => window.scrollTo(0, 0)}
             >
               <li>Tips For Adopters</li>
             </Link>
             <Link
               to="/tips-for-rehouser"
               className=" hover:translate-x-3 ease-in-out duration-200"
+              onClick={() => window.scrollTo(0, 0)}
             >
               <li>Tips For Rehousers</li>
             </Link>
             <Link
               to="/contact-petcares"
               className=" hover:translate-x-3 ease-in-out duration-200"
+              onClick={() => window.scrollTo(0, 0)}
             >
               <li>Contact PetCares</li>
             </Link>
@@ -74,12 +81,14 @@ function Footer() {
             <Link
               to="/about"
               className=" hover:translate-x-3 ease-in-out duration-200"
+              onClick={() => window.scrollTo(0, 0)}
             >
               <li>About Us</li>
             </Link>
             <Link
               to="/testimonials-from-adopters"
               className=" hover:translate-x-3 ease-in-out duration-200"
+              onClick={() => window.scrollTo(0, 0)}
             >
               <li>Testimonials from Adopter</li>
             </Link>
@@ -91,60 +100,70 @@ function Footer() {
             <Link
               to="/for_rehousers"
               className=" hover:translate-x-3 ease-in-out duration-200"
+              onClick={() => window.scrollTo(0, 0)}
             >
               <li>How It Works - Rehomers</li>
             </Link>
             <Link
               to="/for_adopter"
               className=" hover:translate-x-3 ease-in-out duration-200"
+              onClick={() => window.scrollTo(0, 0)}
             >
               <li>How It Works - Adopters</li>
             </Link>
             <Link
               to="/guidelines"
               className=" hover:translate-x-3 ease-in-out duration-200"
+              onClick={() => window.scrollTo(0, 0)}
             >
               <li>Adoption Guidelines</li>
             </Link>
             <Link
               to="/giving-up-a-dog"
               className=" hover:translate-x-3 ease-in-out duration-200"
+              onClick={() => window.scrollTo(0, 0)}
             >
               <li>Giving up a dog</li>
             </Link>
             <Link
               to="/giving-up-a-cat"
               className=" hover:translate-x-3 ease-in-out duration-200"
+              onClick={() => window.scrollTo(0, 0)}
             >
               <li>Giving up a cat</li>
             </Link>
             <Link
               to="/giving-up-a-rabbit"
               className=" hover:translate-x-3 ease-in-out duration-200"
+              onClick={() => window.scrollTo(0, 0)}
             >
               <li>Giving up a rabbit</li>
             </Link>
             <Link
               to="/giving-up-a-parrot"
               className=" hover:translate-x-3 ease-in-out duration-200"
+              onClick={() => window.scrollTo(0, 0)}
             >
               <li>Giving up a parrot</li>
             </Link>
             <Link
               to="/pet-welfare"
               className=" hover:translate-x-3 ease-in-out duration-200"
+              onClick={() => window.scrollTo(0, 0)}
             >
               <li>Pet Care Information</li>
             </Link>
             <Link
               to="/testimonials-from-rehouser"
               className=" hover:translate-x-3 ease-in-out duration-200"
+              onClick={() => window.scrollTo(0, 0)}
             >
               <li>Testimonials from Rehousers</li>
             </Link>
             <Link
               to="/donate-to-neuter"
               className=" hover:translate-x-3 ease-in-out duration-200"
+              onClick={() => window.scrollTo(0, 0)}
             >
               <li>Donate to Neuter</li>
             </Link>

@@ -45,13 +45,14 @@ function Login() {
   };
   const handleSubmit = (e: React.FormEvent<HTMLElement>): void => {
     e.preventDefault();
-    if (!userInfo.email) {
+    if (!userInfo.email.trim()) {
       toast.error("Please enter email");
       return;
     } else if (!userInfo?.password) {
       toast.error("Please enter password");
+    } else {
+      login();
     }
-    login();
   };
 
   const CLIENT_ID = process.env.REACT_APP_CLIENT_ID as string;

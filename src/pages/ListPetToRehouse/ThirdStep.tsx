@@ -110,7 +110,10 @@ function ThirdStep() {
       return toast.error("Select an option");
     else if (!petStory)
       return toast.error("Please enter pet story in more the 150 words");
-    else navigator("/rehouse-a-pet/confirm");
+    else {
+      navigator("/rehouse-a-pet/confirm");
+      window.scrollTo(0, 0);
+    }
   };
 
   return (
@@ -412,7 +415,10 @@ function ThirdStep() {
               className=" border-[#96c16d] hover:text-[#5FA501] bg-[#96c16d]
         hover:bg-white px-20 border-2 text-white rounded-lg font-semibold py-3
         drop-shadow-md"
-              onClick={() => navigator(-1)}
+              onClick={() => {
+                navigator(-1);
+                window.scrollTo(0, 0);
+              }}
             >
               Previous
             </button>

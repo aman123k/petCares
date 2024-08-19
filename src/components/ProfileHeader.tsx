@@ -21,19 +21,19 @@ function ProfileHeader() {
             className=" mt-7 font-bold tracking-wide gap-6 flex max-[950px]:flex-col 
           max-[850px]:gap-2.5 max-[650px]:text-sm"
           >
-            <Link to="/dashboard">
+            <Link to="/dashboard" onClick={() => window.scrollTo(0, 0)}>
               <li>Back to Dashboard</li>
             </Link>
-            <Link to="/profile">
+            <Link to="/profile" onClick={() => window.scrollTo(0, 0)}>
               <li>My Profile</li>
             </Link>
-            <Link to="/notification">
+            <Link to="/notification" onClick={() => window.scrollTo(0, 0)}>
               <li>My Notification</li>
             </Link>
-            <Link to="/messages">
+            <Link to="/messages" onClick={() => window.scrollTo(0, 0)}>
               <li>My Messages</li>
             </Link>
-            <Link to="/favourites">
+            <Link to="/favourites" onClick={() => window.scrollTo(0, 0)}>
               <li>My Favourites</li>
             </Link>
           </ul>

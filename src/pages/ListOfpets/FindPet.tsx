@@ -10,7 +10,7 @@ import useRecivePets from "../../customHooks/RecivePetsData";
 import { animals } from "../../data/data";
 import Lottie from "react-lottie";
 function FindPet() {
-  const { allPetsdata, setPage, totalDoc } = useRecivePets();
+  const { allPetsdata, setPage, totalDoc, loading } = useRecivePets();
   const hasModedata = () => {
     setPage((pre) => pre + 1);
   };
@@ -90,12 +90,16 @@ function FindPet() {
             <FaAngleDown className=" absolute bottom-4 right-2" />
           </div>
         </section>
-        {allPetsdata.length === 0 || totalDoc === 0 ? (
-          <Lottie
-            options={defaultOptions}
-            height={dimensions.height}
-            width={dimensions.width}
-          />
+        {loading ? (
+          <>
+            <Lottie
+              options={defaultOptions}
+              height={dimensions.height}
+              width={dimensions.width}
+            />
+          </>
+        ) : allPetsdata.length === 0 || totalDoc === 0 ? (
+          "nothing to show"
         ) : (
           <InfiniteScroll
             next={hasModedata}

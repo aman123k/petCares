@@ -32,25 +32,29 @@ const useRecivePets = () => {
   const [allPetsdata, setAllPetsdata] = useState<PetsdataType[]>([]);
   const [page, setPage] = useState<number>(1);
   const [totalDoc, setTotalDoc] = useState<number>(0);
+  const [loading, setLoading] = useState(false);
 
   const toastId = useRef("");
   useEffect(() => {
     const fetch = async () => {
       try {
         toastId.current = toast.loading("Please wait...");
+        setLoading(true);
         const data = await fetchPetData(page);
         setAllPetsdata((pre) => [...pre, ...data.response]);
         setTotalDoc(data.totalDoc);
         toast.success("Pets details loaded", { id: toastId.current });
+        setLoading(false);
       } catch {
         toast.error("server error");
+        setLoading(false);
       }
     };
 
     fetch();
   }, [page]);
 
-  return { allPetsdata, totalDoc, setPage };
+  return { allPetsdata, totalDoc, setPage, loading };
 };
 
 export default useRecivePets;

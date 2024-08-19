@@ -47,27 +47,27 @@ function Profiledropdown() {
           </header>
 
           <ul className="flex flex-col gap-4 border-b border-dotted border-black pb-6 tracking-wide">
-            <Link to="/dashboard">
+            <Link to="/dashboard" onClick={() => window.scrollTo(0, 0)}>
               <li className=" text-[#595959] hover:text-[#5FA501] hover:translate-x-3 duration-200 ease-in-out">
                 My Dashboard
               </li>
             </Link>
-            <Link to="/messages">
+            <Link to="/messages" onClick={() => window.scrollTo(0, 0)}>
               <li className=" text-[#595959] hover:text-[#5FA501] hover:translate-x-3 duration-200 ease-in-out">
                 My Messages
               </li>
             </Link>
-            <Link to="/profile">
+            <Link to="/profile" onClick={() => window.scrollTo(0, 0)}>
               <li className=" text-[#595959] hover:text-[#5FA501] hover:translate-x-3 duration-200 ease-in-out">
                 My Profile
               </li>
             </Link>
-            <Link to="/notification">
+            <Link to="/notification" onClick={() => window.scrollTo(0, 0)}>
               <li className=" text-[#595959] hover:text-[#5FA501] hover:translate-x-3 duration-200 ease-in-out">
                 My Notification
               </li>
             </Link>
-            <Link to="/favourites">
+            <Link to="/favourites" onClick={() => window.scrollTo(0, 0)}>
               <li className=" text-[#595959] hover:text-[#5FA501] hover:translate-x-3 duration-200 ease-in-out">
                 Favourites
               </li>

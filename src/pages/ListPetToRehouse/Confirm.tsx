@@ -219,7 +219,10 @@ function Confirm() {
             className=" border-[#96c16d] hover:text-[#5FA501] bg-[#96c16d]
         hover:bg-white px-20 border-2 text-white rounded-lg font-semibold py-3
         drop-shadow-md"
-            onClick={() => navigator(-1)}
+            onClick={() => {
+              navigator(-1);
+              window.scrollTo(0, 0);
+            }}
           >
             Previous
           </button>
