@@ -24,7 +24,7 @@ function PetDetails() {
   const { id } = useParams();
   const { userDetails }: { userDetails?: User } = useContext(ThemeContext);
   const [showImage, setShowImage] = useState<boolean>(false);
-  const { allPetsdata } = useRecivePets();
+  const { allPetsdata } = useRecivePets("all", "all");
   const [favourites, setFavourites] = useState<Array<PetsdataType> | null>(
     null
   );
@@ -44,6 +44,7 @@ function PetDetails() {
 
   const favPet: PetsdataType | null =
     favourites?.filter((pets) => pets._id === id)[0] ?? null;
+
   useEffect(() => {
     if (favPet) {
       setCurentPetInfo(favPet);

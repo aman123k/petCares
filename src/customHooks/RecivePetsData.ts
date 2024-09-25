@@ -18,9 +18,15 @@ export interface PetsdataType {
 
 const url = process.env.REACT_APP_URL as string;
 
-const fetchPetData = async (page: number) => {
+const fetchPetData = async (
+  page: number,
+  petType: string,
+  petBreed: string
+) => {
   try {
-    const response = await fetch(`${url}/getPet?page=${page}`);
+    const response = await fetch(
+      `${url}/getPet?page=${page}&type=${petType}&breed=${petBreed}`
+    );
     const data = await response.json();
 
     return data;
@@ -28,11 +34,11 @@ const fetchPetData = async (page: number) => {
     console.error("Error fetching data:", error);
   }
 };
-const useRecivePets = () => {
+const useRecivePets = (petType: string, petBreed: string) => {
   const [allPetsdata, setAllPetsdata] = useState<PetsdataType[]>([]);
   const [page, setPage] = useState<number>(1);
   const [totalDoc, setTotalDoc] = useState<number>(0);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState<boolean>(false);
 
   const toastId = useRef("");
   useEffect(() => {
@@ -40,19 +46,23 @@ const useRecivePets = () => {
       try {
         toastId.current = toast.loading("Please wait...");
         setLoading(true);
-        const data = await fetchPetData(page);
-        setAllPetsdata((pre) => [...pre, ...data.response]);
+        const data = await fetchPetData(page, petType, petBreed);
+        if (page === 1) {
+          setAllPetsdata(data.response);
+        } else {
+          setAllPetsdata((pre) => [...pre, ...data.response]);
+        }
         setTotalDoc(data.totalDoc);
         toast.success("Pets details loaded", { id: toastId.current });
         setLoading(false);
       } catch {
-        toast.error("server error");
+        toast.error("server error", { id: toastId.current });
         setLoading(false);
       }
     };
 
     fetch();
-  }, [page]);
+  }, [page, petBreed, petType]);
 
   return { allPetsdata, totalDoc, setPage, loading };
 };

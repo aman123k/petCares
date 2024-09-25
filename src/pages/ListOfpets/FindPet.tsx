@@ -7,14 +7,26 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import Catloader from "../../data/loader.json";
 import loader from "../../images/loader.gif";
 import useRecivePets from "../../customHooks/RecivePetsData";
-import { animals } from "../../data/data";
+import {
+  animals,
+  catBread,
+  dogBread,
+  parrotBread,
+  rabbitBread,
+} from "../../data/data";
 import Lottie from "react-lottie";
 function FindPet() {
-  const { allPetsdata, setPage, totalDoc, loading } = useRecivePets();
+  const [dimensions, setDimensions] = useState({ width: "100%", height: 300 });
+  const [petType, setPetType] = useState<string>("all");
+  const [petBreed, setBreed] = useState<string>("all");
+
+  const { allPetsdata, setPage, totalDoc, loading } = useRecivePets(
+    petType,
+    petBreed
+  );
   const hasModedata = () => {
     setPage((pre) => pre + 1);
   };
-  const [dimensions, setDimensions] = useState({ width: "100%", height: 300 });
 
   useEffect(() => {
     function handleResize() {
@@ -59,12 +71,17 @@ function FindPet() {
             </span>
             <select
               className=" w-40 p-3 rounded-lg outline-none max-[650px]:w-full
-           appearance-none cursor-pointer drop-shadow-md"
+           appearance-none cursor-pointer drop-shadow-md capitalize"
+              onChange={(e) => {
+                setPetType(e.currentTarget.value);
+                setBreed("all");
+                setPage(1);
+              }}
             >
               <option value="all">All</option>
               {animals.map((animal, index) => {
                 return (
-                  <option key={index} className="capitalize" value={animal}>
+                  <option key={index} value={animal}>
                     {animal}
                   </option>
                 );
@@ -72,23 +89,55 @@ function FindPet() {
             </select>
             <FaAngleDown className=" absolute bottom-4 right-2" />
           </div>
-          <div className=" flex-col flex gap-3 relative w-max max-[650px]:w-full">
-            <span className=" font-bold text-[#595959] ">Select breed</span>
-            <select
-              className=" w-40 p-3 rounded-lg outline-none max-[650px]:w-full
-           appearance-none cursor-pointer drop-shadow-md"
-            >
-              <option value="all">All</option>
-              {animals.map((animal, index) => {
-                return (
-                  <option key={index} className="capitalize" value={animal}>
-                    {animal}
-                  </option>
-                );
-              })}
-            </select>
-            <FaAngleDown className=" absolute bottom-4 right-2" />
-          </div>
+          {petType !== "all" && (
+            <div className=" flex-col flex gap-3 relative w-max max-[650px]:w-full">
+              <span className=" font-bold text-[#595959] ">Select breed</span>
+              <select
+                className=" w-44 p-3 pr-6 rounded-lg outline-none max-[650px]:w-full
+           appearance-none cursor-pointer drop-shadow-md capitalize truncate"
+                onChange={(e) => {
+                  setBreed(e.currentTarget.value);
+                  setPage(1);
+                }}
+              >
+                <option value="all">All Breeds</option>
+                {petType === "cat"
+                  ? catBread.map((animal, index) => {
+                      return (
+                        <option key={index} value={animal}>
+                          {animal}
+                        </option>
+                      );
+                    })
+                  : petType === "dog"
+                  ? dogBread.map((animal, index) => {
+                      return (
+                        <option key={index} value={animal}>
+                          {animal}
+                        </option>
+                      );
+                    })
+                  : petType === "rabbit"
+                  ? rabbitBread.map((animal, index) => {
+                      return (
+                        <option key={index} value={animal}>
+                          {animal}
+                        </option>
+                      );
+                    })
+                  : petType === "parrot"
+                  ? parrotBread.map((animal, index) => {
+                      return (
+                        <option key={index} value={animal}>
+                          {animal}
+                        </option>
+                      );
+                    })
+                  : ""}
+              </select>
+              <FaAngleDown className=" absolute bottom-4 right-2" />
+            </div>
+          )}
         </section>
         {loading ? (
           <>
