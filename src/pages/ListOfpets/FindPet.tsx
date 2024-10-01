@@ -5,7 +5,6 @@ import CardForPet from "./CardForPet";
 import { FaAngleDown } from "react-icons/fa";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Catloader from "../../data/loader.json";
-import loader from "../../images/loader.gif";
 import useRecivePets from "../../customHooks/RecivePetsData";
 import {
   animals,
@@ -15,6 +14,7 @@ import {
   rabbitBread,
 } from "../../data/data";
 import Lottie from "react-lottie";
+import { BounceLoader } from "react-spinners";
 function FindPet() {
   const [dimensions, setDimensions] = useState({ width: "100%", height: 300 });
   const [petType, setPetType] = useState<string>("all");
@@ -156,10 +156,9 @@ function FindPet() {
             pullDownToRefreshThreshold={1000000}
             loader={
               <h1 className="pb-8">
-                <img
-                  src={loader}
+                <BounceLoader
                   className=" h-16 w-16 absolute left-[50%] translate-x-[-50%] "
-                  alt=""
+                  color="#97C830"
                 />
               </h1>
             }

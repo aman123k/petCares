@@ -131,7 +131,7 @@ function MessageList() {
                         </p>
                       </div>
                     </div>
-                    <div className=" text-sm">
+                    <div className="shrink-0 text-sm">
                       {messages?.id === connection?._id
                         ? getTime(messages?.time)
                         : getTime(connection.time)}

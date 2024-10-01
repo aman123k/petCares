@@ -21,7 +21,7 @@ const getTime = (time: string) => {
   }
 
   // Display date in MM/DD/YYYY format
-  const formattedDate = `${inputDate.getDate()}/ ${inputDate.getMonth()} /${inputDate.getFullYear()}`;
+  const formattedDate = `${inputDate.getDate()}/${inputDate.getMonth()}/${inputDate.getFullYear()}`;
   return formattedDate;
 };
 export default getTime;

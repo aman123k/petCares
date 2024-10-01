@@ -9,7 +9,7 @@ import { ThemeContext } from "../../globleContext/context";
 import { IoArrowDown } from "react-icons/io5";
 import useGetMessages from "../../customHooks/GetMessages";
 import day from "../../function/getDay";
-import loader from "../../images/loader.gif";
+import { BounceLoader } from "react-spinners";
 
 function ChatContainer() {
   const { socket, notification, setNotification } = useContext(ChatContext);
@@ -71,12 +71,9 @@ function ChatContainer() {
   return (
     <section className=" relative overflow-hidden">
       {loading ? (
-        <section className="h-[calc(100vh-160px-72px-84px)] max-[650px]:h-[calc(100vh-104px-72px-84px)]">
-          <img
-            src={loader}
-            alt=""
-            className=" flex w-20 ml-[50%] translate-x-[-50%] mt-[50%] translate-y-[-50%] justify-center items-center "
-          />
+        <section className="h-[calc(100dvh-160px)] max-[650px]:h-[calc(100dvh-104px)] gap-3 flex-col flex items-center justify-center">
+          <BounceLoader className="w-20" color="#97C830" />
+          <h2 className="font-Nunito  text-xl font-semibold ">Jus a sec...</h2>
         </section>
       ) : (
         <>

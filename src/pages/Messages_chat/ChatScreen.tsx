@@ -15,7 +15,7 @@ function ChatScreen() {
   });
   return (
     <>
-      <section className="h-[calc(100vh-160px)] max-[650px]:h-[calc(100vh-104px)] flex">
+      <section className="h-[calc(100vh-160px)] max-[650px]:h-[calc(100dvh-104px)] flex">
         <section
           className={` w-[32%] max-[950px]:w-[40%]  max-[650px]:absolute 
                    max-[650px]:w-full border-r duration-500 ease-in
