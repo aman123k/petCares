@@ -26,6 +26,7 @@ import {
 } from "../../data/data";
 import ThirdHelperContent from "./helper/ThirdHelperContent";
 import toast, { Toaster } from "react-hot-toast";
+import GoogleMap from "./helper/GoogleMap";
 
 function ThirdStep() {
   const { userDetails }: { userDetails?: User } = useContext(ThemeContext);
@@ -115,6 +116,8 @@ function ThirdStep() {
       window.scrollTo(0, 0);
     }
   };
+  const mapPbParam: string =
+    "!1m18!1m12!1m3!1d3502.9673736999143!2d77.04394067571877!3d28.60075557568214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1b17b80568fd%3A0xb92ae35b13dfa49a!2sBiryani%20By%20Kilo%20-%20Dwarka!5e0!3m2!1sen!2sin!4v1730457766578!5m2!1sen!2sin";
 
   return (
     <>
@@ -206,7 +209,7 @@ function ThirdStep() {
             ref={(el) =>
               el && (viewBox.current.Characteristics = el as HTMLDivElement)
             }
-            className=" py-8"
+            className=" py-4"
           >
             <h1 className=" text-[#4A4949] text-3xl font-bold">
               Characteristics
@@ -313,6 +316,17 @@ function ThirdStep() {
               />
             </section>
           </section>
+          {/* <section>
+            <h1 className=" text-[#4A4949] text-3xl font-bold">Location</h1>
+            <p className="text-[#777777] font-semibold my-5 ">
+              You can specify your pet's location. For the best results, please
+              embed a link to your pet's location on Google Maps to help
+              potential adopters find it easily.
+            </p>
+            <div>
+              <GoogleMap pbParam={mapPbParam} />
+            </div>
+          </section> */}
           <section
             ref={(el) =>
               el && (viewBox.current.Petstory = el as HTMLDivElement)

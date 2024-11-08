@@ -4,6 +4,7 @@ import toast from "react-hot-toast";
 const STRIPE_PUBLIC_API_KEY = process.env
   .REACT_APP_STRIPE_PUBLIC_API_KEY as string;
 const url = process.env.REACT_APP_URL as string;
+
 const useStripe = ({
   id,
   fee,
@@ -16,7 +17,6 @@ const useStripe = ({
     try {
       const stripe = await loadStripe(STRIPE_PUBLIC_API_KEY);
       toastId.current = toast.loading("Please wait...");
-      console.log("ji");
       const response = await fetch(`${url}/create-check-out`, {
         method: "post",
         headers: {
@@ -27,14 +27,13 @@ const useStripe = ({
       });
       const json = await response.json();
 
-      toast.success("stripe loaded", { id: toastId.current });
+      toast.success("Payment checkout session created successfully!", {
+        id: toastId.current,
+      });
       stripe?.redirectToCheckout({
         sessionId: json.sessionId,
       });
-      console.log(json.sessionId);
     } catch (err) {
-      console.log(STRIPE_PUBLIC_API_KEY);
-      console.log("froentEnd", err);
       toast.error("server error");
     }
   };

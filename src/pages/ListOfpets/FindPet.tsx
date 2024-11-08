@@ -15,6 +15,7 @@ import {
 } from "../../data/data";
 import Lottie from "react-lottie";
 import { BounceLoader } from "react-spinners";
+
 function FindPet() {
   const [dimensions, setDimensions] = useState({ width: "100%", height: 300 });
   const [petType, setPetType] = useState<string>("all");
@@ -48,6 +49,7 @@ function FindPet() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
   const defaultOptions = {
     loop: true,
     autoplay: true,
