@@ -6,6 +6,7 @@ import { FaAngleDown } from "react-icons/fa";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Catloader from "../../data/loader.json";
 import useRecivePets from "../../customHooks/RecivePetsData";
+import petNotFound from "../../images/missing.png";
 import {
   animals,
   catBread,
@@ -150,7 +151,11 @@ function FindPet() {
             />
           </>
         ) : allPetsdata.length === 0 || totalDoc === 0 ? (
-          "nothing to show"
+          <img
+            src={petNotFound}
+            alt="Pet not found"
+            className=" h-[550px] py-16 m-auto items-center max-[650px]:h-[450px] max-[650px]:py-10"
+          />
         ) : (
           <InfiniteScroll
             next={hasModedata}

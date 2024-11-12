@@ -46,6 +46,7 @@ import DonateNeuter from "./pages/DonateNeuter";
 import TestimonialsRehousers from "./pages/ForRehouser/TestimonialsRehousers";
 import Testimonialsfromadopters from "./pages/ForAdoption/Testimonialsfromadopters";
 import PageNotFound from "./pages/PageNotFound";
+import Success from "./pages/pymentStatus/Success";
 
 function App() {
   const clintId = process.env.REACT_APP_GOOGLE_CLIENT_ID as string;
@@ -137,6 +138,7 @@ function App() {
                     path="/testimonials-from-adopters"
                     element={<Testimonialsfromadopters />}
                   />
+                  <Route path="/success" element={<Success />} />
                   <Route path="*" element={<PageNotFound />} />
                 </Routes>
               </ChatContextProvider>
