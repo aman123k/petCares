@@ -34,6 +34,7 @@ const ChatFooter = () => {
   );
 
   const handleSubmit = async () => {
+    if (!inputText.trim()) return toast.error("Write a message");
     socket.current?.emit("message", {
       inputText,
       id,
@@ -77,7 +78,7 @@ const ChatFooter = () => {
           ) {
             handleSubmit();
           } else {
-            toast.error("you Can't send message");
+            toast.error("You can't send message");
           }
         }}
         key={index}
