@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { messageType } from "../pages/Messages_chat/helper/MessageList";
+import { messageType } from "../pages/Messages_chat/components/MessageList";
+
 interface fetchMessage {
   day: string;
   messages: messages[];

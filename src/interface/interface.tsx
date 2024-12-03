@@ -63,16 +63,8 @@ export type KeyFacts = {
 };
 export interface ChatConnection {
   _id: string;
-  firstUser: {
-    username: string;
-    email: string;
-    picture: string;
-  };
-  secondUser: {
-    username: string;
-    email: string;
-    picture: string;
-  };
+  firstUser: User;
+  secondUser: User;
   userEmail: string[];
   isBlock: string;
   lastMessage: string;

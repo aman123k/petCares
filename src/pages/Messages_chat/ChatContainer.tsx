@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
-import ChatHeader from "./helper/ChatHeader";
-import ChatFooter from "./helper/ChatFooter";
+
 import { useParams } from "react-router-dom";
 import { ChatContext } from "../../globleContext/ChatContext";
 import getTime from "../../function/getTime";
@@ -10,6 +9,8 @@ import { IoArrowDown } from "react-icons/io5";
 import useGetMessages from "../../customHooks/GetMessages";
 import day from "../../function/getDay";
 import { BounceLoader } from "react-spinners";
+import ChatHeader from "./components/ChatHeader";
+import ChatFooter from "./components/ChatFooter";
 
 function ChatContainer() {
   const { socket, notification, setNotification } = useContext(ChatContext);

@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import ChatContainer from "./ChatContainer";
-import MessageList from "./helper/MessageList";
+import MessageList from "./components/MessageList";
 import { useParams } from "react-router-dom";
 import { ChatContext } from "../../globleContext/ChatContext";
 import { ChatConnection } from "../../interface/interface";

@@ -9,7 +9,7 @@ import React, {
 import { ChatConnection, User } from "../interface/interface";
 import { io, Socket } from "socket.io-client";
 import { ThemeContext } from "./context";
-import { messageType } from "../pages/Messages_chat/helper/MessageList";
+import { messageType } from "../pages/Messages_chat/components/MessageList";
 
 interface ContextProps {
   connections: Array<ChatConnection> | undefined;
