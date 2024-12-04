@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import { ThemeContext } from "../../globleContext/context";
-import { User } from "../../interface/interface";
+import { MyFunctionType, User } from "../../interface/interface";
 import { useNavigate } from "react-router-dom";
 import { uploadImage } from "../../components/uploadImage";
 import ProfileHeader from "../../components/ProfileHeader";
@@ -23,17 +23,24 @@ function Profile() {
   const {
     userDetails,
     loading = true,
-  }: { userDetails?: User; loading?: boolean } = useContext(ThemeContext);
+    getUser,
+  }: {
+    userDetails?: User;
+    loading?: boolean;
+    getUser: MyFunctionType;
+  } = useContext(ThemeContext);
+
   useEffect(() => {
     if (!loading) {
       if (userDetails === undefined) navigator("/login");
     }
-  });
+  }, [loading, navigator, userDetails]);
 
   useEffect(() => {
     setUserName(userDetails?.username || "");
     setImage(userDetails?.picture || "");
   }, [userDetails]);
+
   const handleClick = (
     event: React.MouseEvent<SVGElement, MouseEvent>
   ): void => {
@@ -51,6 +58,7 @@ function Profile() {
       return toast.error("Name can't be empty or same");
     } else {
       updateUser();
+      getUser();
     }
   };
 
