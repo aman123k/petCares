@@ -17,7 +17,8 @@ function ForRehouser() {
       <section className=" bg-[#F9F9F9] max-[650px]:py-8 py-14 px-10 max-[650px]:px-5">
         <section
           className=" font-Nunito flex flex-col bg-white drop-shadow-xl max-[650px]:w-full max-[650px]:rounded-3xl
-        max-[850px]:gap-6 max-[650px]:gap-0 rounded-[32px] py-16 px-8 max-[650px]:py-10"
+        max-[850px]:gap-6 max-[650px]:gap-0 rounded-[32px] py-16 px-8 max-[650px]:py-10
+         min-[2000px]:ml-[50%] min-[2000px]:translate-x-[-50%] "
         >
           <section className="max-[650px]:text-start text-center px-[17%] mb-4 max-[850px]:px-5 max-[650px]:px-0">
             <h1 className="font-bold text-[1.5rem] text-[#252525]">

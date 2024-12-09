@@ -10,7 +10,7 @@ function ProfileHeader() {
       <section
         className=" font-Nunito flex items-center justify-between relative
        bg-white p-16 rounded-3xl drop-shadow-lg max-[950px]:items-start
-       max-[650px]:p-10  
+       max-[650px]:p-10  min-[2000px]:ml-[50%] min-[2000px]:translate-x-[-50%]
       "
       >
         <div>

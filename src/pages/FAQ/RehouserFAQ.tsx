@@ -11,7 +11,10 @@ function RehouserFAQ() {
     <>
       <Header />
       <section className=" bg-[#EEEEEE] py-8 px-6">
-        <section className=" bg-white px-10 py-4 rounded-lg drop-shadow-md font-Nunito">
+        <section
+          className=" bg-white px-10 py-4 rounded-lg drop-shadow-md font-Nunito  
+        min-[2000px]:ml-[50%] min-[2000px]:translate-x-[-50%]"
+        >
           <div>
             <h1 className=" text-center py-3 font-bold text-2xl text-[#656565]">
               FAQs for Rehousing a Pet

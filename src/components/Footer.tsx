@@ -7,10 +7,10 @@ import { IoLogoFacebook } from "react-icons/io5";
 
 function Footer() {
   return (
-    <>
+    <section className="bg-[#595959] ">
       <section
-        className="bg-[#595959] max-[650px]:flex max-[1000px]:grid-cols-2 text-white grid grid-cols-5 justify-between px-8 py-6
-       max-[650px]:flex-col max-[650px]:gap-8 gap-8 max-[650px]:text-sm font-Nunito  "
+        className="max-[650px]:flex max-[1000px]:grid-cols-2 text-white grid grid-cols-5 justify-between px-8 py-6
+       max-[650px]:flex-col max-[650px]:gap-8 gap-8 max-[650px]:text-sm font-Nunito  min-[2000px]:ml-[50%] min-[2000px]:translate-x-[-50%] "
       >
         <section className="col-span-2 max-[1000px]:col-span-1 max-[650px]:grid-cols-1 max-[650px]:w-full">
           <h1 className="font-bold text-2xl tracking-wide">About PetCares</h1>
@@ -184,7 +184,7 @@ function Footer() {
           </div>
         </section>
       </section>
-    </>
+    </section>
   );
 }
 

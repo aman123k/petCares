@@ -30,10 +30,10 @@ function ForgetPass() {
     <>
       <Header />
       <section className=" bg-adopterRegister py-56 max-[650px]:py-36 max-[650px]:px-8 object-cover text-white font-Nunito px-24">
-        <h1 className="font-semibold tracking-wider text-lg max-[650px]:text-sm">
+        <h1 className="font-semibold tracking-wider text-lg max-[650px]:text-sm min-[2000px]:ml-[28%]">
           <Link to="/">Home </Link>/ Forgot Password
         </h1>
-        <h3 className=" font-bold text-4xl tracking-wide max-[650px]:text-3xl mt-4">
+        <h3 className=" font-bold text-4xl tracking-wide max-[650px]:text-3xl mt-4 min-[2000px]:ml-[28%]">
           Forgot Password
         </h3>
       </section>

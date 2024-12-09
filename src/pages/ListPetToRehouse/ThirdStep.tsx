@@ -124,7 +124,10 @@ function ThirdStep() {
       <Header />
       <Count />
       <ThirdHelperContent />
-      <section className=" flex max-[950px]:flex-col my-8 max-[950px]:gap-8 ">
+      <section
+        className=" flex max-[950px]:flex-col my-8 max-[950px]:gap-8 
+      min-[2000px]:ml-[50%] min-[2000px]:translate-x-[-50%]"
+      >
         <section
           className=" w-[20%] flex-shrink-0 px-6 max-[950px]:px-8 max-[950px]:w-full sticky 
         max-[950px]:relative max-[950px]:top-auto top-44 border-b-2 pb-6 border-dotted h-max

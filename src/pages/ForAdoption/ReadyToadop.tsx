@@ -11,7 +11,8 @@ function ReadyToadop() {
       <section className=" bg-[#F9F9F9] max-[650px]:py-8 py-14 px-10 max-[650px]:px-5">
         <section
           className=" font-Nunito flex flex-col gap-6 bg-white drop-shadow-xl max-[650px]:w-full max-[650px]:rounded-3xl
-        max-[850px]:gap-4 max-[650px]:gap-0 rounded-[32px] py-16 px-8 max-[650px]:py-10 text-[#595959]"
+        max-[850px]:gap-4 max-[650px]:gap-0 rounded-[32px] py-16 px-8 max-[650px]:py-10 text-[#595959] 
+        min-[2000px]:ml-[50%] min-[2000px]:translate-x-[-50%]"
         >
           <section className=" flex-col flex justify-center max-[1050px]:px-28 max-[850px]:px-16 max-[650px]:px-3.5 px-56 gap-4 max-[]:">
             <h1 className=" text-center text-4xl text-[#595959] font-bold max-[650px]:text-2xl">

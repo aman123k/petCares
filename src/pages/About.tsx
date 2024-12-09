@@ -17,10 +17,10 @@ function About() {
       <Header />
       <section className=" object-cover relative text-white font-Nunito">
         <section className=" py-24 mb-28 px-20 max-[650px]:mb-0 max-[400px]:py-14 max-[400px]:px-8">
-          <h1 className="font-semibold tracking-wider text-lg max-[650px]:text-sm">
+          <h1 className="font-semibold tracking-wider text-lg max-[650px]:text-sm min-[2000px]:ml-[28%]">
             <Link to="/">Home </Link>/ About us
           </h1>
-          <h3 className=" font-bold text-4xl tracking-wide max-[650px]:text-2xl mt-3">
+          <h3 className=" font-bold text-4xl tracking-wide max-[650px]:text-2xl mt-3 min-[2000px]:ml-[28%]">
             About us
           </h3>
         </section>
@@ -36,7 +36,8 @@ function About() {
       >
         <section
           className=" flex mx-6 px-5 mt-10 items-center max-[850px]:gap-4
-       max-[850px]:flex-col max-[850px]:w-full max-[850px]:mx-3 max-[650px]:mx-0 max-[650px]:px-0 "
+       max-[850px]:flex-col max-[850px]:w-full max-[850px]:mx-3 max-[650px]:mx-0 max-[650px]:px-0 
+         min-[2000px]:ml-[50%] min-[2000px]:translate-x-[-50%] mix-blend-multiply"
         >
           <div className=" flex flex-col gap-5 max-[850px]:w-full w-[55%] text-[#595959]">
             <h1 className=" font-bold text-3xl text-[#090808] tracking-wide">
@@ -104,7 +105,8 @@ function About() {
         </section>
         <section
           className=" flex mx-6 px-5 mt-10 items-center max-[650px]:mt-10 max-[850px]:gap-4
-       max-[850px]:flex-col-reverse max-[850px]:w-full max-[850px]:mx-3 max-[650px]:mx-0 max-[650px]:px-0 "
+       max-[850px]:flex-col-reverse max-[850px]:w-full max-[850px]:mx-3 max-[650px]:mx-0 max-[650px]:px-0
+       min-[2000px]:ml-[50%] min-[2000px]:translate-x-[-50%] mix-blend-multiply "
         >
           <img
             src={helper2Image}
@@ -139,13 +141,16 @@ function About() {
           </div>
         </section>
       </section>
-      <section className=" bg-[#EEEEEE] font-Nunito px-10 max-[650px]:px-6 py-7">
-        <h1 className=" text-center text-3xl font-bold">Our Values</h1>
-        <HomeCard />
+      <section className="bg-[#EEEEEE]">
+        <section className="  font-Nunito px-10 max-[650px]:px-6 py-7 min-[2000px]:ml-[50%] min-[2000px]:translate-x-[-50%]">
+          <h1 className=" text-center text-3xl font-bold">Our Values</h1>
+          <HomeCard />
+        </section>
       </section>
       <section
         className="  text-[#777777] px-28 py-16 text-center
-      max-[650px]:px-6 tracking-wide max-[850px]:px-20 flex-col flex  gap-4"
+      max-[650px]:px-6 tracking-wide max-[850px]:px-20 flex-col flex  gap-4
+      min-[2000px]:ml-[50%] min-[2000px]:translate-x-[-50%]"
       >
         <p>
           we recognize the challenges faced by rescue centers struggling with

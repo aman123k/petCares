@@ -10,7 +10,7 @@ function Count() {
           className=" bg-white rounded-3xl font-Nunito drop-shadow-md py-14
         max-[650px]:w-full px-8 max-[950px]:px-4 flex justify-evenly items-center 
         max-[650px]:flex-col max-[650px]:items-start max-[650px]:py-8 max-[650px]:gap-5 
-        max-[650px]:px-8 "
+        max-[650px]:px-8 min-[2000px]:ml-[50%] min-[2000px]:translate-x-[-50%] "
         >
           <div
             className={` flex items-center gap-3 text-xl font-bold  ${

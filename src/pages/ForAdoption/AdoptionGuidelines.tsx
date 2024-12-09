@@ -17,10 +17,10 @@ function AdoptionGuidelines() {
       <Header />
       <section className=" object-cover relative text-white font-Nunito ">
         <section className=" py-24 mb-28 px-20 max-[650px]:mb-0 max-[400px]:py-14 max-[400px]:px-8">
-          <h1 className="font-semibold tracking-wider text-lg max-[650px]:text-sm">
+          <h1 className="font-semibold tracking-wider text-lg max-[650px]:text-sm min-[2000px]:ml-[28%]">
             <Link to="/">Home </Link>/ Adoption Guide
           </h1>
-          <h3 className=" font-bold text-4xl tracking-wide max-[650px]:text-2xl mt-3">
+          <h3 className=" font-bold text-4xl tracking-wide max-[650px]:text-2xl mt-3 min-[2000px]:ml-[28%]">
             Adoption Guide
           </h3>
         </section>
@@ -35,7 +35,10 @@ function AdoptionGuidelines() {
         className=" font-Nunito flex flex-col bg-[#F9F9F9]  max-[650px]:w-full
         max-[850px]:gap-4 max-[650px]:gap-0 py-14 px-8 max-[650px]:py-10 max-[380px]:mt-12"
       >
-        <section className="px-20 mb-4 flex  gap-3 flex-col max-[850px]:px-10 max-[650px]:px-0">
+        <section
+          className="px-20 mb-4 flex  gap-3 flex-col max-[850px]:px-10 max-[650px]:px-0 
+        min-[2000px]:ml-[50%] min-[2000px]:translate-x-[-50%] "
+        >
           <h1 className="font-bold text-4xl max-[650px]:text-3xl text-[#252525]">
             Animal Welfare Is Our Top Priority Our guide to adoption
           </h1>
@@ -68,7 +71,8 @@ function AdoptionGuidelines() {
         </section>
         <section
           className=" flex px-5 mt-16 pb-12 items-center border-b max-[650px]:mt-10 bg-[#F9F9F9]
-           max-[850px]:flex-col-reverse max-[850px]:w-full max-[850px]:mx-3 max-[650px]:mx-0 max-[650px]:px-0 "
+           max-[850px]:flex-col-reverse max-[850px]:w-full max-[850px]:mx-3 max-[650px]:mx-0 max-[650px]:px-0 
+           min-[2000px]:ml-[50%] min-[2000px]:translate-x-[-50%] "
         >
           <img
             src={adoptGuideImg}
@@ -134,7 +138,8 @@ function AdoptionGuidelines() {
         </section>
         <section
           className=" flex mx-14 px-5 mt-8 max-[650px]:gap-0  pb-12 items-center border-b gap-3
-           max-[850px]:flex-col max-[850px]:w-full max-[850px]:mx-3 max-[650px]:mx-0 max-[650px]:px-0"
+           max-[850px]:flex-col max-[850px]:w-full max-[850px]:mx-3 max-[650px]:mx-0 max-[650px]:px-0
+           min-[2000px]:ml-[50%] min-[2000px]:translate-x-[-50%] mix-blend-multiply"
         >
           <div className=" flex flex-col gap-3 w-[50%] max-[850px]:w-full">
             <h1 className=" font-bold text-2xl  max-[650px]:items-start">
@@ -171,7 +176,8 @@ function AdoptionGuidelines() {
         </section>
         <section
           className=" flex mx-14 px-5 mt-8  gap-16 pb-12 items-center border-b
-           max-[850px]:flex-col-reverse max-[850px]:w-full max-[850px]:mx-3 max-[650px]:mx-0 max-[650px]:px-0"
+           max-[850px]:flex-col-reverse max-[850px]:w-full max-[850px]:mx-3 max-[650px]:mx-0 max-[650px]:px-0
+           min-[2000px]:ml-[50%] min-[2000px]:translate-x-[-50%] mix-blend-multiply"
         >
           <img
             src={chooseAdop}
@@ -226,7 +232,8 @@ function AdoptionGuidelines() {
         </section>
         <section
           className=" flex mx-14 px-5 mt-8  gap-16 pb-12 items-center border-b
-           max-[850px]:flex-col max-[850px]:w-full max-[850px]:mx-3 max-[650px]:mx-0 max-[650px]:px-0"
+           max-[850px]:flex-col max-[850px]:w-full max-[850px]:mx-3 max-[650px]:mx-0 max-[650px]:px-0
+           min-[2000px]:ml-[50%] min-[2000px]:translate-x-[-50%] mix-blend-multiply"
         >
           <div className=" flex flex-col gap-3 w-[50%] max-[850px]:w-full">
             <h1 className=" font-bold text-2xl ">Rules for adopting a cat</h1>
@@ -273,7 +280,8 @@ function AdoptionGuidelines() {
         </section>
         <section
           className=" flex mx-14 px-5 mt-8  gap-16 pb-12 items-center border-b
-           max-[850px]:flex-col-reverse max-[850px]:w-full max-[850px]:mx-3 max-[650px]:mx-0 max-[650px]:px-0"
+           max-[850px]:flex-col-reverse max-[850px]:w-full max-[850px]:mx-3 max-[650px]:mx-0 max-[650px]:px-0
+           min-[2000px]:ml-[50%] min-[2000px]:translate-x-[-50%] mix-blend-multiply"
         >
           <img
             src={parrot}
@@ -324,7 +332,8 @@ function AdoptionGuidelines() {
         </section>
         <section
           className=" flex mx-14 px-5 mt-8  gap-16 pb-12 items-center border-b
-           max-[850px]:flex-col max-[850px]:w-full max-[850px]:mx-3 max-[650px]:mx-0 max-[650px]:px-0"
+           max-[850px]:flex-col max-[850px]:w-full max-[850px]:mx-3 max-[650px]:mx-0 max-[650px]:px-0
+           min-[2000px]:ml-[50%] min-[2000px]:translate-x-[-50%] mix-blend-multiply"
         >
           <div className=" flex flex-col gap-3 w-[50%] max-[850px]:w-full">
             <h1 className=" font-bold text-2xl ">

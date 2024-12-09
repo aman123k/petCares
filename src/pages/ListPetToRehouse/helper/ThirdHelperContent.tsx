@@ -4,8 +4,9 @@ function ThirdHelperContent() {
   return (
     <>
       <section
-        className="text-[#777777] text-center justify-center flex items-center px-40 font-Nunito
-       max-[650px]:px-10 gap-5 max-[950px]:px-20 max-[650px]:text-start flex-col my-8 max-[650px]:my-4"
+        className="text-[#777777] text-center justify-center flex items-center px-40 font-Nunito 
+       max-[650px]:px-10 gap-5 max-[950px]:px-20 max-[650px]:text-start flex-col my-8 max-[650px]:my-4
+       min-[2000px]:ml-[50%] min-[2000px]:translate-x-[-50%]"
       >
         <p>
           In this section, you will be providing information about your pet.

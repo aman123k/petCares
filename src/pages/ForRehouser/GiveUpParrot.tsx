@@ -13,26 +13,28 @@ function GiveUpParrot() {
   return (
     <>
       <Header />
-      <section
-        className="bg-[#5FA505] h-96 max-[650px]:h-56 flex overflow-hidden justify-between max-[650px]:justify-normal
-       object-cover relative text-white font-Nunito "
-      >
+      <section className=" bg-[#5FA505]">
         <section
-          className=" py-24 px-20  mb-28  max-[650px]:pl-8 max-[650px]:pr-0
-        max-[650px]:py-14 max-[650px]:mb-0 max-[400px]:py-14 max-[650px]:absolute"
+          className="h-96 max-[650px]:h-56 flex overflow-hidden justify-between max-[650px]:justify-normal
+       object-cover relative text-white font-Nunito min-[2000px]:ml-[50%] min-[2000px]:translate-x-[-50%] "
         >
-          <h1 className="font-semibold tracking-wider text-lg max-[650px]:text-sm">
-            <Link to="/">Home </Link>/ Giving Up A Parrot
-          </h1>
-          <h3 className=" font-bold text-4xl tracking-wide max-[650px]:text-2xl mt-2">
-            Giving Up A Parrot
-          </h3>
+          <section
+            className=" py-24 px-20  mb-28  max-[650px]:pl-8 max-[650px]:pr-0 
+        max-[650px]:py-14 max-[650px]:mb-0 max-[400px]:py-14 max-[650px]:absolute"
+          >
+            <h1 className="font-semibold tracking-wider text-lg max-[650px]:text-sm">
+              <Link to="/">Home </Link>/ Giving Up A Parrot
+            </h1>
+            <h3 className=" font-bold text-4xl tracking-wide max-[650px]:text-2xl mt-2">
+              Giving Up A Parrot
+            </h3>
+          </section>
+          <img
+            src={parrotBanner}
+            alt=""
+            className=" object-cover max-[850px]:w-[55%] py-8 max-[650px]:py-0 max-[650px]:w-full "
+          />
         </section>
-        <img
-          src={parrotBanner}
-          alt=""
-          className=" object-cover max-[850px]:w-[55%] py-8 max-[650px]:py-0 max-[650px]:w-full "
-        />
       </section>
       <section
         className=" font-Nunito flex flex-col bg-[#F9F9F9]  max-[650px]:w-full
@@ -40,7 +42,8 @@ function GiveUpParrot() {
       >
         <section
           className=" flex mx-14 px-5 mt-20 gap-6 justify-between max-[850px]:pb-8 pb-16 items-center border-b max-[650px]:mt-10
-       max-[850px]:flex-col-reverse max-[850px]:w-full max-[850px]:mx-3 max-[650px]:mx-0 max-[650px]:px-0 "
+       max-[850px]:flex-col-reverse max-[850px]:w-full max-[850px]:mx-3 max-[650px]:mx-0 max-[650px]:px-0 
+       min-[2000px]:ml-[50%] min-[2000px]:translate-x-[-50%] mix-blend-multiply"
         >
           <img
             src={parrot}
@@ -76,7 +79,8 @@ function GiveUpParrot() {
         </section>
         <section
           className=" flex mx-14 px-5 mt-20 gap-4 pb-16 max-[850px]:pb-8 items-center border-b max-[650px]:mt-10
-       max-[850px]:flex-col max-[850px]:w-full max-[850px]:mx-3 max-[650px]:mx-0 max-[650px]:px-0 "
+       max-[850px]:flex-col max-[850px]:w-full max-[850px]:mx-3 max-[650px]:mx-0 max-[650px]:px-0 
+       min-[2000px]:ml-[50%] min-[2000px]:translate-x-[-50%] mix-blend-multiply"
         >
           <div className=" flex flex-col gap-3 max-[850px]:w-full w-[50%] text-[#595959]">
             <h1 className=" font-bold text-3xl mb-2">
@@ -115,7 +119,8 @@ function GiveUpParrot() {
 
         <section
           className=" flex  mr-10 px-5 mt-20 gap-9  pb-16 items-center border-b max-[650px]:mt-10
-       max-[850px]:flex-col-reverse max-[850px]:pb-8 max-[850px]:w-full max-[850px]:mx-3 max-[650px]:mx-0 max-[650px]:px-0 "
+       max-[850px]:flex-col-reverse max-[850px]:pb-8 max-[850px]:w-full max-[850px]:mx-3 max-[650px]:mx-0 max-[650px]:px-0 
+       min-[2000px]:ml-[50%] min-[2000px]:translate-x-[-50%] mix-blend-multiply"
         >
           <img
             src={catHelth}
@@ -168,7 +173,8 @@ function GiveUpParrot() {
         </section>
         <section
           className=" flex mx-14 px-5 mt-20 gap-4 pb-16 max-[850px]:pb-8 items-center  max-[650px]:mt-10
-       max-[850px]:flex-col max-[850px]:w-full max-[850px]:mx-3 max-[650px]:mx-0 max-[650px]:px-0 "
+       max-[850px]:flex-col max-[850px]:w-full max-[850px]:mx-3 max-[650px]:mx-0 max-[650px]:px-0 
+       min-[2000px]:ml-[50%] min-[2000px]:translate-x-[-50%] mix-blend-multiply"
         >
           <div className=" flex flex-col gap-3 max-[850px]:w-full w-[50%] text-[#595959]">
             <h1 className=" font-bold text-3xl ">Next steps</h1>

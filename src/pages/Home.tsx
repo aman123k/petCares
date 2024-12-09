@@ -18,14 +18,14 @@ function Home() {
     <div className=" ">
       <Header />
       <section
-        className="bg-homeDod object-contain py-36 flex flex-col gap-14 px-20 text-white
-      max-[650px]:px-8 max-[650px]:py-10 max-[650px]:gap-10 bg-no-repeat"
+        className="bg-homeDod object-contain py-36 flex flex-col gap-14 px-20 text-white 
+      max-[650px]:px-8 max-[650px]:py-10 max-[650px]:gap-10 bg-no-repeat min-[1500px]:bg-cover max-[1500px]:object-none "
       >
         <Link to="/adopt-a-pet">
           <div
             className=" flex gap-10 items-center bg-[#5FA501] w-[500px] py-10
           rounded-lg px-12 hover:scale-[1.1] duration-500 ease-in-out max-[650px]:w-full
-          max-[650px]:px-6 max-[650px]:gap-5 max-[650px]:py-7"
+          max-[650px]:px-6 max-[650px]:gap-5 max-[650px]:py-7 min-[2000px]:ml-[30%]"
           >
             <CiSearch
               className="text-7xl text-[#5FA501] bg-white p-3.5 rounded-lg max-[650px]:text-5xl 
@@ -47,7 +47,7 @@ function Home() {
           <div
             className=" flex gap-10 items-center bg-[#1e7629] w-[500px] py-10
           rounded-lg px-12 hover:scale-[1.1] duration-500 ease-in-out max-[650px]:w-full
-          max-[650px]:px-6 max-[650px]:gap-5 max-[650px]:py-7"
+          max-[650px]:px-6 max-[650px]:gap-5 max-[650px]:py-7 min-[2000px]:ml-[30%]"
           >
             <FcProcess
               className="text-[4.8rem] text-[#5FA501] bg-white px-3 py-0 rounded-lg 
@@ -64,7 +64,7 @@ function Home() {
           </div>
         </Link>
       </section>
-      <section className="  my-10 font-Nunito px-8">
+      <section className="  my-10 font-Nunito px-8 min-[2000px]:ml-[50%] min-[2000px]:translate-x-[-50%] ">
         <div className="text-center flex-col flex-3">
           <h1 className=" text-3xl font-bold text-[#595959]">
             Why Choose PetCares?
@@ -76,35 +76,37 @@ function Home() {
         </div>
         <HomeCard />
       </section>
-      <section
-        className=" my-8 font-Nunito tracking-wide  text-center px-28 max-[950px]:px-16 max-[650px]:px-8
-       py-8  flex-col flex gap-6 bg-[#EEEEEE] drop-shadow-md"
-      >
-        <h1 className=" text-2xl font-bold text-[#595959]">
-          Straightforward Pet Rehousing And Adoption
-        </h1>
-        <p>
-          PetCares is an innovative digital platform where real individuals
-          facilitate connections between prospective pet adopters and pet owners
-          in need of rehousing their animals. Our platform simplifies the
-          adoption process, ensuring that caring individuals find the perfect
-          companion while increasing the likelihood of pets finding their
-          forever homes.
-        </p>
-        <p className=" my-3">
-          We provide a compassionate and non-judgmental service to pet owners
-          seeking to rehome their animals, empowering them with full control
-          throughout the process.
-        </p>
-        <p>
-          Moreover, we play a pivotal role in reducing the influx of animals
-          entering shelters. By connecting pets directly with new homes, we
-          alleviate the strain on shelters, allowing them to allocate their
-          resources more effectively towards pets in urgent need of assistance
-          or specialized care.
-        </p>
+      <section className="bg-[#EEEEEE] ">
+        <section
+          className=" my-8 font-Nunito tracking-wide  text-center px-28 max-[950px]:px-16 max-[650px]:px-8
+       py-8  flex-col flex gap-6 drop-shadow-md min-[2000px]:ml-[50%] min-[2000px]:translate-x-[-50%] "
+        >
+          <h1 className=" text-2xl font-bold text-[#595959]">
+            Straightforward Pet Rehousing And Adoption
+          </h1>
+          <p>
+            PetCares is an innovative digital platform where real individuals
+            facilitate connections between prospective pet adopters and pet
+            owners in need of rehousing their animals. Our platform simplifies
+            the adoption process, ensuring that caring individuals find the
+            perfect companion while increasing the likelihood of pets finding
+            their forever homes.
+          </p>
+          <p className=" my-3">
+            We provide a compassionate and non-judgmental service to pet owners
+            seeking to rehome their animals, empowering them with full control
+            throughout the process.
+          </p>
+          <p>
+            Moreover, we play a pivotal role in reducing the influx of animals
+            entering shelters. By connecting pets directly with new homes, we
+            alleviate the strain on shelters, allowing them to allocate their
+            resources more effectively towards pets in urgent need of assistance
+            or specialized care.
+          </p>
+        </section>
       </section>
-      <section className=" text-center font-Nunito px-9 text-[#484848] max-[650px]:px-8">
+      <section className=" text-center font-Nunito px-9 text-[#484848] max-[650px]:px-8 min-[2000px]:ml-[50%] min-[2000px]:translate-x-[-50%] ">
         <div className=" flex-col flex gap-3">
           <h1 className=" text-3xl font-bold">Popular Pet Searches</h1>
           <p className=" text-[#797979] font-semibold">

@@ -24,7 +24,10 @@ function Dashboard() {
     <>
       <Header />
       <section className=" bg-[#F9F9F9] px-7 py-8 max-[650px]:px-0">
-        <section className=" drop-shawod-2xl shadow-black rounded-3xl overflow-hidden font-Nunito">
+        <section
+          className=" drop-shawod-2xl shadow-black rounded-3xl overflow-hidden font-Nunito
+        min-[2000px]:ml-[50%] min-[2000px]:translate-x-[-50%]"
+        >
           <h1
             className=" bg-[#FFFFFF] px-10 py-12  max-[650px]:px-6  max-[650px]:text-2xl
            text-[#595959] font-bold text-3xl"

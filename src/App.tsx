@@ -51,7 +51,7 @@ import Success from "./pages/pymentStatus/Success";
 function App() {
   const clintId = process.env.REACT_APP_GOOGLE_CLIENT_ID as string;
   return (
-    <div className="min-[1750px]:ml-[50%] min-[1750px]:translate-x-[-50%] ">
+    <div className="">
       <GoogleOAuthProvider clientId={clintId}>
         <BrowserRouter>
           <ThemeContextProvider>

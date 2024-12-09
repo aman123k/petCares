@@ -70,10 +70,15 @@ function PetDetails() {
 
   return (
     <section
-      className={`${showImage ? "h-screen overflow-hidden" : ""} capitalize`}
+      className={`${
+        showImage ? "h-screen overflow-hidden" : ""
+      } capitalize bg-[#F9F9F9]`}
     >
       <Header />
-      <section className=" bg-[#F9F9F9] font-Nunito max-[650px]:px-6 px-8 flex items-center justify-between py-10">
+      <section
+        className=" font-Nunito max-[650px]:px-6 px-8 flex items-center justify-between py-10
+      min-[2000px]:ml-[50%] min-[2000px]:translate-x-[-50%]"
+      >
         <div>
           <Link to="/adopt-a-pet">
             <p className=" flex items-center gap-2 text-[#99CB36] font-semibold text-sm">
@@ -114,7 +119,10 @@ function PetDetails() {
           )}
         </div>
       </section>
-      <section className="bg-[#F9F9F9] max-[650px]:px-6 px-8 flex gap-[2.5%] max-[650px]:gap-10 max-[650px]:flex-col pb-10 h-max">
+      <section
+        className=" max-[650px]:px-6 px-8 flex gap-[2.5%] max-[650px]:gap-10 max-[650px]:flex-col pb-10 h-max
+      min-[2000px]:ml-[50%] min-[2000px]:translate-x-[-50%]"
+      >
         <div
           className=" w-[63%] rounded-lg overflow-hidden drop-shadow-md max-[650px]:w-full max-[650px]:h-auto 
         max-[950px]:h-auto items-start h-[30rem]"
@@ -157,7 +165,10 @@ function PetDetails() {
           </div>
         </div>
       </section>
-      <section className="bg-[#F9F9F9] max-[650px]:px-6 px-8 flex gap-[3%] border-t capitalize py-10 max-[650px]:flex-col">
+      <section
+        className=" max-[650px]:px-6 px-8 flex gap-[3%] border-t capitalize py-10 max-[650px]:flex-col
+      min-[2000px]:ml-[50%] min-[2000px]:translate-x-[-50%]"
+      >
         <section className="w-[63%] max-[650px]:w-full font-Nunito flex flex-col gap-6">
           <div className=" bg-white drop-shadow-lg rounded-lg px-8 py-6">
             <h1 className=" my-3 font-bold  text-2xl text-[#595959]">

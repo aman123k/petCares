@@ -30,7 +30,8 @@ function FirstStep() {
     <>
       <section
         className=" mx-28 max-[950px]:mx-16 max-[650px]:ml-0 max-[650px]:mx-0
-      max-[650px]:px-10 max-[650px]:py-4  py-8 font-Nunito"
+      max-[650px]:px-10 max-[650px]:py-4  py-8 font-Nunito 
+        min-[2000px]:ml-[50%] min-[2000px]:translate-x-[-50%]"
       >
         <h1 className=" font-bold text-[#121212] text-3xl mb-2">
           Before you start…
@@ -110,46 +111,48 @@ function FirstStep() {
           </li>
         </ul>
       </section>
-      <section
-        className=" px-28 max-[950px]:px-16 max-[650px]:ml-0 bg-[#DCEAC9] max-[650px]:mx-0
-      max-[650px]:px-10 max-[650px]:py-10 flex flex-col gap-8 py-16 font-Nunito"
-      >
-        <div
-          className=" flex gap-8 justify-between max-[650px]:flex-col max-[650px]:w-full
-        items-center"
+      <section className="bg-[#DCEAC9]">
+        <section
+          className=" px-28 max-[950px]:px-16 max-[650px]:ml-0 max-[650px]:mx-0
+      max-[650px]:px-10 max-[650px]:py-10 flex flex-col gap-8 py-16 font-Nunito   min-[2000px]:ml-[50%] min-[2000px]:translate-x-[-50%]"
         >
-          <h1 className=" text-lg font-bold text-[#151515]">
-            Are you rehoming a dog, cat or other pet?
-          </h1>
-          <AnimalDropDown />
-        </div>
-        <div
-          className=" flex gap-8 justify-between max-[650px]:flex-col max-[650px]:w-full
+          <div
+            className=" flex gap-8 justify-between max-[650px]:flex-col max-[650px]:w-full
         items-center"
-        >
-          <h1 className=" text-lg font-bold text-[#151515]">
-            Why do you need to rehome your pet?
-          </h1>
-          <ReasonDropDown />
-        </div>
-        <div
-          className=" flex gap-8 justify-between max-[650px]:flex-col max-[650px]:w-full
+          >
+            <h1 className=" text-lg font-bold text-[#151515]">
+              Are you rehoming a dog, cat or other pet?
+            </h1>
+            <AnimalDropDown />
+          </div>
+          <div
+            className=" flex gap-8 justify-between max-[650px]:flex-col max-[650px]:w-full
         items-center"
-        >
-          <h1 className=" text-lg font-bold text-[#151515]">
-            How long are you able to keep your pet while we help find a suitable
-            new home?
-          </h1>
-          <TimeDropDown />
-        </div>
-        <button
-          className=" ml-auto border-[#5FA501] hover:text-[#5FA501] bg-[#5FA501]
+          >
+            <h1 className=" text-lg font-bold text-[#151515]">
+              Why do you need to rehome your pet?
+            </h1>
+            <ReasonDropDown />
+          </div>
+          <div
+            className=" flex gap-8 justify-between max-[650px]:flex-col max-[650px]:w-full
+        items-center"
+          >
+            <h1 className=" text-lg font-bold text-[#151515]">
+              How long are you able to keep your pet while we help find a
+              suitable new home?
+            </h1>
+            <TimeDropDown />
+          </div>
+          <button
+            className=" ml-auto border-[#5FA501] hover:text-[#5FA501] bg-[#5FA501]
         hover:bg-white px-20 max-[650px]:ml-0 border-2 text-white rounded-lg font-semibold py-3
         drop-shadow-md"
-          onClick={nextPage}
-        >
-          Next
-        </button>
+            onClick={nextPage}
+          >
+            Next
+          </button>
+        </section>
       </section>
     </>
   );

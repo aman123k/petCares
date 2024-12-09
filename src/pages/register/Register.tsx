@@ -8,8 +8,11 @@ function Register() {
   return (
     <>
       <Header />
-      <section className="p-8 bg-[#F9F9F9] max-[650px]:px-5">
-        <section className="font-Nunito rounded-3xl text-center py-24 max-[650px]:py-10 drop-shadow-xl  bg-white">
+      <section className="p-8 bg-[#F9F9F9] max-[650px]:px-5 ">
+        <section
+          className="font-Nunito rounded-3xl text-center py-24 max-[650px]:py-10 drop-shadow-xl  bg-white 
+        min-[2000px]:ml-[50%] min-[2000px]:translate-x-[-50%] "
+        >
           <h1 className="font-bold text-2xl tracking-wide">
             Register a new account
           </h1>
