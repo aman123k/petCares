@@ -1,7 +1,7 @@
 const checkfee = (petType: string | undefined, petAge: number | undefined) => {
   if (petType === "rabbit") {
     return 500;
-  } else if (petType === "perrot") {
+  } else if (petType === "parrot") {
     return 1200;
   }
   if (petType === "cat" && petAge) {
