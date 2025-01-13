@@ -69,10 +69,6 @@ function ChatContextProvider(props: { children: React.ReactNode }) {
     }
   }, []);
 
-  useEffect(() => {
-    allConnections();
-  }, [allConnections]);
-
   // Provide the context value to children components
   return (
     <ChatContext.Provider
