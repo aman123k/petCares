@@ -9,11 +9,11 @@ import {
   DropdownListRehouse,
 } from "./DropdownList";
 import React, { useContext, useEffect, useState } from "react";
-import Mobilemenu from "./Mobilemenu";
-import { ThemeContext } from "../globleContext/context";
+import MobileMenu from "./MobileMenu";
+import { ThemeContext } from "../globalContext/context";
 import { MyFunctionType, User } from "../interface/interface";
 import UserProfile from "./UserProfile";
-import Profiledropdown from "./ProfileDropDown";
+import ProfileDropdown from "./ProfileDropDown";
 
 const Header: React.FC = () => {
   const {
@@ -23,7 +23,7 @@ const Header: React.FC = () => {
     useContext(ThemeContext);
 
   const [adopterList, setAdopterList] = useState<boolean>(false);
-  const [rehouseList, setRehouserList] = useState<boolean>(false);
+  const [rehouseList, setRehousesList] = useState<boolean>(false);
   const [otherList, setOtherList] = useState<boolean>(false);
   const [openMenu, setOpenMenu] = useState<boolean>(false);
   const [openProfile, setOpenProfile] = useState<boolean>(false);
@@ -51,10 +51,10 @@ const Header: React.FC = () => {
             className="bg-[#F9F9F9] absolute max-[650px]:top-[3.1rem] font-Dancing 
         top-[4.5rem] right-0 max-[650px]:text-xs max-[650px]:tracking-wide text-[13.4px] tracking-widest "
           >
-            Responsibale for Rehousing
+            Responsible for Rehousing
           </p>
         </div>
-        <Mobilemenu openMenu={openMenu} setOpenMenu={setOpenMenu} />
+        <MobileMenu openMenu={openMenu} setOpenMenu={setOpenMenu} />
         <nav className=" flex flex-col gap-2 max-[950px]:hidden">
           <ul className="flex gap-6 relative">
             <Link
@@ -93,11 +93,11 @@ const Header: React.FC = () => {
 
             <div
               className={`inline-block cursor-pointer group `}
-              onMouseEnter={() => setRehouserList(true)}
-              onMouseLeave={() => setRehouserList(false)}
+              onMouseEnter={() => setRehousesList(true)}
+              onMouseLeave={() => setRehousesList(false)}
             >
               <li className="items-center flex gap-2 hover:text-[#5FA501]">
-                <span>Rehouser</span>
+                <span>Rehouse</span>
                 <FaChevronDown className=" group-hover:rotate-180 duration-300 ease-out" />
               </li>
               {rehouseList && <DropdownListRehouse />}
@@ -166,7 +166,7 @@ const Header: React.FC = () => {
             </Link>
           )}
         </div>
-        {openProfile ? <Profiledropdown /> : null}
+        {openProfile ? <ProfileDropdown /> : null}
       </header>
     </div>
   );

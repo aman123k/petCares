@@ -3,13 +3,13 @@ import Header from "../../components/Header";
 import Count from "./helper/Count";
 import Footer from "../../components/Footer";
 import { Characteristics, KeyFacts, User } from "../../interface/interface";
-import { ThemeContext } from "../../globleContext/context";
-import { ListingContext } from "../../globleContext/ListingContext";
+import { ThemeContext } from "../../globalContext/context";
+import { ListingContext } from "../../globalContext/ListingContext";
 import { useNavigate } from "react-router-dom";
 import ThirdHelperPhoto from "./helper/ThirdHelperPhoto";
 import {
   InputCard,
-  KeyFect,
+  KeyFact,
   PetAge,
   PetName,
 } from "./helper/DropdownForThirdStep";
@@ -97,15 +97,15 @@ function ThirdStep() {
     else if (!characteristics.petSex || !characteristics.petSize)
       return toast.error("Please enter the pet's Size and Sex");
     else if (!characteristics.petColor || !characteristics.petBreed)
-      return toast.error("Please enter the pet's Colour and Bread");
+      return toast.error("Please enter the pet's Color and Bread");
     else if (
-      !keyFact.BehaviourIssues ||
+      !keyFact.BehaviorIssues ||
       !keyFact.GoodWithCat ||
       !keyFact.GoodWithChild ||
       !keyFact.GoodWithDog ||
       !keyFact.HouseTrained ||
       !keyFact.Microchipped ||
-      !keyFact.SpeciallNeed ||
+      !keyFact.SpecialNeed ||
       !keyFact.purebred
     )
       return toast.error("Select an option");
@@ -277,42 +277,42 @@ function ThirdStep() {
           >
             <h1 className=" text-[#4A4949] text-3xl font-bold">Key Facts</h1>
             <section className=" my-8 w-[75%] max-[950px]:w-full flex flex-col gap-6">
-              <KeyFect
+              <KeyFact
                 label="Microchipped"
                 keyname="Microchipped"
                 check={keyFact.Microchipped}
               />
-              <KeyFect
+              <KeyFact
                 label="House trained"
                 keyname="HouseTrained"
                 check={keyFact.HouseTrained}
               />
-              <KeyFect
+              <KeyFact
                 label="Good with Cat"
                 keyname="GoodWithCat"
                 check={keyFact.GoodWithCat}
               />
-              <KeyFect
+              <KeyFact
                 label="Good with Dog"
                 keyname="GoodWithDog"
                 check={keyFact.GoodWithDog}
               />
-              <KeyFect
+              <KeyFact
                 label="Good with Child"
                 keyname="GoodWithChild"
                 check={keyFact.GoodWithChild}
               />
-              <KeyFect
+              <KeyFact
                 label="Behaviour Issues"
-                keyname="BehaviourIssues"
-                check={keyFact.BehaviourIssues}
+                keyname="BehaviorIssues"
+                check={keyFact.BehaviorIssues}
               />
-              <KeyFect
+              <KeyFact
                 label="Has Special needs"
-                keyname="SpeciallNeed"
-                check={keyFact.SpeciallNeed}
+                keyname="SpecialNeed"
+                check={keyFact.SpecialNeed}
               />
-              <KeyFect
+              <KeyFact
                 label="Purebred"
                 keyname="purebred"
                 check={keyFact.purebred}
@@ -352,7 +352,7 @@ function ThirdStep() {
                   <span>
                     <span className=" font-bold">Your pet’s history:</span> how
                     long you’ve had them, where you got them from and why you
-                    need to rehome them
+                    need to re home them
                   </span>
                 </li>
                 <li className=" flex items-center gap-2">
@@ -370,7 +370,7 @@ function ThirdStep() {
                   <RxDot className=" flex-shrink-0 text-xl font-bold" />
                   <span>
                     {" "}
-                    Your pet’s <span>favourite activities</span>
+                    Your pet’s <span>favorite activities</span>
                   </span>
                 </li>
                 <li className=" flex items-center gap-2">

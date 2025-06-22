@@ -22,7 +22,7 @@ function ForgetPass() {
     e.preventDefault();
     if (!email) return toast.error("Enter email...");
     if (!otp) return toast.error("Enter Otp...");
-    if (!newPass) return toast.error("Enter storng password...");
+    if (!newPass) return toast.error("Enter strong password...");
     verifyMail();
   };
 

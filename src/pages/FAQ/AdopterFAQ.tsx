@@ -64,13 +64,13 @@ function AdopterFAQ() {
                   Differentiating ourselves from unregulated platforms like
                   Pets4Homes, Gumtree, and Facebook, we offer a reliable
                   alternative. Our focus is on enhancing pet welfare and
-                  promoting responsible rehoming and adoption practices through
+                  promoting responsible re homing and adoption practices through
                   education and transparency.
                 </li>
                 <li>
                   Moreover, our efforts extend to supporting rescue
                   organizations by alleviating the strain on shelters. By
-                  facilitating rehoming, we create space for animals in dire
+                  facilitating re homing, we create space for animals in dire
                   need of professional care, ultimately contributing to a
                   healthier and more sustainable pet care ecosystem.
                 </li>
@@ -100,8 +100,8 @@ function AdopterFAQ() {
                 <li>
                   We’re focusing on dogs, cats and rabbits and parrots because
                   they’re the most popular types of pet in the Delhi, Punjab,
-                  and Haryana. We plan to help rehome other types of pets in the
-                  future.
+                  and Haryana. We plan to help re home other types of pets in
+                  the future.
                 </li>
               </ul>
             </div>
@@ -130,8 +130,8 @@ function AdopterFAQ() {
                 <li>
                   We’re focusing on dogs, cats and rabbits and parrots because
                   they’re the most popular types of pet in the Delhi, Punjab,
-                  and Haryana. We plan to help rehome other types of pets in the
-                  future.
+                  and Haryana. We plan to help re home other types of pets in
+                  the future.
                 </li>
               </ul>
             </div>
@@ -173,7 +173,7 @@ function AdopterFAQ() {
                 <li>
                   Moreover, since we operate as a charity founded by passionate
                   animal lovers, our primary focus is on pet welfare rather than
-                  profit. We don't charge any fees to rehome pets, eliminating
+                  profit. We don't charge any fees to re home pets, eliminating
                   any incentive for dealers, scammers, or unethical breeders to
                   use our service.
                 </li>
@@ -392,7 +392,7 @@ function AdopterFAQ() {
                 <li>
                   We want people to adopt pets responsibly. By paying the fee at
                   this point in the process, you're demonstrating to the
-                  rehouser that you are very serious about adopting their pet.
+                  rehouses that you are very serious about adopting their pet.
                 </li>
                 <li>
                   We know from our research that it can be very frustrating if
@@ -478,9 +478,9 @@ function AdopterFAQ() {
                 </li>
                 <li>
                   We strongly advise that prior to confirming any adoption (and
-                  after reserving the pet) you ask the rehouser to show you any
+                  after reserving the pet) you ask the rehouses to show you any
                   relevant documentation about the pet including any vet
-                  records. You can also ask the rehouser to give you the vet's
+                  records. You can also ask the rehouses to give you the vet's
                   telephone number so that you can make your own enquiries if
                   you wish to do so.
                 </li>

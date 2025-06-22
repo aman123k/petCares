@@ -5,21 +5,21 @@ import { HiOutlineEmojiHappy } from "react-icons/hi";
 import { IoSend } from "react-icons/io5";
 import { useParams } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
-import { ChatContext } from "../../../globleContext/ChatContext";
+import { ChatContext } from "../../../globalContext/ChatContext";
 import { ChatConnection, User } from "../../../interface/interface";
-import { ThemeContext } from "../../../globleContext/context";
+import { ThemeContext } from "../../../globalContext/context";
 import { RxCross2 } from "react-icons/rx";
 import { Socket } from "socket.io-client";
 
 const ChatFooter = () => {
-  const [inputText, setInputtext] = useState<string>("");
+  const [inputText, setInputText] = useState<string>("");
   const [showEmoji, setShowEmoji] = useState<boolean>(false);
   const { userDetails }: { userDetails?: User } = useContext(ThemeContext);
   const { id } = useParams();
   const url = process.env.REACT_APP_URL as string;
 
   const handleSelect = (emoji: any) => {
-    setInputtext(inputText + emoji.native);
+    setInputText(inputText + emoji.native);
   };
   const { socket, connections } = useContext(ChatContext) as {
     socket: React.MutableRefObject<Socket | null>;
@@ -29,8 +29,8 @@ const ChatFooter = () => {
     return connection?._id === id;
   });
 
-  const reciver = currentConnection[0].userEmail.filter(
-    (reciver) => reciver !== userDetails?.email
+  const receiver = currentConnection[0].userEmail.filter(
+    (receiver) => receiver !== userDetails?.email
   );
 
   const handleSubmit = async () => {
@@ -40,7 +40,7 @@ const ChatFooter = () => {
       id,
       time: new Date(),
       sender: userDetails?.email,
-      reciver: reciver,
+      receiver: receiver,
     });
     const response = await fetch(`${url}/sendMessage`, {
       method: "post",
@@ -52,19 +52,19 @@ const ChatFooter = () => {
     });
     const json = await response.json();
     if (json.success) {
-      setInputtext("");
+      setInputText("");
     } else {
       toast.error(json.response);
-      setInputtext("");
+      setInputText("");
     }
   };
 
   // Chat Render Form
-  const renderChatForm = (currnetChat: any, index: number) => {
-    const isFirstUser = currnetChat.firstUser.email !== userDetails?.email;
+  const renderChatForm = (currentChat: any, index: number) => {
+    const isFirstUser = currentChat.firstUser.email !== userDetails?.email;
     const userEmail = isFirstUser
-      ? currnetChat.firstUser.email
-      : currnetChat.secondUser.email;
+      ? currentChat.firstUser.email
+      : currentChat.secondUser.email;
 
     return (
       <form
@@ -73,8 +73,8 @@ const ChatFooter = () => {
         onSubmit={(e) => {
           e.preventDefault();
           if (
-            !currnetChat?.isBlock.includes(userEmail) &&
-            !currnetChat?.isBlock.includes(userDetails?.email ?? "")
+            !currentChat?.isBlock.includes(userEmail) &&
+            !currentChat?.isBlock.includes(userDetails?.email ?? "")
           ) {
             handleSubmit();
           } else {
@@ -101,7 +101,7 @@ const ChatFooter = () => {
          w-full rounded-lg text-lg "
           placeholder="Type a message "
           onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-            setInputtext(e.currentTarget.value)
+            setInputText(e.currentTarget.value)
           }
         />
         <button>

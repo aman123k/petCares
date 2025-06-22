@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useRef } from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Count from "./helper/Count";
-import { ListingContext } from "../../globleContext/ListingContext";
+import { ListingContext } from "../../globalContext/ListingContext";
 import { Characteristics, KeyFacts } from "../../interface/interface";
 import { useNavigate } from "react-router-dom";
 import ConfirmHelper from "./helper/confirmHelper";
@@ -107,8 +107,8 @@ function Confirm() {
           GoodWithCat: "",
           GoodWithDog: "",
           GoodWithChild: "",
-          SpeciallNeed: "",
-          BehaviourIssues: "",
+          SpecialNeed: "",
+          BehaviorIssues: "",
           purebred: "",
         });
         setPetImage([]);
@@ -191,7 +191,7 @@ function Confirm() {
               <ConfirmHelper agr={characteristics.petAge} agr2="Age" />
               <ConfirmHelper agr={characteristics.petSize} agr2="Size" />
               <ConfirmHelper agr={characteristics.petSex} agr2="Sex" />
-              <ConfirmHelper agr={characteristics.petColor} agr2="Colour" />
+              <ConfirmHelper agr={characteristics.petColor} agr2="Color" />
               <ConfirmHelper agr={characteristics.petBreed} agr2="Breed" />
             </div>
           </section>
@@ -214,11 +214,11 @@ function Confirm() {
               />
               <ConfirmHelper agr={keyFact.purebred} agr2="Purebred" />
               <ConfirmHelper
-                agr={keyFact.BehaviourIssues}
+                agr={keyFact.BehaviorIssues}
                 agr2="Behaviour Issues"
               />
               <ConfirmHelper
-                agr={keyFact.SpeciallNeed}
+                agr={keyFact.SpecialNeed}
                 agr2="Has Special needs"
               />
             </div>

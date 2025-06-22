@@ -10,7 +10,7 @@ import confirm from "../../images/confirm.jpeg";
 import { RxDotFilled } from "react-icons/rx";
 import { Link } from "react-router-dom";
 
-function ForRehouser() {
+function ForRehouses() {
   return (
     <>
       <Header />
@@ -22,12 +22,12 @@ function ForRehouser() {
         >
           <section className="max-[650px]:text-start text-center px-[17%] mb-4 max-[850px]:px-5 max-[650px]:px-0">
             <h1 className="font-bold text-[1.5rem] text-[#252525]">
-              How It Works For Rehousers
+              How It Works For Rehouses
             </h1>
             <p className=" mt-2 text-[#595959]">
               Rehousing a pet can indeed be a challenging and emotional
               decision, but ensuring the well-being of the animal is crucial.
-              Here's a general guide to help make the rehoming process as
+              Here's a general guide to help make the re homing process as
               straightforward and safe as possible.
             </p>
           </section>
@@ -83,7 +83,7 @@ function ForRehouser() {
               </h1>
               <p className=" font-semibold  text-[16px]">
                 To help keep everyone safe, all listings are subject to approval
-                by the PetRehomer team. Before we post your pet’s profile on the
+                by the PetRehome team. Before we post your pet’s profile on the
                 site, we’ll:
               </p>
               <ul className=" mt-4 flex flex-col text-[#595959] gap-4">
@@ -217,7 +217,7 @@ function ForRehouser() {
                       FAQs{" "}
                     </Link>
                     and{" "}
-                    <Link to="/tips-for-rehouser" className="text-[#85DB12]">
+                    <Link to="/tips-for-rehouse" className="text-[#85DB12]">
                       {" "}
                       tips for rehomers.{" "}
                     </Link>
@@ -243,7 +243,7 @@ function ForRehouser() {
                 <li className=" flex items-center  gap-2 max-[650px]:items-start">
                   <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                   If everyone is happy on the day, the adopter can take the pet
-                  home or you can agree to meet up again before finalising.
+                  home or you can agree to meet up again before finalizing.
                 </li>
                 <li className=" flex items-center  gap-2 max-[650px]:items-start ">
                   <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
@@ -278,4 +278,4 @@ function ForRehouser() {
   );
 }
 
-export default ForRehouser;
+export default ForRehouses;

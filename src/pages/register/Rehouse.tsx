@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import Header from "../../components/Header";
 import { Toaster } from "react-hot-toast";
 
-function Rehouser() {
+function Rehouse() {
   return (
     <>
       <Header />
@@ -39,7 +39,7 @@ function Rehouser() {
               Benefits of a PetCares PetRehouser Account?
             </h1>
             <p className=" mt-2 max-[650px]:mt-1">
-              Creating a PetCares (Rehousers) account is easy and free, it gives
+              Creating a PetCares (Rehouses) account is easy and free, it gives
               you access to great features such as:
             </p>
             <ul
@@ -85,13 +85,13 @@ function Rehouser() {
             </ul>
             <p className="mt-2">
               Don't forget to review our Don't forget to review our{" "}
-              <Link to="/tips-for-rehouser" className="text-[#9BCC3A]">
+              <Link to="/tips-for-rehouse" className="text-[#9BCC3A]">
                 {" "}
-                tips for rehousers page{" "}
+                tips for rehouses page{" "}
               </Link>{" "}
               where you will find details of what should be included in your
               pet's profile to give them the best chance of being successfully
-              rehomed.
+              re homed.
             </p>
           </div>
         </section>
@@ -101,4 +101,4 @@ function Rehouser() {
     </>
   );
 }
-export default Rehouser;
+export default Rehouse;

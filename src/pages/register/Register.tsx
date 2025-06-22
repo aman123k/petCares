@@ -26,13 +26,13 @@ function Register() {
             </li>
             <li className="text-[#595959] pt-2 px-56 max-[650px]:px-8 max-[1300px]:px-[10%] max-[650px]:text-sm">
               By completing this account setup now, you can save valuable time
-              when you're ready to proceed with the adoption or rehoming
+              when you're ready to proceed with the adoption or re homing
               process.
             </li>
             <li className="text-[#595959] pt-2 px-56 max-[650px]:px-8 max-[1300px]:px-[10%] max-[650px]:text-sm">
               It's advisable to provide comprehensive details to help the other
               party make an informed decision. If you're a rehomer, you might
-              also want to explore our helpful tips for rehoming.
+              also want to explore our helpful tips for re homing.
             </li>
           </ul>
           <section

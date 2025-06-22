@@ -2,7 +2,7 @@ import React from "react";
 import { CiLocationOn } from "react-icons/ci";
 import { FaRegHeart } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import addFavourite from "../../function/addFaviourite";
+import addFavorite from "../../function/addFavorite";
 import { Toaster } from "react-hot-toast";
 import day from "../../function/getDay";
 interface petList {
@@ -38,7 +38,7 @@ function CardForPet({ PetsData }: { PetsData: petList }) {
               {PetsData.characteristics.petAge} year old
             </h2>
             <div
-              onClick={() => addFavourite({ id: PetsData._id })}
+              onClick={() => addFavorite({ id: PetsData._id })}
               className="bg-black opacity-55 p-2 hover:bg-[#5F9F0C] cursor-pointer rounded-lg"
             >
               <FaRegHeart className="  " />

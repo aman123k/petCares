@@ -1,9 +1,9 @@
 import React, { SetStateAction, useContext, useEffect, useState } from "react";
 import { IoSearch } from "react-icons/io5";
 import { Link, useParams } from "react-router-dom";
-import { ChatContext } from "../../../globleContext/ChatContext";
+import { ChatContext } from "../../../globalContext/ChatContext";
 import { ChatConnection, User } from "../../../interface/interface";
-import { ThemeContext } from "../../../globleContext/context";
+import { ThemeContext } from "../../../globalContext/context";
 import getTime from "../../../function/getTime";
 import { Socket } from "socket.io-client";
 export interface messageType {
@@ -23,8 +23,7 @@ function MessageList() {
     setNotification: React.Dispatch<SetStateAction<messageType | undefined>>;
   };
   const [messages, setMessages] = useState<messageType>();
-  console.log("noti", notification);
-  const [value, setvalue] = useState<string>("");
+  const [value, setValue] = useState<string>("");
   const { id } = useParams();
 
   const [list, setList] = useState<Array<ChatConnection>>(connections);
@@ -140,7 +139,7 @@ function MessageList() {
             className="w-full outline-none rounded-lg px-3 py-2"
             placeholder=" Search "
             value={value}
-            onChange={(e) => setvalue(e.currentTarget.value)}
+            onChange={(e) => setValue(e.currentTarget.value)}
           />
         </div>
       </header>

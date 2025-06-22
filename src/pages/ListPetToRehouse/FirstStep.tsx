@@ -5,7 +5,7 @@ import {
   TimeDropDown,
 } from "./helper/DropdownForFirstStep";
 import toast from "react-hot-toast";
-import { ListingContext } from "../../globleContext/ListingContext";
+import { ListingContext } from "../../globalContext/ListingContext";
 import { useNavigate } from "react-router-dom";
 
 function FirstStep() {
@@ -85,7 +85,7 @@ function FirstStep() {
           <li>
             7. Messages exchanged between{" "}
             <span className="font-bold">
-              rehousers and adopters are monitored to ensure safety for all
+              rehouses and adopters are monitored to ensure safety for all
               parties
             </span>{" "}
             involved.
@@ -121,7 +121,7 @@ function FirstStep() {
         items-center"
           >
             <h1 className=" text-lg font-bold text-[#151515]">
-              Are you rehoming a dog, cat or other pet?
+              Are you re homing a dog, cat or other pet?
             </h1>
             <AnimalDropDown />
           </div>
@@ -130,7 +130,7 @@ function FirstStep() {
         items-center"
           >
             <h1 className=" text-lg font-bold text-[#151515]">
-              Why do you need to rehome your pet?
+              Why do you need to re home your pet?
             </h1>
             <ReasonDropDown />
           </div>

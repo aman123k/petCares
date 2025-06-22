@@ -1,4 +1,4 @@
-const checkfee = (petType: string | undefined, petAge: number | undefined) => {
+const checkFee = (petType: string | undefined, petAge: number | undefined) => {
   if (petType === "rabbit") {
     return 500;
   } else if (petType === "parrot") {
@@ -28,4 +28,4 @@ const checkfee = (petType: string | undefined, petAge: number | undefined) => {
     return 0;
   }
 };
-export default checkfee;
+export default checkFee;

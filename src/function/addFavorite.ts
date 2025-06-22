@@ -1,8 +1,8 @@
 import toast from "react-hot-toast";
 const url = process.env.REACT_APP_URL as string;
-const addFavourite = async ({ id }: { id: string }) => {
+const addFavorite = async ({ id }: { id: string }) => {
   try {
-    const response = await fetch(`${url}/addFavourite`, {
+    const response = await fetch(`${url}/addFavorite`, {
       method: "post",
       headers: {
         "Content-Type": "application/json",
@@ -21,4 +21,4 @@ const addFavourite = async ({ id }: { id: string }) => {
   }
 };
 
-export default addFavourite;
+export default addFavorite;

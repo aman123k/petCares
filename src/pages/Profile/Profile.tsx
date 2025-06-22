@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import { ThemeContext } from "../../globleContext/context";
+import { ThemeContext } from "../../globalContext/context";
 import { MyFunctionType, User } from "../../interface/interface";
 import { useNavigate } from "react-router-dom";
 import { uploadImage } from "../../components/uploadImage";
@@ -53,7 +53,7 @@ function Profile() {
   const handelUpdate = (e: React.FormEvent) => {
     e.preventDefault();
     if (image === userDetails?.picture && userName === userDetails?.username) {
-      return toast.error("Change somthing to update");
+      return toast.error("Change something to update");
     } else if (!userName) {
       return toast.error("Name can't be empty or same");
     } else {

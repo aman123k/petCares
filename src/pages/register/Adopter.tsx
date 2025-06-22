@@ -82,7 +82,7 @@ function Adopter() {
                   </span>{" "}
                   and{" "}
                   <span className="text-black font-semibold">
-                    message pet rehousers
+                    message pet rehouses
                   </span>
                 </p>
               </li>

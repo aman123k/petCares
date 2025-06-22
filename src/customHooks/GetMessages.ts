@@ -15,7 +15,7 @@ const url = process.env.REACT_APP_URL as string;
 
 const fetchMessages = async (id: string) => {
   try {
-    const response = await fetch(`${url}/reciveMessage`, {
+    const response = await fetch(`${url}/receiveMessage`, {
       method: "post",
       body: JSON.stringify({ id }),
       headers: {
@@ -33,7 +33,7 @@ const useGetMessages = ({ id }: { id: string | undefined }) => {
   const [loading, setLoading] = useState<boolean>(false);
   const [allMessages, setAllMessages] = useState<Array<fetchMessage>>([]);
   const [messages, setMessages] = useState<Array<messageType>>([]);
-  const [intialmessage, setIntialmessage] = useState<string>("");
+  const [initialMessage, setInitialMessage] = useState<string>("");
 
   useEffect(() => {
     try {
@@ -43,11 +43,11 @@ const useGetMessages = ({ id }: { id: string | undefined }) => {
         const fetch = async () => {
           const data = await fetchMessages(id);
           setAllMessages(data?.response);
-          setIntialmessage(data.intialmessage);
+          setInitialMessage(data.initialMessage);
           setMessages([]);
           setLoading(false);
+          console.log(data);
         };
-
         fetch();
       }
     } catch (err) {
@@ -60,7 +60,7 @@ const useGetMessages = ({ id }: { id: string | undefined }) => {
     allMessages,
     messages,
     setMessages,
-    intialmessage,
+    initialMessage,
     loading,
   };
 };

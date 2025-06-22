@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import aboutBnner from "../images/green-hand-paw-1.png";
+import aboutBanner from "../images/green-hand-paw-1.png";
 import { Link } from "react-router-dom";
 import helperImage from "../images/adoption-giving-up-a-catsmall.jpg";
 import helper2Image from "../images/about-us-2nd 1.png";
@@ -25,7 +25,7 @@ function About() {
           </h3>
         </section>
         <img
-          src={aboutBnner}
+          src={aboutBanner}
           alt=""
           className=" object-cover absolute top-0 -z-10 w-full  h-96 max-[650px]:h-56"
         />
@@ -49,8 +49,8 @@ function About() {
             </h3>
             <p className="tracking-wide text-[#777777]">
               We, a group of animal lovers, have established PetCares with the
-              aim of tackling pet homelessness and promoting responsible
-              rehoming. Being part of a registered Indian charity, we prioritize
+              aim of tackling pet homelessness and promoting responsible re
+              homing. Being part of a registered Indian charity, we prioritize
               the well-being of pets over profit.
             </p>
             <div className=" flex items-center gap-4">
@@ -92,7 +92,7 @@ function About() {
                 <p className=" text-sm mt-1 tracking-wide">
                   As students, we've created a pet adoption community where
                   individuals looking to adopt can safely connect with those
-                  needing to rehome a dog, cat, parrot ,or rabbit.
+                  needing to re home a dog, cat, parrot ,or rabbit.
                 </p>
               </div>
             </div>
@@ -119,20 +119,20 @@ function About() {
             </h3>
             <p className="tracking-wide text-[#777777]">
               we've developed a safer, more professional, and ethical
-              alternative to popular pet rehomusing sites like Facebook,
-              Preloved, Pets4Homes, and Gumtree.
+              alternative to popular pet rehousing sites like Facebook, Pre
+              loved, Pets4Homes, and Gumtree.
             </p>
             <p className="tracking-wide text-[#777777]">
               Our platform facilitates connections between potential adopters
-              and pet owners who need to rehome their animals, focusing
+              and pet owners who need to re home their animals, focusing
               initially on dogs, cats, parrot, and rabbits - the Delhi's most
               common pets. By doing so, we make it easier for caring individuals
               to find the right pet while increasing the chances of pets finding
               their forever homes.
             </p>
             <p className="tracking-wide text-[#777777]">
-              We provide a non-judgmental service to pet owners looking to
-              rehome their animals, granting them full control of the rehoming
+              We provide a non-judgmental service to pet owners looking to re
+              home their animals, granting them full control of the re homing
               process. Additionally, our efforts contribute to reducing the
               number of animals entering shelters, thus freeing up space and
               resources for abandoned pets in need of immediate or specialized
@@ -166,7 +166,7 @@ function About() {
         <p>
           Our mission is clear: to save lives, relieve the burden on rescue
           centers, and create a positive impact in ending pet homelessness. Join
-          us in enabling responsible rehoming and ensuring every pet finds the
+          us in enabling responsible re homing and ensuring every pet finds the
           love and care they deserve.
         </p>
         <img

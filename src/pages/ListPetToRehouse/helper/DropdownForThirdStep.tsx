@@ -1,6 +1,6 @@
 import React, { SetStateAction, useContext } from "react";
 import { Characteristics, KeyFacts } from "../../../interface/interface";
-import { ListingContext } from "../../../globleContext/ListingContext";
+import { ListingContext } from "../../../globalContext/ListingContext";
 import { FaCaretDown } from "react-icons/fa6";
 
 function PetName() {
@@ -116,7 +116,7 @@ function InputCard({
     </>
   );
 }
-function KeyFect({
+function KeyFact({
   label,
   keyname,
   check,
@@ -161,4 +161,4 @@ function KeyFect({
     </>
   );
 }
-export { InputCard, PetName, PetAge, KeyFect };
+export { InputCard, PetName, PetAge, KeyFact };

@@ -38,7 +38,7 @@ function HomeCard() {
           </li>
           <li className=" flex  text-[#595959] gap-2">
             <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
-            Empower individuals rehoming pets to make decisions free from
+            Empower individuals re homing pets to make decisions free from
             judgment, fostering a compassionate environment for responsible and
             thoughtful transitions.
           </li>
@@ -80,15 +80,15 @@ function HomeCard() {
             Responsible Rehousing
           </h1>
           <div className=" mt-10 flex gap-8 flex-col text-center text-[#595959]">
-            <p>We’re champions of rehoming. But not at any cost.</p>
+            <p>We’re champions of re homing. But not at any cost.</p>
             <p>
               We believe in finding the right match between adopters and pets,
               not taking risks or rushing.
             </p>
             <p>
-              We always prioritise pet welfare. And we offer a safer, more
+              We always priorities pet welfare. And we offer a safer, more
               ethical and professional alternative to online marketplaces like
-              Preloved, Pets4Homes, Facebook and Gumtree.
+              Pre loved, Pets4Homes, Facebook and Gumtree.
             </p>
           </div>
         </div>

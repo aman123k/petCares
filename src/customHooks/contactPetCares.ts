@@ -6,15 +6,15 @@ const useContactPetCares = ({
   email,
   name,
   phone,
-  enquriyAbout,
-  enquriyIs,
+  enquiryAbout,
+  enquiryIs,
 }: {
   url: string;
   email: string;
   name: string;
   phone: string | number;
-  enquriyAbout: string;
-  enquriyIs: string;
+  enquiryAbout: string;
+  enquiryIs: string;
 }) => {
   const toastId = useRef("");
   const contactPetCares = async () => {
@@ -25,7 +25,7 @@ const useContactPetCares = ({
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ email, name, phone, enquriyAbout, enquriyIs }),
+        body: JSON.stringify({ email, name, phone, enquiryAbout, enquiryIs }),
         credentials: "include",
       });
       const json = await res.json();

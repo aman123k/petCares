@@ -3,7 +3,7 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
 import dog from "../../images/adopting-dog-single.jpg";
-import behaviours from "../../images/cannot-adopt.jpg";
+import behaviors from "../../images/cannot-adopt.jpg";
 import chooseAdop from "../../images/choseAdop.jpeg";
 import v_5 from "../../images/5-vet.jpg";
 import confirm from "../../images/confirm.jpeg";
@@ -48,7 +48,7 @@ function GiveUpDog() {
             <h1 className=" font-bold text-3xl ">Giving up a dog</h1>
             <p className=" ">
               Sometimes, prioritizing a pet's well-being means making tough
-              choices. If rehoming your dog is necessary, PetRehomer provides a
+              choices. If re homing your dog is necessary, PetRehome provides a
               non-judgmental, safe, and simple platform to help find them a
               caring home.
             </p>
@@ -66,12 +66,13 @@ function GiveUpDog() {
                 After selecting an adopter, meet them when they collect your
                 dog. If things feel off or you reconsider, you can back out
                 anytime until handing your dog over, ensuring flexibility and
-                comfort in the rehoming process.
+                comfort in the re homing process.
               </li>
               <li className="  ">
-                As a direct rehoming service, your dog transitions directly from
-                your home to their new one. This avoids stays in rescue centers
-                or shelters, minimizing stress and anxiety for many dogs.
+                As a direct re homing service, your dog transitions directly
+                from your home to their new one. This avoids stays in rescue
+                centers or shelters, minimizing stress and anxiety for many
+                dogs.
               </li>
             </ul>
           </div>
@@ -83,17 +84,17 @@ function GiveUpDog() {
         >
           <div className=" flex flex-col gap-3 max-[850px]:w-full w-[50%] text-[#595959]">
             <h1 className=" font-bold text-3xl mb-2">
-              Giving up a dog with behavioural problems
+              Giving up a dog with behavioral problems
             </h1>
             <p className=" ">
               For dogs exhibiting uncontrollable, aggressive, or dangerous
-              behavior, refrain from listing on PetRehomer. Contact a rescue
+              behavior, refrain from listing on PetRehome. Contact a rescue
               center instead to ensure proper handling and appropriate care for
               the dog's needs.
             </p>
             <p>
               We urge honesty and transparency when listing a dog on PetRehouser
-              regarding their history and behavior. If uncertain about rehoming
+              regarding their history and behavior. If uncertain about re homing
               due to mild behavioral issues or quirks, reach out for a
               conversation to explore the best approach for your dog.
             </p>
@@ -102,16 +103,16 @@ function GiveUpDog() {
                 Giving up a dog in an emergency
               </h1>
               <li className="  ">
-                Regrettably, we cannot accommodate emergency rehoming as we lack
-                rescue center facilities. If your dog is in immediate danger or
-                poses a threat, promptly contact a rescue center once safety
-                allows for urgent assistance, ensuring the well-being and
+                Regrettably, we cannot accommodate emergency re homing as we
+                lack rescue center facilities. If your dog is in immediate
+                danger or poses a threat, promptly contact a rescue center once
+                safety allows for urgent assistance, ensuring the well-being and
                 appropriate care for the dog.
               </li>
             </ul>
           </div>
           <img
-            src={behaviours}
+            src={behaviors}
             alt=""
             className="w-[50%] max-[650px]:w-full  max-[850px]:w-[70%] min-[1350px]:h-[28rem] object-contain mix-blend-multiply"
           />
@@ -133,7 +134,7 @@ function GiveUpDog() {
             <ul className=" mt-4 flex flex-col  gap-4 ">
               <li className="  ">
                 Considering temporary or foster care due to uncertainty? If not
-                prepared for permanent rehoming or expecting changes, take time
+                prepared for permanent re homing or expecting changes, take time
                 to decide. Dogs thrive on stability; frequent moves can cause
                 stress and confusion. Prioritize their well-being, ensuring
                 decisions align with their long-term comfort and happiness.
@@ -162,7 +163,7 @@ function GiveUpDog() {
               and health conditions, emphasizing honesty about age and
               condition. This ensures accurate information for potential
               adopters to make informed decisions, promoting the best welfare
-              for dogs in need of rehoming.
+              for dogs in need of re homing.
             </p>
             <ul className=" mt-4 flex flex-col  gap-3 ">
               <li className="  ">
@@ -230,22 +231,22 @@ function GiveUpDog() {
               through the process:
             </p>
             <ul className=" mt-4 flex flex-col  gap-3 text-[#96C830]">
-              <Link to="/for_rehousers">
+              <Link to="/for_rehouses">
                 <li className=" flex justify-start gap-2">
                   <RxDotFilled className="text-3xl  flex-shrink-0" />
                   How rehousing works
                 </li>
               </Link>
-              <Link to="/rehousers-faq">
+              <Link to="/rehouses-faq">
                 <li className=" flex justify-start gap-2">
                   <RxDotFilled className="text-3xl  flex-shrink-0" />
-                  FAQs for rehousers
+                  FAQs for rehouses
                 </li>
               </Link>
-              <Link to="/tips-for-rehouser">
+              <Link to="/tips-for-rehouse">
                 <li className=" flex justify-start gap-2">
                   <RxDotFilled className="text-3xl  flex-shrink-0" />
-                  Tips for rehousers
+                  Tips for rehouses
                 </li>
               </Link>
             </ul>

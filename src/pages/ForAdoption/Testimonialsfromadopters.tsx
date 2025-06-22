@@ -129,7 +129,7 @@ function Testimonialsfromadopters() {
                 <li>
                   We are overjoyed to have welcomed our beloved dog into our
                   family through PetCares. The adoption process was friendly and
-                  straightforward, with PetRehomer ensuring a thorough check
+                  straightforward, with PetRehome ensuring a thorough check
                   before allowing us to bring our furry friend home.
                 </li>
                 <li>

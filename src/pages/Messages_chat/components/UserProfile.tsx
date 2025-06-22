@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import { RxCross2 } from "react-icons/rx";
 import { ChatConnection, User } from "../../../interface/interface";
-import { ChatContext } from "../../../globleContext/ChatContext";
-import { ThemeContext } from "../../../globleContext/context";
+import { ChatContext } from "../../../globalContext/ChatContext";
+import { ThemeContext } from "../../../globalContext/context";
 import { useParams } from "react-router-dom";
 import { HiOutlineMailOpen } from "react-icons/hi";
 import { MdOutlineDelete } from "react-icons/md";

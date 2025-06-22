@@ -13,17 +13,17 @@ export interface UserLoginData {
   password: string;
   email: string;
 }
-export interface UserUpadteData {
+export interface UserUpdateData {
   image: string;
   userName: string;
 }
-export interface UserUpadteAditonalData {
+export interface UserUpdateAdditionalData {
   image: string;
   name: string;
 }
 export interface userUpdateProp {
   url: string;
-  data: UserUpadteData | UserUpadteAditonalData;
+  data: UserUpdateData | UserUpdateAdditionalData;
 }
 export interface UserLoginProps {
   url: string;
@@ -57,8 +57,8 @@ export type KeyFacts = {
   GoodWithCat: string;
   GoodWithDog: string;
   GoodWithChild: string;
-  SpeciallNeed: string;
-  BehaviourIssues: string;
+  SpecialNeed: string;
+  BehaviorIssues: string;
   purebred: string;
 };
 export interface ChatConnection {

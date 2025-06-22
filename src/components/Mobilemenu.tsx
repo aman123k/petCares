@@ -5,7 +5,7 @@ import logo from "../images/logo.png";
 import { ImPencil } from "react-icons/im";
 import { MdPersonOutline } from "react-icons/md";
 import { User } from "../interface/interface";
-import { ThemeContext } from "../globleContext/context";
+import { ThemeContext } from "../globalContext/context";
 import useLogOut from "../customHooks/logOutFun";
 
 export interface ParentComponentProps {
@@ -13,7 +13,7 @@ export interface ParentComponentProps {
   setOpenMenu: React.Dispatch<React.SetStateAction<boolean>>;
 }
 const url = process.env.REACT_APP_URL as string;
-const Mobilemenu: React.FC<ParentComponentProps> = ({
+const MobileMenu: React.FC<ParentComponentProps> = ({
   openMenu,
   setOpenMenu,
 }) => {
@@ -39,7 +39,7 @@ const Mobilemenu: React.FC<ParentComponentProps> = ({
               className="bg-[#FFFFFF] absolute max-[650px]:top-[3.1rem] font-Dancing 
         top-[3.7rem] left-[4.3rem] max-[650px]:text-xs tracking-wide text-sm"
             >
-              Responsibale for Rehousing
+              Responsible for Rehousing
             </p>
           </div>
           <RxCross2
@@ -93,7 +93,7 @@ const Mobilemenu: React.FC<ParentComponentProps> = ({
                 Pet Care Information
               </li>
             </Link>
-            <Link to="/for_rehousers" onClick={() => window.scrollTo(0, 0)}>
+            <Link to="/for_rehouses" onClick={() => window.scrollTo(0, 0)}>
               <li className=" border-b py-4 hover:bg-[#F7F7F7] text-sm font-semibold px-6">
                 How It Works - Rehomers
               </li>
@@ -150,9 +150,9 @@ const Mobilemenu: React.FC<ParentComponentProps> = ({
                     My Notification
                   </li>
                 </Link>
-                <Link to="/favourites" onClick={() => window.scrollTo(0, 0)}>
+                <Link to="/favorites" onClick={() => window.scrollTo(0, 0)}>
                   <li className=" border-b py-4 flex items-center gap-2 hover:bg-[#F7F7F7] text-sm font-semibold px-6">
-                    Favourites
+                    Favorites
                   </li>
                 </Link>
 
@@ -177,4 +177,4 @@ const Mobilemenu: React.FC<ParentComponentProps> = ({
   );
 };
 
-export default Mobilemenu;
+export default MobileMenu;

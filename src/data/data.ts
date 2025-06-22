@@ -35,7 +35,7 @@ const colors: string[] = [
   "Gold/Apricot",
   "White",
   "Red/Ginger",
-  "Mixed Colour",
+  "Mixed Color",
   "Silver/Grey",
   "Other",
 ];
@@ -359,7 +359,7 @@ const parrotBread: string[] = [
   "Pionus Parrot",
   "Quaker Parrot",
 ];
-const KeyFect: string[] = [
+const KeyFact: string[] = [
   "Microchipped",
   "House-trained",
   "Can Live With Other Dogs",
@@ -381,5 +381,5 @@ export {
   catBread,
   parrotBread,
   rabbitBread,
-  KeyFect,
+  KeyFact,
 };

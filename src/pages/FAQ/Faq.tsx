@@ -34,7 +34,7 @@ function Faq() {
               </div>
             </Link>
             <Link
-              to="/rehousers-faq"
+              to="/rehouses-faq"
               className=" group bg-white border p-14 rounded-xl max-[650px]:px-12 flex flex-col gap-10 hover:drop-shadow-xl"
             >
               <div className="ml-[50%] translate-x-[-50%] w-max bg-[#AFD57D] group-hover:bg-[#5FA501] p-5 rounded-full">
@@ -42,7 +42,7 @@ function Faq() {
               </div>
               <div className=" text-center">
                 <h1 className=" text-xl mb-3 font-bold">
-                  FAQ's for Pet Rehousers
+                  FAQ's for Pet Rehouses
                 </h1>
                 <p>
                   Finding a new home for your pet doesn't need to be a daunting

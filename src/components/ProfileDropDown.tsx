@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import { User } from "../interface/interface";
 import { useContext } from "react";
-import { ThemeContext } from "../globleContext/context";
+import { ThemeContext } from "../globalContext/context";
 import useLogOut from "../customHooks/logOutFun";
 import { Toaster } from "react-hot-toast";
 
-function Profiledropdown() {
+function ProfileDropdown() {
   const { userDetails }: { userDetails?: User } = useContext(ThemeContext);
   const url = process.env.REACT_APP_URL as string;
   const { logOut } = useLogOut(`${url}/logOut`);
@@ -67,9 +67,9 @@ function Profiledropdown() {
                 My Notification
               </li>
             </Link>
-            <Link to="/favourites" onClick={() => window.scrollTo(0, 0)}>
+            <Link to="/favorites" onClick={() => window.scrollTo(0, 0)}>
               <li className=" text-[#595959] hover:text-[#5FA501] hover:translate-x-3 duration-200 ease-in-out">
-                Favourites
+                Favorites
               </li>
             </Link>
           </ul>
@@ -88,4 +88,4 @@ function Profiledropdown() {
   );
 }
 
-export default Profiledropdown;
+export default ProfileDropdown;

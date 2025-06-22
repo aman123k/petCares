@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { User } from "../interface/interface";
-import { ThemeContext } from "../globleContext/context";
+import { ThemeContext } from "../globalContext/context";
 import { Link } from "react-router-dom";
 
 function ProfileHeader() {
@@ -33,8 +33,8 @@ function ProfileHeader() {
             <Link to="/messages" onClick={() => window.scrollTo(0, 0)}>
               <li>My Messages</li>
             </Link>
-            <Link to="/favourites" onClick={() => window.scrollTo(0, 0)}>
-              <li>My Favourites</li>
+            <Link to="/favorites" onClick={() => window.scrollTo(0, 0)}>
+              <li>My Favorites</li>
             </Link>
           </ul>
         </div>

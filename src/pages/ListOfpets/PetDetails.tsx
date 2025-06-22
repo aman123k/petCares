@@ -6,16 +6,18 @@ import { FaRegHeart } from "react-icons/fa";
 import { IoMdArrowRoundBack } from "react-icons/io";
 import { FaHeart } from "react-icons/fa";
 import Slider from "./Slider";
-import getFavourites from "../../function/getFaviourite";
-import addFavourite from "../../function/addFaviourite";
+import getFavorites from "../../function/getFavorites";
+import addFavorite from "../../function/addFavorite";
 import { Toaster } from "react-hot-toast";
-import { ThemeContext } from "../../globleContext/context";
+import { ThemeContext } from "../../globalContext/context";
 import { User } from "../../interface/interface";
 import { GoPerson } from "react-icons/go";
-import checkfee from "../../function/checkFeeFun";
+import checkFee from "../../function/checkFeeFun";
 import useCreateChat from "../../customHooks/CreateChat";
-import useRecivePets, { PetsdataType } from "../../customHooks/RecivePetsData";
-import { KeyFect } from "../../data/data";
+import useReceivePets, {
+  PetsDataType,
+} from "../../customHooks/ReceivePetsData";
+import { KeyFact } from "../../data/data";
 import { GoCheck } from "react-icons/go";
 import useStripe from "../../customHooks/UseStripe";
 const url = process.env.REACT_APP_URL as string;
@@ -24,40 +26,38 @@ function PetDetails() {
   const { id } = useParams();
   const { userDetails }: { userDetails?: User } = useContext(ThemeContext);
   const [showImage, setShowImage] = useState<boolean>(false);
-  const { allPetsdata } = useRecivePets("all", "all");
-  const [favourites, setFavourites] = useState<Array<PetsdataType> | null>(
-    null
-  );
-  const [currentPetsInfo, setCurentPetInfo] = useState<
-    PetsdataType | undefined | null
+  const { allPetsData } = useReceivePets("all", "all");
+  const [favorites, setFavorites] = useState<Array<PetsDataType> | null>(null);
+  const [currentPetsInfo, setCurrentPetInfo] = useState<
+    PetsDataType | undefined | null
   >();
-  const fee = checkfee(
+  const fee = checkFee(
     currentPetsInfo?.petType,
     currentPetsInfo?.characteristics.petAge
   );
   useEffect(() => {
-    getFavourites({ setItems: setFavourites });
+    getFavorites({ setItems: setFavorites });
   }, []);
-  const petdata: PetsdataType = allPetsdata.filter(
+  const petData: PetsDataType = allPetsData.filter(
     (pets) => pets._id === id
   )[0];
 
-  const favPet: PetsdataType | null =
-    favourites?.filter((pets) => pets._id === id)[0] ?? null;
+  const favPet: PetsDataType | null =
+    favorites?.filter((pets) => pets._id === id)[0] ?? null;
 
   useEffect(() => {
     if (favPet) {
-      setCurentPetInfo(favPet);
+      setCurrentPetInfo(favPet);
     } else {
-      setCurentPetInfo(petdata);
+      setCurrentPetInfo(petData);
     }
-  }, [petdata, favPet]);
+  }, [petData, favPet]);
   const [showFav, setShowFav] = useState<boolean>(false);
 
   useEffect(() => {
-    if (currentPetsInfo?.Favourites?.includes(userDetails?.email ?? "")) {
+    if (currentPetsInfo?.Favorites?.includes(userDetails?.email ?? "")) {
       setShowFav(
-        currentPetsInfo?.Favourites?.includes(userDetails?.email ?? "")
+        currentPetsInfo?.Favorites?.includes(userDetails?.email ?? "")
       );
     }
   }, [currentPetsInfo, userDetails]);
@@ -67,7 +67,6 @@ function PetDetails() {
     id: id,
     fee: fee,
   });
-
   return (
     <section
       className={`${
@@ -100,20 +99,20 @@ function PetDetails() {
             bg-[#abe13f]
           `}
           onClick={() => {
-            addFavourite({ id: currentPetsInfo?._id ?? "" });
+            addFavorite({ id: currentPetsInfo?._id ?? "" });
             setShowFav(!showFav);
           }}
         >
           {showFav ? (
             <div title="remove from your favorite list">
               <FaHeart
-                title="Add Pet in your favourite list"
+                title="Add Pet in your favorite list"
                 className=" text-white text-xl"
               />
             </div>
           ) : (
             <FaRegHeart
-              title="Add Pet in your favourite list"
+              title="Add Pet in your favorite list"
               className=" text-white text-xl"
             />
           )}
@@ -197,7 +196,7 @@ function PetDetails() {
                   </span>
                 </div>
                 <div className=" flex gap-5">
-                  <span className="text-[#595959]">Reason for rehoming: </span>
+                  <span className="text-[#595959]">Reason for re homing: </span>
                   <span className=" font-bold">{currentPetsInfo?.reason}</span>
                 </div>
               </div>
@@ -216,7 +215,7 @@ function PetDetails() {
                   </span>
                 </div>
                 <div className=" flex gap-5">
-                  <span className="text-[#595959]">Colour: </span>
+                  <span className="text-[#595959]">Color: </span>
                   <span className=" font-bold">
                     {currentPetsInfo?.characteristics?.petColor}
                   </span>
@@ -237,7 +236,7 @@ function PetDetails() {
                 }`}
               >
                 <GoCheck className=" text-xl flex-shrink-0 text-[#9BCC3A]" />
-                {currentPetsInfo?.keyFact.Microchipped ? KeyFect[0] : ""}
+                {currentPetsInfo?.keyFact.Microchipped ? KeyFact[0] : ""}
               </div>
               <div
                 className={`flex items-center gap-3 ${
@@ -247,7 +246,7 @@ function PetDetails() {
                 }`}
               >
                 <GoCheck className=" text-xl flex-shrink-0 text-[#9BCC3A]" />
-                {currentPetsInfo?.keyFact.HouseTrained ? KeyFect[1] : ""}
+                {currentPetsInfo?.keyFact.HouseTrained ? KeyFact[1] : ""}
               </div>
               <div
                 className={`flex items-center gap-3 ${
@@ -257,7 +256,7 @@ function PetDetails() {
                 }`}
               >
                 <GoCheck className=" text-xl flex-shrink-0 text-[#9BCC3A]" />
-                {currentPetsInfo?.keyFact.GoodWithDog ? KeyFect[2] : ""}
+                {currentPetsInfo?.keyFact.GoodWithDog ? KeyFact[2] : ""}
               </div>
               <div
                 className={`flex items-center gap-3 ${
@@ -267,7 +266,7 @@ function PetDetails() {
                 }`}
               >
                 <GoCheck className=" text-xl flex-shrink-0 text-[#9BCC3A]" />
-                {currentPetsInfo?.keyFact.GoodWithCat ? KeyFect[3] : ""}
+                {currentPetsInfo?.keyFact.GoodWithCat ? KeyFact[3] : ""}
               </div>
               <div
                 className={`flex items-center gap-3 ${
@@ -277,27 +276,27 @@ function PetDetails() {
                 }`}
               >
                 <GoCheck className=" text-xl flex-shrink-0 text-[#9BCC3A]" />
-                {currentPetsInfo?.keyFact.GoodWithChild ? KeyFect[4] : ""}
+                {currentPetsInfo?.keyFact.GoodWithChild ? KeyFact[4] : ""}
               </div>
               <div
                 className={`flex items-center gap-3 ${
-                  currentPetsInfo?.keyFact.SpeciallNeed === "yes"
+                  currentPetsInfo?.keyFact.SpecialNeed === "yes"
                     ? "block"
                     : "hidden"
                 }`}
               >
                 <GoCheck className=" text-xl flex-shrink-0 text-[#9BCC3A]" />
-                {currentPetsInfo?.keyFact.SpeciallNeed ? KeyFect[5] : ""}
+                {currentPetsInfo?.keyFact.SpecialNeed ? KeyFact[5] : ""}
               </div>
               <div
                 className={`flex items-center gap-3 ${
-                  currentPetsInfo?.keyFact.BehaviourIssues === "yes"
+                  currentPetsInfo?.keyFact.BehaviorIssues === "yes"
                     ? "block"
                     : "hidden"
                 }`}
               >
                 <GoCheck className=" text-xl flex-shrink-0 text-[#9BCC3A]" />
-                {currentPetsInfo?.keyFact.BehaviourIssues ? KeyFect[6] : ""}
+                {currentPetsInfo?.keyFact.BehaviorIssues ? KeyFact[6] : ""}
               </div>
               <div
                 className={`flex items-center gap-3 ${
@@ -307,7 +306,7 @@ function PetDetails() {
                 }`}
               >
                 <GoCheck className=" text-xl flex-shrink-0 text-[#9BCC3A]" />
-                {currentPetsInfo?.keyFact.purebred ? KeyFect[7] : ""}
+                {currentPetsInfo?.keyFact.purebred ? KeyFact[7] : ""}
               </div>
             </div>
           </div>

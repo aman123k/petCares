@@ -1,10 +1,10 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 
 import { useParams } from "react-router-dom";
-import { ChatContext } from "../../globleContext/ChatContext";
+import { ChatContext } from "../../globalContext/ChatContext";
 import getTime from "../../function/getTime";
 import { ChatConnection, User } from "../../interface/interface";
-import { ThemeContext } from "../../globleContext/context";
+import { ThemeContext } from "../../globalContext/context";
 import { IoArrowDown } from "react-icons/io5";
 import useGetMessages from "../../customHooks/GetMessages";
 import day from "../../function/getDay";
@@ -16,7 +16,7 @@ function ChatContainer() {
   const { socket, notification, setNotification } = useContext(ChatContext);
   const { userDetails }: { userDetails?: User } = useContext(ThemeContext);
   const { id } = useParams();
-  const { allMessages, messages, setMessages, intialmessage, loading } =
+  const { allMessages, messages, setMessages, initialMessage, loading } =
     useGetMessages({
       id,
     });
@@ -99,7 +99,7 @@ function ChatContainer() {
                ${allMessages.length === 0 ? "block" : "hidden"}
              }`}
               >
-                {intialmessage}
+                {initialMessage}
               </span>
               {allMessages &&
                 allMessages?.map((message, index) => {
@@ -119,7 +119,7 @@ function ChatContainer() {
  
    }`}
                       >
-                        {intialmessage}
+                        {initialMessage}
                       </span>
                       {message.messages?.map((userChat, index) => {
                         if (userChat.chatId === id) {

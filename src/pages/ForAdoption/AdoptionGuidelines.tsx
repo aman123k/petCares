@@ -92,7 +92,7 @@ function AdoptionGuidelines() {
               <li className=" flex items-center gap-2 max-[650px]:items-start">
                 <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                 Prove your identity with photo ID such as a driving license ,
-                addharcard passport
+                Addharcard passport
               </li>
               <li className=" flex items-center gap-2 max-[650px]:items-start">
                 <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
@@ -115,8 +115,7 @@ function AdoptionGuidelines() {
               </li>
               <li className=" flex items-center gap-2">
                 <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
-                Agree to continue with any training or behavioural
-                rehabilitation
+                Agree to continue with any training or behavioral rehabilitation
               </li>
               <li className=" flex items-center gap-2 max-[650px]:items-start">
                 <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
@@ -340,7 +339,7 @@ function AdoptionGuidelines() {
               Rules for adopting a rabbit
             </h1>
             <p className="text-lg text-[#595959] font-semibold">
-              If you want to adopt a rabbit through PetRehomer, you must…
+              If you want to adopt a rabbit through PetRehome, you must…
             </p>
             <ul className=" mt-4 flex flex-col  gap-4">
               <li className=" flex items-center text-[#595959] gap-2  max-[650px]:items-start">

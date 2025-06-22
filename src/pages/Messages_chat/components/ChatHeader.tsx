@@ -4,8 +4,8 @@ import UserProfile from "./UserProfile";
 import { useNavigate, useParams } from "react-router-dom";
 import { IoMdArrowRoundBack } from "react-icons/io";
 import { ChatConnection, User } from "../../../interface/interface";
-import { ChatContext } from "../../../globleContext/ChatContext";
-import { ThemeContext } from "../../../globleContext/context";
+import { ChatContext } from "../../../globalContext/ChatContext";
+import { ThemeContext } from "../../../globalContext/context";
 import { Socket } from "socket.io-client";
 type onlineUser = {
   user_Id: string;
@@ -14,7 +14,7 @@ type onlineUser = {
 
 function ChatHeader() {
   const [messagePro, setmessagePro] = useState<boolean>(false);
-  const navegator = useNavigate();
+  const navigator = useNavigate();
   const { userDetails }: { userDetails?: User } = useContext(ThemeContext);
   const { id } = useParams();
 
@@ -48,7 +48,7 @@ function ChatHeader() {
                 <div className=" flex items-center gap-3 cursor-pointer">
                   <IoMdArrowRoundBack
                     className=" cursor-pointer max-[650px]:block hidden text-xl"
-                    onClick={() => navegator("/messages")}
+                    onClick={() => navigator("/messages")}
                   />
                   <>
                     {chats?.firstUser?.picture &&
@@ -97,7 +97,7 @@ function ChatHeader() {
                 <div className=" flex items-center gap-3 cursor-pointer">
                   <IoMdArrowRoundBack
                     className=" cursor-pointer max-[650px]:block hidden text-xl"
-                    onClick={() => navegator("/messages")}
+                    onClick={() => navigator("/messages")}
                   />
                   <>
                     {chats?.secondUser?.picture &&

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { FaPlus } from "react-icons/fa6";
 import { PiMinusBold } from "react-icons/pi";
 
-function RehouserFAQ() {
+function RehousesFAQ() {
   const [id, setId] = useState<number>();
   return (
     <>
@@ -64,13 +64,13 @@ function RehouserFAQ() {
                   Differentiating ourselves from unregulated platforms like
                   Pets4Homes, Gumtree, and Facebook, we offer a reliable
                   alternative. Our focus is on enhancing pet welfare and
-                  promoting responsible rehoming and adoption practices through
+                  promoting responsible re homing and adoption practices through
                   education and transparency.
                 </li>
                 <li>
                   Moreover, our efforts extend to supporting rescue
                   organizations by alleviating the strain on shelters. By
-                  facilitating rehoming, we create space for animals in dire
+                  facilitating re homing, we create space for animals in dire
                   need of professional care, ultimately contributing to a
                   healthier and more sustainable pet care ecosystem.
                 </li>
@@ -100,8 +100,8 @@ function RehouserFAQ() {
                 <li>
                   We’re focusing on dogs, cats and rabbits and parrots because
                   they’re the most popular types of pet in the Delhi, Punjab,
-                  and Haryana. We plan to help rehome other types of pets in the
-                  future.
+                  and Haryana. We plan to help re home other types of pets in
+                  the future.
                 </li>
               </ul>
             </div>
@@ -130,8 +130,8 @@ function RehouserFAQ() {
                 <li>
                   We’re focusing on dogs, cats and rabbits and parrots because
                   they’re the most popular types of pet in the Delhi, Punjab,
-                  and Haryana. We plan to help rehome other types of pets in the
-                  future.
+                  and Haryana. We plan to help re home other types of pets in
+                  the future.
                 </li>
               </ul>
             </div>
@@ -142,7 +142,7 @@ function RehouserFAQ() {
               <div className=" flex justify-between items-center gap-6 max-[650px]:items-start">
                 <h1 className=" font-semibold text-lg ">
                   Why would I use PetCares to rehouse my pet when I could use
-                  Nextdoor, Rescue Me, Petfinder or even Facebook?
+                  Nextdoor, Rescue Me, Pet finder or even Facebook?
                 </h1>
                 <span className=" cursor-pointer text-[#5fa505] ">
                   {id !== 4 ? (
@@ -173,7 +173,7 @@ function RehouserFAQ() {
                 <li>
                   Moreover, since we operate as a charity founded by passionate
                   animal lovers, our primary focus is on pet welfare rather than
-                  profit. We don't charge any fees to rehome pets, eliminating
+                  profit. We don't charge any fees to re home pets, eliminating
                   any incentive for dealers, scammers, or unethical breeders to
                   use our service.
                 </li>
@@ -203,14 +203,14 @@ function RehouserFAQ() {
               >
                 <li>
                   While we encourage complying with Indian legislation on pet
-                  neutering, microchipping, and vaccination before rehoming,
+                  neutering, microchipping, and vaccination before re homing,
                   we're here to assist regardless. Contact us for support in
                   finding a loving home for your pet.
                 </li>
                 <li>
                   Adopters prefer pets already neutered, microchipped, and
                   vaccinated, easing their responsibility. Please consider this
-                  before rehoming. It enhances your pet's appeal for a loving
+                  before re homing. It enhances your pet's appeal for a loving
                   family.
                 </li>
               </ul>
@@ -290,8 +290,8 @@ function RehouserFAQ() {
             >
               <div className=" flex justify-between items-center gap-6 max-[650px]:items-start">
                 <h1 className=" font-semibold text-lg ">
-                  My pet has behavioural problems. Can I use the PetCares
-                  website to find them a new home?
+                  My pet has behavioral problems. Can I use the PetCares website
+                  to find them a new home?
                 </h1>
                 <span className=" cursor-pointer text-[#5fa505] ">
                   {id !== 8 ? (
@@ -313,14 +313,14 @@ function RehouserFAQ() {
                   </span>{" "}
                   for you to manage, you should
                   <span className=" font-bold">
-                    speak to a rescue organisation
+                    speak to a rescue organization
                   </span>{" "}
                   immediately and you
                   <span className=" font-bold"> must not</span> list your pet
                   here.
                 </li>
                 <li>
-                  We connect people who want to rehome pets with those looking
+                  We connect people who want to re home pets with those looking
                   to adopt through our website. We don't evaluate behavior, so
                   we rely on honesty about pets' temperaments.
                 </li>
@@ -367,4 +367,4 @@ function RehouserFAQ() {
   );
 }
 
-export default RehouserFAQ;
+export default RehousesFAQ;

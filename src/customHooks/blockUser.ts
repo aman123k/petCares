@@ -1,6 +1,6 @@
 import { useContext, useRef } from "react";
 import toast from "react-hot-toast";
-import { ChatContext } from "../globleContext/ChatContext";
+import { ChatContext } from "../globalContext/ChatContext";
 
 const useBlock = ({
   id,

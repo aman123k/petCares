@@ -48,8 +48,8 @@ const ListingContext = createContext<ListingContextType>({
     GoodWithCat: "",
     GoodWithDog: "",
     GoodWithChild: "",
-    SpeciallNeed: "",
-    BehaviourIssues: "",
+    SpecialNeed: "",
+    BehaviorIssues: "",
     purebred: "",
   },
   setKeyFact: () => {},
@@ -77,8 +77,8 @@ const ListingContextProvider: React.FC<{ children: React.ReactNode }> = (
     GoodWithCat: "",
     GoodWithDog: "",
     GoodWithChild: "",
-    SpeciallNeed: "",
-    BehaviourIssues: "",
+    SpecialNeed: "",
+    BehaviorIssues: "",
     purebred: "",
   });
 

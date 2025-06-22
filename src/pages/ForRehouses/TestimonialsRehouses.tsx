@@ -10,7 +10,7 @@ import blueberry from "../../images/blurbarry.png";
 import Header from "../../components/Header";
 import { Link } from "react-router-dom";
 
-function TestimonialsRehousers() {
+function TestimonialsRehouses() {
   return (
     <>
       <Header />
@@ -46,7 +46,7 @@ function TestimonialsRehousers() {
             />
             <div className=" flex flex-col gap-3 max-[850px]:w-full w-[50%]">
               <h1 className=" font-bold text-2xl ">
-                From Aman, Smokey's Rehouser
+                From Aman, Smokey's Rehouse
               </h1>
               <ul className=" mt-4 flex flex-col  gap-4 text-[#595959]">
                 <li>
@@ -63,7 +63,7 @@ function TestimonialsRehousers() {
                 <li>
                   I am profoundly moved by PetCares's dedication and commitment
                   to pet welfare. I wholeheartedly recommend their services to
-                  anyone in need of rehoming their beloved pets. Thank you once
+                  anyone in need of re homing their beloved pets. Thank you once
                   again!
                 </li>
               </ul>
@@ -75,7 +75,7 @@ function TestimonialsRehousers() {
           >
             <div className=" flex flex-col gap-3 max-[850px]:w-full w-[50%]">
               <h1 className=" font-bold text-2xl ">
-                From Khushboo, OREO's Rehouser
+                From Khushboo, OREO's Rehouse
               </h1>
 
               <ul className=" mt-4 flex flex-col  gap-4 text-[#595959]">
@@ -113,7 +113,7 @@ function TestimonialsRehousers() {
             />
             <div className=" flex flex-col gap-3 max-[850px]:w-full w-[50%]">
               <h1 className=" font-bold text-2xl ">
-                From UV, Ganger's Rehouser
+                From UV, Ganger's Rehouse
               </h1>
 
               <ul className=" mt-4 flex flex-col  gap-4 text-[#595959]">
@@ -140,21 +140,21 @@ function TestimonialsRehousers() {
           >
             <div className=" flex flex-col gap-3 max-[850px]:w-full w-[50%]">
               <h1 className=" font-bold text-2xl ">
-                From Jaanvi, Kitty's Rehouser
+                From Jaanvi, Kitty's Rehouse
               </h1>
 
               <ul className=" mt-4 flex flex-col  gap-4 text-[#595959]">
                 <li>" Hello, I'm Jaanvi,</li>
                 <li>
-                  In my search to rehome my kitten Hazel, I discovered PetCares.
-                  I must say, from the beginning to the end, the service was
-                  exceptional. I received all the necessary information along
-                  the way, keeping me informed at every stage.
+                  In my search to re home my kitten Hazel, I discovered
+                  PetCares. I must say, from the beginning to the end, the
+                  service was exceptional. I received all the necessary
+                  information along the way, keeping me informed at every stage.
                 </li>
                 <li>
                   Within just 2 weeks, Hazel found herself in a lovely new home,
                   and I couldn't be happier for her. I wholeheartedly recommend
-                  PetRehomer to anyone in need of pet rehoming services. x "
+                  PetRehome to anyone in need of pet re homing services. x "
                 </li>
               </ul>
             </div>
@@ -175,14 +175,14 @@ function TestimonialsRehousers() {
             />
             <div className=" flex flex-col gap-3 max-[850px]:w-full w-[50%]">
               <h1 className=" font-bold text-2xl ">
-                From Sukhdeep, Blueberry's Rehouser
+                From Sukhdeep, Blueberry's Rehouse
               </h1>
               <ul className=" mt-4 flex flex-col  gap-4 text-[#595959]">
                 <li>Hello PetCares Team,</li>
                 <li>
                   I wanted to take a moment to express my heartfelt gratitude
-                  for your assistance and support in rehoming my beloved parrot,
-                  Blueberry.
+                  for your assistance and support in re homing my beloved
+                  parrot, Blueberry.
                 </li>
                 <li>
                   The decision to rehouse Blueberry was incredibly difficult and
@@ -203,8 +203,8 @@ function TestimonialsRehousers() {
                   In addition to welcoming Blueberry into her home, Emily has
                   been incredibly kind to me and has graciously kept me updated
                   on Ezra's progress. This ongoing communication is something I
-                  deeply appreciate and is a significant benefit of rehoming him
-                  through PetCares.
+                  deeply appreciate and is a significant benefit of re homing
+                  him through PetCares.
                 </li>
                 <li>
                   Thank you immensely for helping Blueberry find his happiness.
@@ -229,4 +229,4 @@ function TestimonialsRehousers() {
   );
 }
 
-export default TestimonialsRehousers;
+export default TestimonialsRehouses;

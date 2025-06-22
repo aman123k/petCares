@@ -137,8 +137,8 @@ function ReadyToadop() {
               <p className="  break-words text-[17px] tracking-wide max-[650px]:text-sm">
                 If the answer is ‘no’, you should be proud of yourself for being
                 honest and realistic. Remember there’s no rush and you’ll
-                probably be ready to adopt one day. And when you are, PetRehomer
-                will be right here.
+                probably be ready to adopt one day. And when you are, Pet
+                PetRehome will be right here.
               </p>
             </div>
           </section>

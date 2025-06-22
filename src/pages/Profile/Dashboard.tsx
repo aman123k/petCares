@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import { User } from "../../interface/interface";
-import { ThemeContext } from "../../globleContext/context";
+import { ThemeContext } from "../../globalContext/context";
 import { Link, useNavigate } from "react-router-dom";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
@@ -79,13 +79,13 @@ function Dashboard() {
                 </div>
               </div>
               <div className="">
-                <h1 className=" font-bold text-xl">Pet Rehouser Dashboard</h1>
+                <h1 className=" font-bold text-xl">Pet Rehouse Dashboard</h1>
                 <div className=" bg-transparent border-t border-l border-r border-[#D5D8D5]  rounded-lg overflow-hidden mt-10  ">
                   <div
                     className=" my-14 py-2 max-[1050px]:my-[3.11rem] px-6 text-[#919291]
                    italic max-[1050px]:py-6 max-[650px]:my-6"
                   >
-                    You have not yet registered to rehome a pet
+                    You have not yet registered to re home a pet
                   </div>
                   <Link to="/rehouse-a-pet">
                     <h1

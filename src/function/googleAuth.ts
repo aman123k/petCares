@@ -10,7 +10,7 @@ const useGoogleAuth = (url: string) => {
   ) {
     registerType = ["adopter"];
   } else {
-    registerType = ["rehouser"];
+    registerType = ["rehouses"];
   }
 
   const googleLogin = useGoogleLogin({

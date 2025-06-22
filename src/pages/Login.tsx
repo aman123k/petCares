@@ -10,7 +10,7 @@ import useLogin from "../customHooks/loginFunction";
 import { User, UserLoginData } from "../interface/interface";
 import { HiOutlineEye } from "react-icons/hi2";
 import useGoogleAuth from "../function/googleAuth";
-import { ThemeContext } from "../globleContext/context";
+import { ThemeContext } from "../globalContext/context";
 
 function Login() {
   const [showPassword, setShowPassword] = useState<boolean>(false);
@@ -67,10 +67,10 @@ function Login() {
       <Header />
       <section className=" bg-adopterRegister py-56 max-[650px]:py-36 max-[650px]:px-8 object-cover text-white font-Nunito px-24">
         <h1 className="font-semibold tracking-wider text-lg max-[650px]:text-sm min-[2000px]:ml-[28%]">
-          <Link to="/">Home </Link>/ Login to your PetRehomer Account
+          <Link to="/">Home </Link>/ Login to your PetRehome Account
         </h1>
         <h3 className=" font-bold text-4xl tracking-wide max-[650px]:text-3xl mt-4 min-[2000px]:ml-[28%]">
-          Login to your PetRehomer Account
+          Login to your PetRehome Account
         </h3>
       </section>
       <section className=" font-Nunito flex flex-col text-center py-10 gap-10 bg-[#FAFAFA] px-10">

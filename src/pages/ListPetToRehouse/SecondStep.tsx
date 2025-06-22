@@ -2,14 +2,14 @@ import React, { useContext, useState } from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Count from "./helper/Count";
-import { ListingContext } from "../../globleContext/ListingContext";
-import { ThemeContext } from "../../globleContext/context";
+import { ListingContext } from "../../globalContext/ListingContext";
+import { ThemeContext } from "../../globalContext/context";
 import { User } from "../../interface/interface";
 import { Link, useNavigate } from "react-router-dom";
 import { GoPerson } from "react-icons/go";
 import toast, { Toaster } from "react-hot-toast";
 
-function SecoundStep() {
+function SecondStep() {
   const navigator = useNavigate();
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
@@ -43,7 +43,7 @@ function SecoundStep() {
             you have up to 45 minutes to gather all the necessary information
             before starting.{" "}
           </span>
-          Please refer to our guidelines for rehoming pets and the process
+          Please refer to our guidelines for re homing pets and the process
           involved to help you prepare.
         </p>
       </section>
@@ -154,4 +154,4 @@ function SecoundStep() {
   );
 }
 
-export default SecoundStep;
+export default SecondStep;

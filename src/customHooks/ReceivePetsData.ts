@@ -2,10 +2,10 @@ import { useState, useEffect, useRef } from "react";
 import { Characteristics, KeyFacts } from "../interface/interface";
 import toast from "react-hot-toast";
 
-export interface PetsdataType {
+export interface PetsDataType {
   _id: string;
   Auth: { email: string; name: string };
-  Favourites: string[];
+  Favorites: string[];
   characteristics: Characteristics;
   keyFact: KeyFacts;
   petImage: string[];
@@ -34,8 +34,8 @@ const fetchPetData = async (
     console.error("Error fetching data:", error);
   }
 };
-const useRecivePets = (petType: string, petBreed: string) => {
-  const [allPetsdata, setAllPetsdata] = useState<PetsdataType[]>([]);
+const useReceivePets = (petType: string, petBreed: string) => {
+  const [allPetsData, setAllPetsdata] = useState<PetsDataType[]>([]);
   const [page, setPage] = useState<number>(1);
   const [totalDoc, setTotalDoc] = useState<number>(0);
   const [loading, setLoading] = useState<boolean>(false);
@@ -72,7 +72,7 @@ const useRecivePets = (petType: string, petBreed: string) => {
     fetch();
   }, [page, petBreed, petType, currentPage]);
 
-  return { allPetsdata, totalDoc, setPage, loading };
+  return { allPetsData, totalDoc, setPage, loading };
 };
 
-export default useRecivePets;
+export default useReceivePets;

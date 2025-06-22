@@ -94,7 +94,7 @@ function Home() {
           </p>
           <p className=" my-3">
             We provide a compassionate and non-judgmental service to pet owners
-            seeking to rehome their animals, empowering them with full control
+            seeking to re home their animals, empowering them with full control
             throughout the process.
           </p>
           <p>

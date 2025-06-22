@@ -1,7 +1,7 @@
 import { useContext, useRef } from "react";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
-import { ChatContext } from "../globleContext/ChatContext";
+import { ChatContext } from "../globalContext/ChatContext";
 
 const useDeleteChat = ({
   id,

@@ -8,54 +8,54 @@ import { FaInstagram } from "react-icons/fa";
 import { IoLogoFacebook } from "react-icons/io5";
 import toast, { Toaster } from "react-hot-toast";
 import useContactPetCares from "../customHooks/contactPetCares";
-interface petCaresContect {
+interface petCaresContact {
   name: string;
   email: string;
   phone: string;
-  enquriyAbout: string;
-  enquriyIs: string;
+  enquiryAbout: string;
+  enquiryIs: string;
 }
 const url = process.env.REACT_APP_URL as string;
 
 function Contact() {
-  const [contectPetCares, setContactPetCares] = useState<petCaresContect>({
+  const [connectPetCares, setContactPetCares] = useState<petCaresContact>({
     name: "",
     email: "",
     phone: "",
-    enquriyAbout: "",
-    enquriyIs: "",
+    enquiryAbout: "",
+    enquiryIs: "",
   });
 
   const handelChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     setContactPetCares({
-      ...contectPetCares,
+      ...connectPetCares,
       [e.target.name]: e.target.value,
     });
   };
   const { contactPetCares } = useContactPetCares({
     url,
-    name: contectPetCares.name,
-    email: contectPetCares.email,
-    phone: contectPetCares.phone,
-    enquriyAbout: contectPetCares.enquriyAbout,
-    enquriyIs: contectPetCares.enquriyIs,
+    name: connectPetCares.name,
+    email: connectPetCares.email,
+    phone: connectPetCares.phone,
+    enquiryAbout: connectPetCares.enquiryAbout,
+    enquiryIs: connectPetCares.enquiryIs,
   });
   const handelSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (!contectPetCares.name) {
+    if (!connectPetCares.name) {
       toast.error("Please enter name");
-    } else if (!contectPetCares.email) {
+    } else if (!connectPetCares.email) {
       toast.error("Please enter email");
     } else if (
-      !contectPetCares.phone &&
-      !contectPetCares.phone.match(/^[1-9]\d{9}$|^(?!0{10})\d{10}$/)
+      !connectPetCares.phone &&
+      !connectPetCares.phone.match(/^[1-9]\d{9}$|^(?!0{10})\d{10}$/)
     ) {
       toast.error("please enter phone number");
-    } else if (!contectPetCares.enquriyAbout) {
+    } else if (!connectPetCares.enquiryAbout) {
       toast.error("Enter what is your enquiry about");
-    } else if (!contectPetCares.enquriyIs) {
+    } else if (!connectPetCares.enquiryIs) {
       toast.error("Enter what is your enquiry ");
     } else {
       contactPetCares();
@@ -63,8 +63,8 @@ function Contact() {
         name: "",
         email: "",
         phone: "",
-        enquriyAbout: "",
-        enquriyIs: "",
+        enquiryAbout: "",
+        enquiryIs: "",
       });
     }
   };
@@ -112,7 +112,7 @@ function Contact() {
               <input
                 type="text"
                 placeholder="Full name"
-                value={contectPetCares?.name}
+                value={connectPetCares?.name}
                 onChange={handelChange}
                 name="name"
                 className=" border rounded-lg px-4 py-3 outline-none"
@@ -121,7 +121,7 @@ function Contact() {
                 type="email"
                 placeholder="Email"
                 name="email"
-                value={contectPetCares?.email}
+                value={connectPetCares?.email}
                 onChange={handelChange}
                 className=" border rounded-lg px-4 py-3 outline-none"
               />
@@ -129,26 +129,26 @@ function Contact() {
                 type="text"
                 placeholder="Phone number"
                 name="phone"
-                value={contectPetCares.phone}
+                value={connectPetCares.phone}
                 onChange={handelChange}
                 className=" border rounded-lg px-4 py-3 outline-none"
               />
               <input
                 type="text"
                 placeholder="What is your enquiry about"
-                name="enquriyAbout"
-                value={contectPetCares.enquriyAbout}
+                name="enquiryAbout"
+                value={connectPetCares.enquiryAbout}
                 onChange={handelChange}
                 className=" border rounded-lg px-4 py-3 outline-none"
               />
               <textarea
-                name="enquriyIs"
+                name="enquiryIs"
                 placeholder="What is your enquiry"
                 className=" border rounded-lg col-span-2 px-4 py-3 outline-none max-[650px]:col-auto"
                 rows={5}
                 cols={50}
                 id=""
-                value={contectPetCares.enquriyIs}
+                value={connectPetCares.enquiryIs}
                 onChange={handelChange}
               ></textarea>
               <button className=" text-white bg-[#5EAE46] font-semibold py-3.5 rounded-lg">

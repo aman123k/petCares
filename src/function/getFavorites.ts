@@ -1,14 +1,14 @@
 import toast from "react-hot-toast";
-import { PetsdataType } from "../customHooks/RecivePetsData";
+import { PetsDataType } from "../customHooks/ReceivePetsData";
 
-const getFavourites = async ({
+const getFavorites = async ({
   setItems,
 }: {
-  setItems: React.Dispatch<React.SetStateAction<Array<PetsdataType> | null>>;
+  setItems: React.Dispatch<React.SetStateAction<Array<PetsDataType> | null>>;
 }) => {
   const url = process.env.REACT_APP_URL as string;
   try {
-    const response = await fetch(`${url}/getFavourites`, {
+    const response = await fetch(`${url}/getFavorites`, {
       credentials: "include",
     });
     const result = await response.json();
@@ -21,4 +21,4 @@ const getFavourites = async ({
     console.log("Error fetching user data:", error);
   }
 };
-export default getFavourites;
+export default getFavorites;

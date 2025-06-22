@@ -1,14 +1,14 @@
 # PetCares
 
-PetCares is a web application designed to facilitate the responsible rehoming and adoption of pets. The platform connects pet owners looking to rehome their animals with potential adopters, ensuring a safe and compassionate process for both parties.
+PetCares is a web application designed to facilitate the responsible re homing and adoption of pets. The platform connects pet owners looking to re home their animals with potential adopters, ensuring a safe and compassionate process for both parties.
 
 ## Features
 
 - **User Registration**: Users can create accounts to manage their profiles and pets.
-- **Pet Profiles**: Detailed profiles for pets available for adoption or rehoming.
+- **Pet Profiles**: Detailed profiles for pets available for adoption or re homing.
 - **Search Functionality**: Users can search for pets based on various criteria.
 - **Responsive Design**: The application is designed to work on both desktop and mobile devices.
-- **Community Support**: Resources and tips for both adopters and rehousers.
+- **Community Support**: Resources and tips for both adopters and rehouses.
 
 ## Technologies Used
 

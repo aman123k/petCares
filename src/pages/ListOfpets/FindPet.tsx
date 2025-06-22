@@ -4,8 +4,8 @@ import Footer from "../../components/Footer";
 import CardForPet from "./CardForPet";
 import { FaAngleDown } from "react-icons/fa";
 import InfiniteScroll from "react-infinite-scroll-component";
-import Catloader from "../../data/loader.json";
-import useRecivePets from "../../customHooks/RecivePetsData";
+import CatLoader from "../../data/loader.json";
+import useReceivePets from "../../customHooks/ReceivePetsData";
 import petNotFound from "../../images/missing.png";
 import {
   animals,
@@ -22,11 +22,11 @@ function FindPet() {
   const [petType, setPetType] = useState<string>("all");
   const [petBreed, setBreed] = useState<string>("all");
 
-  const { allPetsdata, setPage, totalDoc, loading } = useRecivePets(
+  const { allPetsData, setPage, totalDoc, loading } = useReceivePets(
     petType,
     petBreed
   );
-  const hasModedata = () => {
+  const hasMoreData = () => {
     setPage((pre) => pre + 1);
   };
 
@@ -54,7 +54,7 @@ function FindPet() {
   const defaultOptions = {
     loop: true,
     autoplay: true,
-    animationData: Catloader,
+    animationData: CatLoader,
     rendererSettings: {
       preserveAspectRatio: "xMidYMid slice",
     },
@@ -151,7 +151,7 @@ function FindPet() {
                 width={dimensions.width}
               />
             </>
-          ) : allPetsdata.length === 0 || totalDoc === 0 ? (
+          ) : allPetsData.length === 0 || totalDoc === 0 ? (
             <img
               src={petNotFound}
               alt="Pet not found"
@@ -159,8 +159,8 @@ function FindPet() {
             />
           ) : (
             <InfiniteScroll
-              next={hasModedata}
-              hasMore={allPetsdata.length < (totalDoc ?? 0)}
+              next={hasMoreData}
+              hasMore={allPetsData.length < (totalDoc ?? 0)}
               pullDownToRefreshThreshold={1000000}
               loader={
                 <h1 className="pb-8">
@@ -170,11 +170,11 @@ function FindPet() {
                   />
                 </h1>
               }
-              dataLength={allPetsdata.length}
+              dataLength={allPetsData.length}
               className=" grid grid-cols-3 justify-center max-[650px]:grid-cols-1 max-[950px]:grid-cols-2
           max-[650px]:px-8 max-[650px]:gap-y-4 max-[650px]:py-8 gap-8 min-[1200px]:grid-cols-4 px-10 py-14"
             >
-              {allPetsdata?.map((petData, index) => {
+              {allPetsData?.map((petData, index) => {
                 return <CardForPet key={index} PetsData={petData} />;
               })}
             </InfiniteScroll>

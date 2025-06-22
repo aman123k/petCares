@@ -17,7 +17,7 @@ function TipsForrehouser() {
         >
           <section className=" flex-col flex justify-center max-[1050px]:px-28 max-[850px]:px-16 max-[650px]:px-3.5 px-56 gap-4 max-[]:">
             <h1 className=" text-center text-4xl text-[#595959] font-bold max-[650px]:text-2xl">
-              How to make the rehoming process straightforward and safe
+              How to make the re homing process straightforward and safe
             </h1>
             <img src={HallFrame} alt="" />
           </section>
@@ -26,7 +26,7 @@ function TipsForrehouser() {
               Putting a pet up for adoption is never easy. But following our
               tips can help make the process that little bit more
               straightforward. Here are some important things to do once you’ve
-              decided to rehome your pet.
+              decided to re home your pet.
             </h1>
           </section>
           <section className=" flex-col flex justify-center max-[1050px]:px-28 max-[850px]:px-16 max-[650px]:px-3.5 px-56 gap-6 mt-10 max-[]:">
@@ -57,7 +57,7 @@ function TipsForrehouser() {
               <ul className=" mt-4 flex flex-col  gap-4">
                 <li className=" flex items-center text-[#595959] gap-2 max-[650px]:items-start">
                   <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
-                  Pet's past: ownership duration, origin, rehoming
+                  Pet's past: ownership duration, origin, re homing
                   necessity—essential details for potential adopters to
                   understand your pet's history.
                 </li>
@@ -103,7 +103,7 @@ function TipsForrehouser() {
             </div>
             <div className="flex-col flex gap-4">
               <h1 className=" text-2xl text-[#0f0e0e] font-bold mt-2 max-[650px]:text-xl">
-                Be honest about behavioural issues
+                Be honest about behavioral issues
               </h1>
               <p className="  break-words text-[17px] tracking-wide max-[650px]:text-sm">
                 Maintain honesty about behavioral issues. If your pet has shown

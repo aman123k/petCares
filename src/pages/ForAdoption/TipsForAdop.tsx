@@ -87,7 +87,7 @@ function TipsForAdop() {
                 Ask lots of questions
               </h1>
               <p className="  break-words text-[17px] tracking-wide max-[650px]:text-sm">
-                PetCares team and the rehouser. Asking numerous questions allows
+                PetCares team and the rehouses. Asking numerous questions allows
                 you to gather essential information and make informed decisions
                 about your potential new furry companion.
               </p>
@@ -97,7 +97,7 @@ function TipsForAdop() {
                 Get the right paperwork
               </h1>
               <p className="  break-words text-[17px] tracking-wide max-[650px]:text-sm">
-                Ensure to inquire with the rehouser for comprehensive details
+                Ensure to inquire with the rehouses for comprehensive details
                 about the pet, including their current vet information,
                 vaccination records, microchip details, flea and worming
                 treatments, and any other pertinent paperwork. This information
@@ -112,7 +112,7 @@ function TipsForAdop() {
                 Once the pet is handed over to you, you assume legal ownership.
                 It's important to note that there is no provision for returning
                 the pet to its original home if you have a change of heart.
-                Additionally, please be aware that PetRehomer is not a rescue
+                Additionally, please be aware that PetRehome is not a rescue
                 service, and as such, we are unable to take the pet into our
                 care in case you encounter difficulties. Responsible ownership
                 entails a commitment to the well-being of the adopted pet for
@@ -168,7 +168,7 @@ function TipsForAdop() {
               </h1>
               <p className="  break-words text-[17px] tracking-wide max-[650px]:text-sm">
                 PetCares is a direct rehousing service, not a rescue
-                organisation. We don’t have the facilities or means to take pets
+                organization. We don’t have the facilities or means to take pets
                 into our care. However, we offer a post-adoption support service
                 so please{" "}
                 <Link to="/contact-petcares" className=" text-[#99C739]">

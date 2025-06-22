@@ -21,7 +21,7 @@ function ThirdHelperContent() {
           Please choose great photos, and upload any useful documents.{" "}
           <span className=" font-bold">Please be honest about your pet.</span>{" "}
           PetCares is here to help people responsibly rehouse their pets, and we
-          encourage rehousers to be truthful when describing their pets.{" "}
+          encourage rehouses to be truthful when describing their pets.{" "}
         </p>
         <p>
           <span className=" font-bold">

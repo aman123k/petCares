@@ -6,7 +6,7 @@ import parrotBanner from "../../images/parrotBanner-removebg-preview.png";
 import parrot from "../../images/parrot.png";
 import { RxDotFilled } from "react-icons/rx";
 import confirm from "../../images/confirm.jpeg";
-import behaviours from "../../images/cannot-adopt.jpg";
+import behaviors from "../../images/cannot-adopt.jpg";
 import catHelth from "../../images/6-vet.jpg";
 
 function GiveUpParrot() {
@@ -53,7 +53,7 @@ function GiveUpParrot() {
           <div className=" flex flex-col gap-3 max-[850px]:w-full w-[50%] text-[#595959]">
             <h1 className=" font-bold text-3xl ">Giving up a Parrot</h1>
             <p className=" ">
-              Life's unpredictability may lead to rehoming your cherished
+              Life's unpredictability may lead to re homing your cherished
               parrot. PetCares stands ready to assist, offering support and
               guidance through this challenging process, ensuring the well-being
               of your feathered companion.
@@ -87,7 +87,7 @@ function GiveUpParrot() {
               Giving up your parrot in an emergency
             </h1>
             <p className=" ">
-              If urgent rehoming is necessary due to danger, reach out to a
+              If urgent re homing is necessary due to danger, reach out to a
               rescue center for your parrot. PetCares doesn't have facilities to
               accommodate animals. Prioritize safety by connecting with
               dedicated rescue organizations.
@@ -111,7 +111,7 @@ function GiveUpParrot() {
             </ul>
           </div>
           <img
-            src={behaviours}
+            src={behaviors}
             alt=""
             className="w-[50%] max-[650px]:w-full  max-[850px]:w-[70%] min-[1350px]:h-[28rem] object-contain mix-blend-multiply"
           />
@@ -187,22 +187,22 @@ function GiveUpParrot() {
               through the process:
             </p>
             <ul className=" mt-4 flex flex-col  gap-3 text-[#96C830]">
-              <Link to="/for_rehousers">
+              <Link to="/for_rehouses">
                 <li className=" flex justify-start gap-2">
                   <RxDotFilled className="text-3xl  flex-shrink-0" />
                   How rehousing works
                 </li>
               </Link>
-              <Link to="/rehousers-faq">
+              <Link to="/rehouses-faq">
                 <li className=" flex justify-start gap-2">
                   <RxDotFilled className="text-3xl  flex-shrink-0" />
-                  FAQs for rehousers
+                  FAQs for rehouses
                 </li>
               </Link>
-              <Link to="/tips-for-rehouser">
+              <Link to="/tips-for-rehouse">
                 <li className=" flex justify-start gap-2">
                   <RxDotFilled className="text-3xl  flex-shrink-0" />
-                  Tips for rehousers
+                  Tips for rehouses
                 </li>
               </Link>
             </ul>

@@ -64,11 +64,11 @@ function Footer() {
               <li>Tips For Adopters</li>
             </Link>
             <Link
-              to="/tips-for-rehouser"
+              to="/tips-for-rehouse"
               className=" hover:translate-x-3 ease-in-out duration-200"
               onClick={() => window.scrollTo(0, 0)}
             >
-              <li>Tips For Rehousers</li>
+              <li>Tips For Rehouses</li>
             </Link>
             <Link
               to="/contact-petcares"
@@ -98,7 +98,7 @@ function Footer() {
           <h1 className="font-bold text-2xl tracking-wide">Quick Links</h1>
           <ul className="mt-4 flex flex-col gap-2.5">
             <Link
-              to="/for_rehousers"
+              to="/for_rehouses"
               className=" hover:translate-x-3 ease-in-out duration-200"
               onClick={() => window.scrollTo(0, 0)}
             >
@@ -154,11 +154,11 @@ function Footer() {
               <li>Pet Care Information</li>
             </Link>
             <Link
-              to="/testimonials-from-rehouser"
+              to="/testimonials-from-rehouse"
               className=" hover:translate-x-3 ease-in-out duration-200"
               onClick={() => window.scrollTo(0, 0)}
             >
-              <li>Testimonials from Rehousers</li>
+              <li>Testimonials from Rehouses</li>
             </Link>
             <Link
               to="/donate-to-neuter"

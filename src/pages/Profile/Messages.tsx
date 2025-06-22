@@ -2,9 +2,9 @@ import React, { useContext, useEffect } from "react";
 import Header from "../../components/Header";
 import ChatScreen from "../Messages_chat/ChatScreen";
 import { useNavigate } from "react-router-dom";
-import { ThemeContext } from "../../globleContext/context";
+import { ThemeContext } from "../../globalContext/context";
 import { ChatConnection, User } from "../../interface/interface";
-import { ChatContext } from "../../globleContext/ChatContext";
+import { ChatContext } from "../../globalContext/ChatContext";
 import Footer from "../../components/Footer";
 import ProfileHeader from "../../components/ProfileHeader";
 

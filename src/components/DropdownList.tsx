@@ -68,7 +68,7 @@ function DropdownListRehouse() {
         <nav className="  bg-white px-10 mt-9  py-9 rounded-xl drop-shadow-xl">
           <div className="w-6 bg-white h-6 absolute drop-shadow-xl top-[-24px] right-8 [clip-path:polygon(51%_40%,0_100%,100%_100%)]"></div>
           <ul className="flex flex-col gap-4 tracking-wide">
-            <Link to="/for_rehousers" onClick={() => window.scrollTo(0, 0)}>
+            <Link to="/for_rehouses" onClick={() => window.scrollTo(0, 0)}>
               <li className=" pb-4 text-[#595959] hover:text-[#5FA501] hover:translate-x-3 duration-200 ease-in-out">
                 How It Works - Rehomers
               </li>
@@ -104,30 +104,30 @@ function DropdownListRehouse() {
               </li>
               <hr />
             </Link>
-            <Link to="/tips-for-rehouser" onClick={() => window.scrollTo(0, 0)}>
+            <Link to="/tips-for-rehouse" onClick={() => window.scrollTo(0, 0)}>
               <li className="pb-4 text-[#595959] hover:text-[#5FA501] hover:translate-x-3 duration-200 ease-in-out">
-                Tips For Rehousers
+                Tips For Rehouses
               </li>
               <hr />
             </Link>
-            <Link to="/rehousers-faq" onClick={() => window.scrollTo(0, 0)}>
+            <Link to="/rehouses-faq" onClick={() => window.scrollTo(0, 0)}>
               <li className="pb-4 text-[#595959] hover:text-[#5FA501] hover:translate-x-3 duration-200 ease-in-out">
-                Rehousers FAQ's
+                Rehouses FAQ's
               </li>
               <hr />
             </Link>
             <Link
-              to="/testimonials-from-rehouser"
+              to="/testimonials-from-rehouse"
               onClick={() => window.scrollTo(0, 0)}
             >
               <li className="pb-4 text-[#595959] hover:text-[#5FA501] hover:translate-x-3 duration-200 ease-in-out">
-                Testimonials from Rehousers
+                Testimonials from Rehouses
               </li>
               <hr />
             </Link>
             <Link to="/rehouse-a-pet" onClick={() => window.scrollTo(0, 0)}>
               <li className="text-[#595959] hover:text-[#5FA501] hover:translate-x-3 duration-200 ease-in-out">
-                Rehouser My Pet
+                Rehouse My Pet
               </li>
             </Link>
           </ul>

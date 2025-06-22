@@ -11,10 +11,10 @@ import toast from "react-hot-toast";
 import { FaRegEyeSlash } from "react-icons/fa";
 import { HiOutlineEye } from "react-icons/hi2";
 import useGoogleAuth from "../../function/googleAuth";
-import { ThemeContext } from "../../globleContext/context";
+import { ThemeContext } from "../../globalContext/context";
 
 const RegisterForm: React.FC = () => {
-  const [showPassord, setShowPassword] = useState<boolean>(false);
+  const [showPassword, setShowPassword] = useState<boolean>(false);
   const [data, setData] = useState<UserRegistrationData>({
     username: "",
     email: "",
@@ -42,7 +42,7 @@ const RegisterForm: React.FC = () => {
   });
 
   if (window.location.href.split("/")[3] === "register_rehouse_your_pet") {
-    data.registerType = ["rehouser"];
+    data.registerType = ["rehouses"];
   } else {
     data.registerType = ["adopter"];
   }
@@ -109,21 +109,21 @@ const RegisterForm: React.FC = () => {
         </div>
         <div className="relative">
           <input
-            type={showPassord ? "text" : "password"}
+            type={showPassword ? "text" : "password"}
             placeholder="password"
             name="password"
             onChange={handleChange}
             className="w-full pl-4 pr-10 py-3 rounded-lg outline-[#595959]"
           />
-          {showPassord ? (
+          {showPassword ? (
             <HiOutlineEye
               className=" absolute top-4 right-4 text-[#7DDC22] text-lg font-bold cursor-pointer"
-              onClick={() => setShowPassword(!showPassord)}
+              onClick={() => setShowPassword(!showPassword)}
             />
           ) : (
             <FaRegEyeSlash
               className=" absolute top-4 right-4 text-[#7DDC22] text-lg font-bold cursor-pointer"
-              onClick={() => setShowPassword(!showPassord)}
+              onClick={() => setShowPassword(!showPassword)}
             />
           )}
         </div>

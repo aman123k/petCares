@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { ThemeContext } from "../globleContext/context";
+import { ThemeContext } from "../globalContext/context";
 import { User } from "../interface/interface";
 interface ParentComponentProps {
   openProfile: boolean;

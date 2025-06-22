@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { ListingContext } from "../../../globleContext/ListingContext";
+import { ListingContext } from "../../../globalContext/ListingContext";
 import { IoCamera } from "react-icons/io5";
 import { multiUploadImage } from "../../../components/uploadImage";
 import { TiPlus } from "react-icons/ti";

@@ -78,7 +78,7 @@ function ForAdopter() {
                 <li className=" flex items-center text-[#595959] gap-2 max-[650px]:items-start ">
                   <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
                   If we think you’re a good match, we’ll approve your
-                  application and profile, and pass it on to the rehouser
+                  application and profile, and pass it on to the rehouses
                 </li>
                 <li className=" flex items-center text-[#595959] gap-2 max-[650px]:items-start ">
                   <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
@@ -109,7 +109,7 @@ function ForAdopter() {
               <ul className=" mt-4 flex flex-col  gap-4">
                 <li className=" flex items-center text-[#595959] gap-2 max-[650px]:items-start ">
                   <RxDotFilled className="text-3xl text-[#96C830] flex-shrink-0" />
-                  The rehouser will decide if they want to take your application
+                  The rehouses will decide if they want to take your application
                   to the next stage.
                 </li>
                 <li className=" flex items-center text-[#595959] gap-2 max-[650px]:items-start ">
@@ -132,7 +132,7 @@ function ForAdopter() {
           >
             <div className=" flex flex-col gap-3 w-[50%] max-[850px]:w-full">
               <h1 className=" font-bold text-2xl ">
-                4. Have a home check and chat to the rehouser
+                4. Have a home check and chat to the rehouses
               </h1>
               <p className=" font-semibold  text-[16px]">
                 A home check helps us make sure your living environment is right
@@ -181,7 +181,7 @@ function ForAdopter() {
             <div className=" flex flex-col gap- w-[50%] max-[850px]:w-full">
               <h1 className=" font-bold text-2xl ">5. Adopt your new pet</h1>
               <p className=" font-semibold  text-[16px]">
-                If the rehouser wants you to adopt their pet…
+                If the rehouses wants you to adopt their pet…
               </p>
               <ul className=" mt-4 flex flex-col  gap-4">
                 <li className=" flex items-center text-[#595959] gap-2 max-[650px]:items-start">
@@ -211,9 +211,9 @@ function ForAdopter() {
               HOW MUCH DOES IT COST TO ADOPT A PET?
             </h1>
             <p className="text-[#595959]">
-              The adoption fees charged by PetRehomer are used to help our
-              registered charity fund the cost of operating the rehoming website
-              and the provision of our post adoption advice and support
+              The adoption fees charged by PetRehome are used to help our
+              registered charity fund the cost of operating the re homing
+              website and the provision of our post adoption advice and support
             </p>
             <span className="font-semibold text-lg text-[#595959]">
               Our adoption fees are currently:
