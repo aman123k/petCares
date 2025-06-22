@@ -46,7 +46,7 @@ import DonateNeuter from "./pages/DonateNeuter";
 import TestimonialsRehouses from "./pages/ForRehouses/TestimonialsRehouses";
 import Testimonialsfromadopters from "./pages/ForAdoption/Testimonialsfromadopters";
 import PageNotFound from "./pages/PageNotFound";
-import Success from "./pages/pymentStatus/Success";
+import Success from "./pages/paymentStatus/Success";
 
 function App() {
   const clintId = process.env.REACT_APP_GOOGLE_CLIENT_ID as string;
