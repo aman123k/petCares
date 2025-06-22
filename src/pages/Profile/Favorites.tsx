@@ -4,7 +4,7 @@ import Footer from "../../components/Footer";
 import { Link } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import getFavorites from "../../function/getFavorites";
-import CardForPet from "../ListOfpets/CardForPet";
+import CardForPet from "../ListOfPets/CardForPet";
 import { PetsDataType } from "../../customHooks/ReceivePetsData";
 
 function Favorites() {
